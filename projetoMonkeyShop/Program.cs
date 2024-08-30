@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace projetoMonkeyShop
+namespace projetoMonkeyShop.src.view
 {
     internal static class Program
     {
@@ -16,7 +16,7 @@ namespace projetoMonkeyShop
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new FrmEstoque.cs());
+            Application.Run(new FrmEstoque());
         }
     }
 }
