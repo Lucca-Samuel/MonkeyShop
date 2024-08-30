@@ -117,6 +117,27 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnExcluirProd.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAAuSAAALkgH37vJvAAADLklE
+        QVRYR7WXOc9NURSGb9AQHY1ZTYIQYyWR6PEDDImYOr9AKISGhAKJDhWNH2CqDKEyNkRJBCEKQ/A81903
+        665vn++e8+FNnuTcs9ewzx7W3rfXUtNhGRyGa/AYPsOvAT77zjZttNXnr2WQjXAOXsEPKEmb0EZbffSd
+        ckcWwEl4C7VEbdDXGPOgk9bBHagFlW/wDl4P8Pk71Gx/wi1YDa20FV5ADvQV7sER2AYrYfEAn7fDUbgP
+        djD7P4MtMKn88ucQHf0Cg+6EOTBO2mj7CGIceQrmqMo5vw3RwWG9AAuhqxwZffPUmMNcI5oGLpZoqOMJ
+        mA1Tlb6nIHfCXOYcahPk1X4ecvJZMOPPY1W2aRNljIsQY78Bt2hf9sQ9Gw2c80UQ5TRcgQNQ29u+OwTa
+        5ClzOowZc5yB/igsBwtHaXAFu4iinLPrYPtH2A+xEz7bMdu00TbP8x6Iu+MlmLtfOmOFuwtzoWgmXIbS
+        Lh9gH/gFYnLfRZtLoG+RMY1d2s3piPWuDl4U3OdRTQn87fuDg+fcVjoY5aKOdn5Y/xApL1ytFpksh9iA
+        OZGHUDyURJu9UFsnxo47wtwjASypVrWamjoRmSy5MrY5iv0nGAlgXXfFNskhdQF+gegnvqsNe5SxzRH9
+        Rn606YBz3tQB10TnDjgM5YfDswpqKltt3BQ4Ck1TYOwJU5AX4Q7IakretAibOmHsCYswb8NjEFWGPSd/
+        DyZyTfgc27StTUd1G+ZC5JnfphC52k0gtd2hTy5Exi7tw0JkObQslgbL5S6IiqW4JI9D7HPsRFMpjsM/
+        LMV+QT6MHsJSiPKA8aua5td3Toc2+TAyVr6gDA8j5dHoERkN/vdxvAGGsie1C4mXidyJLtL3NMShl+Mw
+        /Pqi+XAToqHrwd7nu0EbLQF9c/IbYK6q1oAXx+jgpfQB7Ia2l1JtnXN9Yyz3/djruVdnr9DRUcq13L3s
+        FXwFWFrFQ8YiY1vTtdzkm6GV1kK+IUdMYEm1rovPeagLjoJT2/qPSZH7+F/8NXPBdf5rVuTedru4Z7v+
+        OT0L66FWMzrLIP7lLrfeJxAPIU8139mmjRWuReJe7zcHY9ChyQVoRwAAAABJRU5ErkJggg==
+</value>
+  </data>
   <metadata name="colId.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>

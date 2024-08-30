@@ -93,16 +93,6 @@ namespace projetoMonkeyShop.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap novo {
-            get {
-                object obj = ResourceManager.GetObject("novo", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap save1 {
             get {
                 object obj = ResourceManager.GetObject("save1", resourceCulture);

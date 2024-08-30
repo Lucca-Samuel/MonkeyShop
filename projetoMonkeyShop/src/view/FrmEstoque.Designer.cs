@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEstoque));
             this.tbxId = new System.Windows.Forms.TextBox();
             this.tbxCodInc = new System.Windows.Forms.TextBox();
             this.tbxProdName = new System.Windows.Forms.TextBox();
@@ -247,40 +248,52 @@
             // 
             // btnCancelarProd
             // 
-            this.btnCancelarProd.Location = new System.Drawing.Point(412, 673);
+            this.btnCancelarProd.Image = global::projetoMonkeyShop.Properties.Resources.cancel;
+            this.btnCancelarProd.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCancelarProd.Location = new System.Drawing.Point(505, 673);
             this.btnCancelarProd.Name = "btnCancelarProd";
-            this.btnCancelarProd.Size = new System.Drawing.Size(123, 45);
+            this.btnCancelarProd.Size = new System.Drawing.Size(110, 45);
             this.btnCancelarProd.TabIndex = 4;
             this.btnCancelarProd.Text = "Cancelar";
+            this.btnCancelarProd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancelarProd.UseVisualStyleBackColor = true;
             // 
             // btnAlterarProd
             // 
-            this.btnAlterarProd.Location = new System.Drawing.Point(571, 673);
+            this.btnAlterarProd.Image = global::projetoMonkeyShop.Properties.Resources.edit;
+            this.btnAlterarProd.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAlterarProd.Location = new System.Drawing.Point(634, 673);
             this.btnAlterarProd.Name = "btnAlterarProd";
-            this.btnAlterarProd.Size = new System.Drawing.Size(123, 45);
+            this.btnAlterarProd.Size = new System.Drawing.Size(110, 45);
             this.btnAlterarProd.TabIndex = 4;
             this.btnAlterarProd.Text = "Alterar";
+            this.btnAlterarProd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAlterarProd.UseVisualStyleBackColor = true;
             // 
             // btnCriarProd
             // 
             this.btnCriarProd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnCriarProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCriarProd.Image = global::projetoMonkeyShop.Properties.Resources._new;
+            this.btnCriarProd.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCriarProd.Location = new System.Drawing.Point(900, 673);
             this.btnCriarProd.Name = "btnCriarProd";
-            this.btnCriarProd.Size = new System.Drawing.Size(123, 45);
+            this.btnCriarProd.Size = new System.Drawing.Size(110, 45);
             this.btnCriarProd.TabIndex = 4;
             this.btnCriarProd.Text = "Novo";
+            this.btnCriarProd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCriarProd.UseVisualStyleBackColor = true;
             // 
             // btnExcluirProd
             // 
-            this.btnExcluirProd.Location = new System.Drawing.Point(261, 673);
+            this.btnExcluirProd.Image = ((System.Drawing.Image)(resources.GetObject("btnExcluirProd.Image")));
+            this.btnExcluirProd.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnExcluirProd.Location = new System.Drawing.Point(375, 673);
             this.btnExcluirProd.Name = "btnExcluirProd";
-            this.btnExcluirProd.Size = new System.Drawing.Size(123, 45);
+            this.btnExcluirProd.Size = new System.Drawing.Size(110, 45);
             this.btnExcluirProd.TabIndex = 4;
             this.btnExcluirProd.Text = "Excluir";
+            this.btnExcluirProd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnExcluirProd.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
@@ -391,10 +404,11 @@
             // btnSalvarProd
             // 
             this.btnSalvarProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvarProd.Image = global::projetoMonkeyShop.Properties.Resources.save1;
             this.btnSalvarProd.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSalvarProd.Location = new System.Drawing.Point(700, 673);
+            this.btnSalvarProd.Location = new System.Drawing.Point(763, 673);
             this.btnSalvarProd.Name = "btnSalvarProd";
-            this.btnSalvarProd.Size = new System.Drawing.Size(104, 45);
+            this.btnSalvarProd.Size = new System.Drawing.Size(110, 45);
             this.btnSalvarProd.TabIndex = 4;
             this.btnSalvarProd.Text = "Salvar";
             this.btnSalvarProd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
