@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.tbxId = new System.Windows.Forms.TextBox();
+            this.tbxCodInc = new System.Windows.Forms.TextBox();
+            this.tbxProdName = new System.Windows.Forms.TextBox();
+            this.tbxModelo = new System.Windows.Forms.TextBox();
+            this.tbxQtd = new System.Windows.Forms.TextBox();
+            this.tbxPreco = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,79 +44,79 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.tbxBuscarProd = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.btnBuscarProd = new System.Windows.Forms.Button();
             this.btnCancelarProd = new System.Windows.Forms.Button();
             this.btnAlterarProd = new System.Windows.Forms.Button();
-            this.btnSalvarProd = new System.Windows.Forms.Button();
             this.btnCriarProd = new System.Windows.Forms.Button();
             this.btnExcluirProd = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.idProd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codProd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCod = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeProd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.categoriaProd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.modelProd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tamanhoProd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.corProd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qtdProd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusProd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precoProd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.colCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colModelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTamanho = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colQtd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPreco = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cbxTamanho = new System.Windows.Forms.ComboBox();
+            this.cbxCor = new System.Windows.Forms.ComboBox();
+            this.cbxStatus = new System.Windows.Forms.ComboBox();
+            this.cbxCategoria = new System.Windows.Forms.ComboBox();
+            this.btnSalvarProd = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // tbxId
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(12, 29);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(99, 38);
-            this.textBox1.TabIndex = 0;
+            this.tbxId.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxId.Location = new System.Drawing.Point(12, 29);
+            this.tbxId.Name = "tbxId";
+            this.tbxId.Size = new System.Drawing.Size(99, 38);
+            this.tbxId.TabIndex = 0;
             // 
-            // textBox2
+            // tbxCodInc
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(137, 29);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(736, 38);
-            this.textBox2.TabIndex = 0;
+            this.tbxCodInc.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxCodInc.Location = new System.Drawing.Point(137, 29);
+            this.tbxCodInc.Name = "tbxCodInc";
+            this.tbxCodInc.Size = new System.Drawing.Size(736, 38);
+            this.tbxCodInc.TabIndex = 0;
             // 
-            // textBox3
+            // tbxProdName
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(12, 113);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(212, 38);
-            this.textBox3.TabIndex = 0;
+            this.tbxProdName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxProdName.Location = new System.Drawing.Point(12, 113);
+            this.tbxProdName.Name = "tbxProdName";
+            this.tbxProdName.Size = new System.Drawing.Size(212, 38);
+            this.tbxProdName.TabIndex = 0;
             // 
-            // textBox7
+            // tbxModelo
             // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(482, 113);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(212, 38);
-            this.textBox7.TabIndex = 0;
+            this.tbxModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxModelo.Location = new System.Drawing.Point(482, 113);
+            this.tbxModelo.Name = "tbxModelo";
+            this.tbxModelo.Size = new System.Drawing.Size(212, 38);
+            this.tbxModelo.TabIndex = 0;
             // 
-            // textBox8
+            // tbxQtd
             // 
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(12, 196);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(134, 38);
-            this.textBox8.TabIndex = 0;
+            this.tbxQtd.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxQtd.Location = new System.Drawing.Point(12, 196);
+            this.tbxQtd.Name = "tbxQtd";
+            this.tbxQtd.Size = new System.Drawing.Size(134, 38);
+            this.tbxQtd.TabIndex = 0;
             // 
-            // textBox10
+            // tbxPreco
             // 
-            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.Location = new System.Drawing.Point(412, 196);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(212, 38);
-            this.textBox10.TabIndex = 0;
+            this.tbxPreco.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxPreco.Location = new System.Drawing.Point(412, 196);
+            this.tbxPreco.Name = "tbxPreco";
+            this.tbxPreco.Size = new System.Drawing.Size(212, 38);
+            this.tbxPreco.TabIndex = 0;
             // 
             // label1
             // 
@@ -218,13 +218,13 @@
             this.label10.TabIndex = 1;
             this.label10.Text = "Preço";
             // 
-            // textBox11
+            // tbxBuscarProd
             // 
-            this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.Location = new System.Drawing.Point(12, 306);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(846, 38);
-            this.textBox11.TabIndex = 0;
+            this.tbxBuscarProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxBuscarProd.Location = new System.Drawing.Point(12, 306);
+            this.tbxBuscarProd.Name = "tbxBuscarProd";
+            this.tbxBuscarProd.Size = new System.Drawing.Size(846, 38);
+            this.tbxBuscarProd.TabIndex = 0;
             // 
             // label11
             // 
@@ -263,17 +263,10 @@
             this.btnAlterarProd.Text = "Alterar";
             this.btnAlterarProd.UseVisualStyleBackColor = true;
             // 
-            // btnSalvarProd
-            // 
-            this.btnSalvarProd.Location = new System.Drawing.Point(735, 673);
-            this.btnSalvarProd.Name = "btnSalvarProd";
-            this.btnSalvarProd.Size = new System.Drawing.Size(123, 45);
-            this.btnSalvarProd.TabIndex = 4;
-            this.btnSalvarProd.Text = "Salvar";
-            this.btnSalvarProd.UseVisualStyleBackColor = true;
-            // 
             // btnCriarProd
             // 
+            this.btnCriarProd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnCriarProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCriarProd.Location = new System.Drawing.Point(900, 673);
             this.btnCriarProd.Name = "btnCriarProd";
             this.btnCriarProd.Size = new System.Drawing.Size(123, 45);
@@ -294,116 +287,128 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idProd,
-            this.codProd,
+            this.colId,
+            this.colCod,
             this.nomeProd,
-            this.categoriaProd,
-            this.modelProd,
-            this.tamanhoProd,
-            this.corProd,
-            this.qtdProd,
-            this.statusProd,
-            this.precoProd});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 372);
+            this.colCategoria,
+            this.colModelo,
+            this.colTamanho,
+            this.colCor,
+            this.colQtd,
+            this.colStatus,
+            this.colPreco});
+            this.dataGridView1.Location = new System.Drawing.Point(12, 362);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1011, 279);
+            this.dataGridView1.Size = new System.Drawing.Size(1011, 294);
             this.dataGridView1.TabIndex = 5;
             // 
-            // idProd
+            // colId
             // 
-            this.idProd.HeaderText = "ID";
-            this.idProd.Name = "idProd";
+            this.colId.HeaderText = "ID";
+            this.colId.Name = "colId";
             // 
-            // codProd
+            // colCod
             // 
-            this.codProd.HeaderText = "Cod/Barras";
-            this.codProd.Name = "codProd";
+            this.colCod.HeaderText = "Cod/Barras";
+            this.colCod.Name = "colCod";
             // 
             // nomeProd
             // 
             this.nomeProd.HeaderText = "Column1";
             this.nomeProd.Name = "nomeProd";
             // 
-            // categoriaProd
+            // colCategoria
             // 
-            this.categoriaProd.HeaderText = "Categoria";
-            this.categoriaProd.Name = "categoriaProd";
+            this.colCategoria.HeaderText = "Categoria";
+            this.colCategoria.Name = "colCategoria";
             // 
-            // modelProd
+            // colModelo
             // 
-            this.modelProd.HeaderText = "Modelo";
-            this.modelProd.Name = "modelProd";
+            this.colModelo.HeaderText = "Modelo";
+            this.colModelo.Name = "colModelo";
             // 
-            // tamanhoProd
+            // colTamanho
             // 
-            this.tamanhoProd.HeaderText = "Tamanho";
-            this.tamanhoProd.Name = "tamanhoProd";
+            this.colTamanho.HeaderText = "Tamanho";
+            this.colTamanho.Name = "colTamanho";
             // 
-            // corProd
+            // colCor
             // 
-            this.corProd.HeaderText = "Cor";
-            this.corProd.Name = "corProd";
+            this.colCor.HeaderText = "Cor";
+            this.colCor.Name = "colCor";
             // 
-            // qtdProd
+            // colQtd
             // 
-            this.qtdProd.HeaderText = "Quantidade";
-            this.qtdProd.Name = "qtdProd";
+            this.colQtd.HeaderText = "Quantidade";
+            this.colQtd.Name = "colQtd";
             // 
-            // statusProd
+            // colStatus
             // 
-            this.statusProd.HeaderText = "Status";
-            this.statusProd.Name = "statusProd";
+            this.colStatus.HeaderText = "Status";
+            this.colStatus.Name = "colStatus";
             // 
-            // precoProd
+            // colPreco
             // 
-            this.precoProd.HeaderText = "Preço";
-            this.precoProd.Name = "precoProd";
+            this.colPreco.HeaderText = "Preço";
+            this.colPreco.Name = "colPreco";
             // 
-            // comboBox1
+            // cbxTamanho
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(719, 113);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(138, 39);
-            this.comboBox1.TabIndex = 6;
+            this.cbxTamanho.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxTamanho.FormattingEnabled = true;
+            this.cbxTamanho.Location = new System.Drawing.Point(719, 113);
+            this.cbxTamanho.Name = "cbxTamanho";
+            this.cbxTamanho.Size = new System.Drawing.Size(138, 39);
+            this.cbxTamanho.TabIndex = 6;
             // 
-            // comboBox2
+            // cbxCor
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(884, 113);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(92, 39);
-            this.comboBox2.TabIndex = 6;
+            this.cbxCor.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxCor.FormattingEnabled = true;
+            this.cbxCor.Location = new System.Drawing.Point(884, 113);
+            this.cbxCor.Name = "cbxCor";
+            this.cbxCor.Size = new System.Drawing.Size(92, 39);
+            this.cbxCor.TabIndex = 6;
             // 
-            // comboBox3
+            // cbxStatus
             // 
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(172, 196);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(212, 39);
-            this.comboBox3.TabIndex = 6;
+            this.cbxStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxStatus.FormattingEnabled = true;
+            this.cbxStatus.Location = new System.Drawing.Point(172, 196);
+            this.cbxStatus.Name = "cbxStatus";
+            this.cbxStatus.Size = new System.Drawing.Size(212, 39);
+            this.cbxStatus.TabIndex = 6;
             // 
-            // comboBox4
+            // cbxCategoria
             // 
-            this.comboBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(245, 112);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(208, 39);
-            this.comboBox4.TabIndex = 6;
+            this.cbxCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxCategoria.FormattingEnabled = true;
+            this.cbxCategoria.Location = new System.Drawing.Point(245, 112);
+            this.cbxCategoria.Name = "cbxCategoria";
+            this.cbxCategoria.Size = new System.Drawing.Size(208, 39);
+            this.cbxCategoria.TabIndex = 6;
+            // 
+            // btnSalvarProd
+            // 
+            this.btnSalvarProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvarProd.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSalvarProd.Location = new System.Drawing.Point(700, 673);
+            this.btnSalvarProd.Name = "btnSalvarProd";
+            this.btnSalvarProd.Size = new System.Drawing.Size(104, 45);
+            this.btnSalvarProd.TabIndex = 4;
+            this.btnSalvarProd.Text = "Salvar";
+            this.btnSalvarProd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalvarProd.UseVisualStyleBackColor = true;
             // 
             // FrmEstoque
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1052, 741);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbxCor);
+            this.Controls.Add(this.cbxCategoria);
+            this.Controls.Add(this.cbxStatus);
+            this.Controls.Add(this.cbxTamanho);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnCriarProd);
             this.Controls.Add(this.btnSalvarProd);
@@ -422,13 +427,13 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbxBuscarProd);
+            this.Controls.Add(this.tbxCodInc);
+            this.Controls.Add(this.tbxModelo);
+            this.Controls.Add(this.tbxQtd);
+            this.Controls.Add(this.tbxPreco);
+            this.Controls.Add(this.tbxProdName);
+            this.Controls.Add(this.tbxId);
             this.Name = "FrmEstoque";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmEstoque";
@@ -440,12 +445,12 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox tbxId;
+        private System.Windows.Forms.TextBox tbxCodInc;
+        private System.Windows.Forms.TextBox tbxProdName;
+        private System.Windows.Forms.TextBox tbxModelo;
+        private System.Windows.Forms.TextBox tbxQtd;
+        private System.Windows.Forms.TextBox tbxPreco;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -456,7 +461,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox tbxBuscarProd;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button btnBuscarProd;
         private System.Windows.Forms.Button btnCancelarProd;
@@ -465,19 +470,19 @@
         private System.Windows.Forms.Button btnCriarProd;
         private System.Windows.Forms.Button btnExcluirProd;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idProd;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codProd;
+        private System.Windows.Forms.ComboBox cbxTamanho;
+        private System.Windows.Forms.ComboBox cbxCor;
+        private System.Windows.Forms.ComboBox cbxStatus;
+        private System.Windows.Forms.ComboBox cbxCategoria;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCod;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeProd;
-        private System.Windows.Forms.DataGridViewTextBoxColumn categoriaProd;
-        private System.Windows.Forms.DataGridViewTextBoxColumn modelProd;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tamanhoProd;
-        private System.Windows.Forms.DataGridViewTextBoxColumn corProd;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qtdProd;
-        private System.Windows.Forms.DataGridViewTextBoxColumn statusProd;
-        private System.Windows.Forms.DataGridViewTextBoxColumn precoProd;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCategoria;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colModelo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTamanho;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colQtd;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colStatus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPreco;
     }
 }

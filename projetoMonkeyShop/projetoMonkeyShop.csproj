@@ -48,6 +48,11 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="src\view\FrmEstoque.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,13 +67,9 @@
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="src\view\FrmEstoque.resx">
       <DependentUpon>FrmEstoque.cs</DependentUpon>
     </EmbeddedResource>
@@ -92,8 +93,31 @@
     <Folder Include="src\conexao\" />
     <Folder Include="src\controller\" />
     <Folder Include="src\dao\" />
-    <Folder Include="src\imagens\" />
     <Folder Include="src\model\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\imagens\mais.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\imagens\save_icon_255899.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\imagens\new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\imagens\novo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\imagens\editar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\imagens\save1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\imagens\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\imagens\cancel.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
