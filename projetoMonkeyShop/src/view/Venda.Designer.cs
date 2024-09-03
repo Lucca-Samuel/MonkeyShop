@@ -42,6 +42,11 @@
             this.lblCodProduto = new System.Windows.Forms.Label();
             this.btnOk = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.lblQtdeItens = new System.Windows.Forms.Label();
+            this.tbxQtdeItens = new System.Windows.Forms.TextBox();
+            this.tbxValorTotal = new System.Windows.Forms.TextBox();
+            this.lblValorTotal = new System.Windows.Forms.Label();
+            this.lblUsuario = new System.Windows.Forms.Label();
             this.colCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,11 +55,6 @@
             this.colTamanho = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPreco = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colQtde = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblQtdeItens = new System.Windows.Forms.Label();
-            this.tbxQtdeItens = new System.Windows.Forms.TextBox();
-            this.tbxValorTotal = new System.Windows.Forms.TextBox();
-            this.lblValorTotal = new System.Windows.Forms.Label();
-            this.lblUsuario = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -199,46 +199,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(837, 217);
             this.dataGridView1.TabIndex = 13;
             // 
-            // colCodigo
-            // 
-            this.colCodigo.HeaderText = "Código";
-            this.colCodigo.Name = "colCodigo";
-            // 
-            // colProduto
-            // 
-            this.colProduto.HeaderText = "Produto";
-            this.colProduto.Name = "colProduto";
-            // 
-            // colCategoria
-            // 
-            this.colCategoria.HeaderText = "Categoria";
-            this.colCategoria.Name = "colCategoria";
-            // 
-            // colModelo
-            // 
-            this.colModelo.HeaderText = "Modelo";
-            this.colModelo.Name = "colModelo";
-            // 
-            // colCor
-            // 
-            this.colCor.HeaderText = "Cor";
-            this.colCor.Name = "colCor";
-            // 
-            // colTamanho
-            // 
-            this.colTamanho.HeaderText = "Tamanho";
-            this.colTamanho.Name = "colTamanho";
-            // 
-            // colPreco
-            // 
-            this.colPreco.HeaderText = "Preço";
-            this.colPreco.Name = "colPreco";
-            // 
-            // colQtde
-            // 
-            this.colQtde.HeaderText = "Quantidade";
-            this.colQtde.Name = "colQtde";
-            // 
             // lblQtdeItens
             // 
             this.lblQtdeItens.AutoSize = true;
@@ -284,6 +244,47 @@
             this.lblUsuario.Size = new System.Drawing.Size(64, 18);
             this.lblUsuario.TabIndex = 18;
             this.lblUsuario.Text = "Usuário:";
+            // 
+            // colCodigo
+            // 
+            this.colCodigo.HeaderText = "Código";
+            this.colCodigo.Name = "colCodigo";
+            this.colCodigo.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // colProduto
+            // 
+            this.colProduto.HeaderText = "Produto";
+            this.colProduto.Name = "colProduto";
+            // 
+            // colCategoria
+            // 
+            this.colCategoria.HeaderText = "Categoria";
+            this.colCategoria.Name = "colCategoria";
+            // 
+            // colModelo
+            // 
+            this.colModelo.HeaderText = "Modelo";
+            this.colModelo.Name = "colModelo";
+            // 
+            // colCor
+            // 
+            this.colCor.HeaderText = "Cor";
+            this.colCor.Name = "colCor";
+            // 
+            // colTamanho
+            // 
+            this.colTamanho.HeaderText = "Tamanho";
+            this.colTamanho.Name = "colTamanho";
+            // 
+            // colPreco
+            // 
+            this.colPreco.HeaderText = "Preço";
+            this.colPreco.Name = "colPreco";
+            // 
+            // colQtde
+            // 
+            this.colQtde.HeaderText = "Quantidade";
+            this.colQtde.Name = "colQtde";
             // 
             // Venda
             // 
@@ -333,6 +334,11 @@
         private System.Windows.Forms.Label lblCodProduto;
         private System.Windows.Forms.Button btnOk;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label lblQtdeItens;
+        private System.Windows.Forms.TextBox tbxQtdeItens;
+        private System.Windows.Forms.TextBox tbxValorTotal;
+        private System.Windows.Forms.Label lblValorTotal;
+        private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCodigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn colProduto;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCategoria;
@@ -341,10 +347,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colTamanho;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPreco;
         private System.Windows.Forms.DataGridViewTextBoxColumn colQtde;
-        private System.Windows.Forms.Label lblQtdeItens;
-        private System.Windows.Forms.TextBox tbxQtdeItens;
-        private System.Windows.Forms.TextBox tbxValorTotal;
-        private System.Windows.Forms.Label lblValorTotal;
-        private System.Windows.Forms.Label lblUsuario;
     }
 }

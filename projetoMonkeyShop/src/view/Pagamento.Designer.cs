@@ -48,7 +48,7 @@
             // 
             this.lblPagamento.AutoSize = true;
             this.lblPagamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPagamento.Location = new System.Drawing.Point(146, 9);
+            this.lblPagamento.Location = new System.Drawing.Point(69, 7);
             this.lblPagamento.Name = "lblPagamento";
             this.lblPagamento.Size = new System.Drawing.Size(152, 31);
             this.lblPagamento.TabIndex = 0;
@@ -57,7 +57,7 @@
             // tbxDinheiro
             // 
             this.tbxDinheiro.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxDinheiro.Location = new System.Drawing.Point(220, 83);
+            this.tbxDinheiro.Location = new System.Drawing.Point(143, 81);
             this.tbxDinheiro.Name = "tbxDinheiro";
             this.tbxDinheiro.Size = new System.Drawing.Size(124, 31);
             this.tbxDinheiro.TabIndex = 1;
@@ -65,7 +65,7 @@
             // btnFinalizar
             // 
             this.btnFinalizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFinalizar.Location = new System.Drawing.Point(140, 309);
+            this.btnFinalizar.Location = new System.Drawing.Point(95, 318);
             this.btnFinalizar.Name = "btnFinalizar";
             this.btnFinalizar.Size = new System.Drawing.Size(126, 50);
             this.btnFinalizar.TabIndex = 2;
@@ -76,7 +76,7 @@
             // 
             this.rbtnDinheiro.AutoSize = true;
             this.rbtnDinheiro.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnDinheiro.Location = new System.Drawing.Point(104, 85);
+            this.rbtnDinheiro.Location = new System.Drawing.Point(27, 83);
             this.rbtnDinheiro.Name = "rbtnDinheiro";
             this.rbtnDinheiro.Size = new System.Drawing.Size(110, 29);
             this.rbtnDinheiro.TabIndex = 3;
@@ -87,7 +87,7 @@
             // btnCancelar
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(140, 365);
+            this.btnCancelar.Location = new System.Drawing.Point(95, 374);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(126, 50);
             this.btnCancelar.TabIndex = 4;
@@ -98,7 +98,7 @@
             // 
             this.rbtnPix.AutoSize = true;
             this.rbtnPix.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnPix.Location = new System.Drawing.Point(104, 128);
+            this.rbtnPix.Location = new System.Drawing.Point(27, 126);
             this.rbtnPix.Name = "rbtnPix";
             this.rbtnPix.Size = new System.Drawing.Size(60, 29);
             this.rbtnPix.TabIndex = 6;
@@ -109,7 +109,7 @@
             // tbxPix
             // 
             this.tbxPix.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxPix.Location = new System.Drawing.Point(220, 126);
+            this.tbxPix.Location = new System.Drawing.Point(143, 124);
             this.tbxPix.Name = "tbxPix";
             this.tbxPix.Size = new System.Drawing.Size(124, 31);
             this.tbxPix.TabIndex = 5;
@@ -118,7 +118,7 @@
             // 
             this.rbtnDebito.AutoSize = true;
             this.rbtnDebito.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnDebito.Location = new System.Drawing.Point(104, 175);
+            this.rbtnDebito.Location = new System.Drawing.Point(27, 173);
             this.rbtnDebito.Name = "rbtnDebito";
             this.rbtnDebito.Size = new System.Drawing.Size(92, 29);
             this.rbtnDebito.TabIndex = 8;
@@ -129,7 +129,7 @@
             // tbxDebito
             // 
             this.tbxDebito.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxDebito.Location = new System.Drawing.Point(220, 173);
+            this.tbxDebito.Location = new System.Drawing.Point(143, 171);
             this.tbxDebito.Name = "tbxDebito";
             this.tbxDebito.Size = new System.Drawing.Size(124, 31);
             this.tbxDebito.TabIndex = 7;
@@ -138,7 +138,7 @@
             // 
             this.rbtnCredito.AutoSize = true;
             this.rbtnCredito.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnCredito.Location = new System.Drawing.Point(104, 228);
+            this.rbtnCredito.Location = new System.Drawing.Point(27, 226);
             this.rbtnCredito.Name = "rbtnCredito";
             this.rbtnCredito.Size = new System.Drawing.Size(99, 29);
             this.rbtnCredito.TabIndex = 10;
@@ -149,7 +149,7 @@
             // tbxCredito
             // 
             this.tbxCredito.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxCredito.Location = new System.Drawing.Point(220, 226);
+            this.tbxCredito.Location = new System.Drawing.Point(143, 224);
             this.tbxCredito.Name = "tbxCredito";
             this.tbxCredito.Size = new System.Drawing.Size(124, 31);
             this.tbxCredito.TabIndex = 9;
@@ -158,7 +158,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(438, 450);
+            this.ClientSize = new System.Drawing.Size(321, 450);
             this.Controls.Add(this.rbtnCredito);
             this.Controls.Add(this.tbxCredito);
             this.Controls.Add(this.rbtnDebito);
@@ -172,6 +172,7 @@
             this.Controls.Add(this.lblPagamento);
             this.Name = "Pagamento";
             this.Text = "Pagamento";
+            this.Load += new System.EventHandler(this.Pagamento_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

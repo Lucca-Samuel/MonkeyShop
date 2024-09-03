@@ -17,5 +17,9 @@ namespace projetoMonkeyShop.src.view
             InitializeComponent();
         }
 
+        private void Pagamento_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
