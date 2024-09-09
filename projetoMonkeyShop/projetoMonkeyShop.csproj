@@ -71,18 +71,6 @@
     <Compile Include="src\view\CadastroFornecedores.Designer.cs">
       <DependentUpon>CadastroFornecedores.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\view\Form2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="src\view\Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="src\view\Form3.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="src\view\Form3.Designer.cs">
-      <DependentUpon>Form3.cs</DependentUpon>
-    </Compile>
     <Compile Include="src\view\FormCadastro.cs">
       <SubType>Form</SubType>
     </Compile>

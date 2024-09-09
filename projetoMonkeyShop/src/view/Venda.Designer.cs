@@ -107,7 +107,7 @@
             // btnVenda
             // 
             this.btnVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVenda.Location = new System.Drawing.Point(17, 94);
+            this.btnVenda.Location = new System.Drawing.Point(37, 94);
             this.btnVenda.Name = "btnVenda";
             this.btnVenda.Size = new System.Drawing.Size(223, 50);
             this.btnVenda.TabIndex = 5;
@@ -117,7 +117,7 @@
             // btnOrcamento
             // 
             this.btnOrcamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOrcamento.Location = new System.Drawing.Point(17, 163);
+            this.btnOrcamento.Location = new System.Drawing.Point(37, 163);
             this.btnOrcamento.Name = "btnOrcamento";
             this.btnOrcamento.Size = new System.Drawing.Size(223, 50);
             this.btnOrcamento.TabIndex = 6;
@@ -127,7 +127,7 @@
             // btnPagamento
             // 
             this.btnPagamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPagamento.Location = new System.Drawing.Point(296, 94);
+            this.btnPagamento.Location = new System.Drawing.Point(451, 94);
             this.btnPagamento.Name = "btnPagamento";
             this.btnPagamento.Size = new System.Drawing.Size(223, 50);
             this.btnPagamento.TabIndex = 7;
@@ -137,7 +137,7 @@
             // btnCancelarVenda
             // 
             this.btnCancelarVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelarVenda.Location = new System.Drawing.Point(296, 163);
+            this.btnCancelarVenda.Location = new System.Drawing.Point(451, 163);
             this.btnCancelarVenda.Name = "btnCancelarVenda";
             this.btnCancelarVenda.Size = new System.Drawing.Size(223, 50);
             this.btnCancelarVenda.TabIndex = 8;
@@ -148,7 +148,7 @@
             // 
             this.lblInclusao.AutoSize = true;
             this.lblInclusao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInclusao.Location = new System.Drawing.Point(17, 226);
+            this.lblInclusao.Location = new System.Drawing.Point(17, 258);
             this.lblInclusao.Name = "lblInclusao";
             this.lblInclusao.Size = new System.Drawing.Size(128, 16);
             this.lblInclusao.TabIndex = 9;
@@ -157,7 +157,7 @@
             // tbxInclusao
             // 
             this.tbxInclusao.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxInclusao.Location = new System.Drawing.Point(21, 272);
+            this.tbxInclusao.Location = new System.Drawing.Point(21, 304);
             this.tbxInclusao.Name = "tbxInclusao";
             this.tbxInclusao.Size = new System.Drawing.Size(676, 35);
             this.tbxInclusao.TabIndex = 10;
@@ -166,7 +166,7 @@
             // 
             this.lblCodProduto.AutoSize = true;
             this.lblCodProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodProduto.Location = new System.Drawing.Point(17, 245);
+            this.lblCodProduto.Location = new System.Drawing.Point(17, 277);
             this.lblCodProduto.Name = "lblCodProduto";
             this.lblCodProduto.Size = new System.Drawing.Size(116, 24);
             this.lblCodProduto.TabIndex = 11;
@@ -175,7 +175,7 @@
             // btnOk
             // 
             this.btnOk.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOk.Location = new System.Drawing.Point(718, 272);
+            this.btnOk.Location = new System.Drawing.Point(718, 304);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(140, 35);
             this.btnOk.TabIndex = 12;
@@ -194,16 +194,16 @@
             this.colTamanho,
             this.colPreco,
             this.colQtde});
-            this.dataGridView1.Location = new System.Drawing.Point(21, 331);
+            this.dataGridView1.Location = new System.Drawing.Point(21, 345);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(837, 217);
+            this.dataGridView1.Size = new System.Drawing.Size(1019, 217);
             this.dataGridView1.TabIndex = 13;
             // 
             // lblQtdeItens
             // 
             this.lblQtdeItens.AutoSize = true;
             this.lblQtdeItens.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQtdeItens.Location = new System.Drawing.Point(16, 571);
+            this.lblQtdeItens.Location = new System.Drawing.Point(16, 614);
             this.lblQtdeItens.Name = "lblQtdeItens";
             this.lblQtdeItens.Size = new System.Drawing.Size(129, 29);
             this.lblQtdeItens.TabIndex = 14;
@@ -212,7 +212,7 @@
             // tbxQtdeItens
             // 
             this.tbxQtdeItens.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxQtdeItens.Location = new System.Drawing.Point(142, 565);
+            this.tbxQtdeItens.Location = new System.Drawing.Point(142, 614);
             this.tbxQtdeItens.Name = "tbxQtdeItens";
             this.tbxQtdeItens.Size = new System.Drawing.Size(98, 35);
             this.tbxQtdeItens.TabIndex = 15;
@@ -220,7 +220,7 @@
             // tbxValorTotal
             // 
             this.tbxValorTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxValorTotal.Location = new System.Drawing.Point(409, 565);
+            this.tbxValorTotal.Location = new System.Drawing.Point(409, 614);
             this.tbxValorTotal.Name = "tbxValorTotal";
             this.tbxValorTotal.Size = new System.Drawing.Size(134, 35);
             this.tbxValorTotal.TabIndex = 17;
@@ -229,7 +229,7 @@
             // 
             this.lblValorTotal.AutoSize = true;
             this.lblValorTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblValorTotal.Location = new System.Drawing.Point(267, 571);
+            this.lblValorTotal.Location = new System.Drawing.Point(267, 614);
             this.lblValorTotal.Name = "lblValorTotal";
             this.lblValorTotal.Size = new System.Drawing.Size(136, 29);
             this.lblValorTotal.TabIndex = 16;
@@ -239,7 +239,7 @@
             // 
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.Location = new System.Drawing.Point(12, 649);
+            this.lblUsuario.Location = new System.Drawing.Point(12, 714);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(64, 18);
             this.lblUsuario.TabIndex = 18;
@@ -250,41 +250,49 @@
             this.colCodigo.HeaderText = "Código";
             this.colCodigo.Name = "colCodigo";
             this.colCodigo.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colCodigo.Width = 105;
             // 
             // colProduto
             // 
             this.colProduto.HeaderText = "Produto";
             this.colProduto.Name = "colProduto";
+            this.colProduto.Width = 127;
             // 
             // colCategoria
             // 
             this.colCategoria.HeaderText = "Categoria";
             this.colCategoria.Name = "colCategoria";
+            this.colCategoria.Width = 127;
             // 
             // colModelo
             // 
             this.colModelo.HeaderText = "Modelo";
             this.colModelo.Name = "colModelo";
+            this.colModelo.Width = 127;
             // 
             // colCor
             // 
             this.colCor.HeaderText = "Cor";
             this.colCor.Name = "colCor";
+            this.colCor.Width = 127;
             // 
             // colTamanho
             // 
             this.colTamanho.HeaderText = "Tamanho";
             this.colTamanho.Name = "colTamanho";
+            this.colTamanho.Width = 127;
             // 
             // colPreco
             // 
             this.colPreco.HeaderText = "Preço";
             this.colPreco.Name = "colPreco";
+            this.colPreco.Width = 127;
             // 
             // colQtde
             // 
             this.colQtde.HeaderText = "Quantidade";
             this.colQtde.Name = "colQtde";
+            this.colQtde.Width = 110;
             // 
             // Venda
             // 
