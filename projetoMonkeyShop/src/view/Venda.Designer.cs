@@ -42,11 +42,6 @@
             this.lblCodProduto = new System.Windows.Forms.Label();
             this.btnOk = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.lblQtdeItens = new System.Windows.Forms.Label();
-            this.tbxQtdeItens = new System.Windows.Forms.TextBox();
-            this.tbxValorTotal = new System.Windows.Forms.TextBox();
-            this.lblValorTotal = new System.Windows.Forms.Label();
-            this.lblUsuario = new System.Windows.Forms.Label();
             this.colCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,6 +50,11 @@
             this.colTamanho = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPreco = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colQtde = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblQtdeItens = new System.Windows.Forms.Label();
+            this.tbxQtdeItens = new System.Windows.Forms.TextBox();
+            this.tbxValorTotal = new System.Windows.Forms.TextBox();
+            this.lblValorTotal = new System.Windows.Forms.Label();
+            this.lblUsuario = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -107,7 +107,7 @@
             // btnVenda
             // 
             this.btnVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVenda.Location = new System.Drawing.Point(37, 94);
+            this.btnVenda.Location = new System.Drawing.Point(17, 94);
             this.btnVenda.Name = "btnVenda";
             this.btnVenda.Size = new System.Drawing.Size(223, 50);
             this.btnVenda.TabIndex = 5;
@@ -117,7 +117,7 @@
             // btnOrcamento
             // 
             this.btnOrcamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOrcamento.Location = new System.Drawing.Point(37, 163);
+            this.btnOrcamento.Location = new System.Drawing.Point(17, 163);
             this.btnOrcamento.Name = "btnOrcamento";
             this.btnOrcamento.Size = new System.Drawing.Size(223, 50);
             this.btnOrcamento.TabIndex = 6;
@@ -199,52 +199,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(1019, 217);
             this.dataGridView1.TabIndex = 13;
             // 
-            // lblQtdeItens
-            // 
-            this.lblQtdeItens.AutoSize = true;
-            this.lblQtdeItens.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQtdeItens.Location = new System.Drawing.Point(16, 614);
-            this.lblQtdeItens.Name = "lblQtdeItens";
-            this.lblQtdeItens.Size = new System.Drawing.Size(129, 29);
-            this.lblQtdeItens.TabIndex = 14;
-            this.lblQtdeItens.Text = "Qtde Itens:";
-            // 
-            // tbxQtdeItens
-            // 
-            this.tbxQtdeItens.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxQtdeItens.Location = new System.Drawing.Point(142, 614);
-            this.tbxQtdeItens.Name = "tbxQtdeItens";
-            this.tbxQtdeItens.Size = new System.Drawing.Size(98, 35);
-            this.tbxQtdeItens.TabIndex = 15;
-            // 
-            // tbxValorTotal
-            // 
-            this.tbxValorTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxValorTotal.Location = new System.Drawing.Point(409, 614);
-            this.tbxValorTotal.Name = "tbxValorTotal";
-            this.tbxValorTotal.Size = new System.Drawing.Size(134, 35);
-            this.tbxValorTotal.TabIndex = 17;
-            // 
-            // lblValorTotal
-            // 
-            this.lblValorTotal.AutoSize = true;
-            this.lblValorTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblValorTotal.Location = new System.Drawing.Point(267, 614);
-            this.lblValorTotal.Name = "lblValorTotal";
-            this.lblValorTotal.Size = new System.Drawing.Size(136, 29);
-            this.lblValorTotal.TabIndex = 16;
-            this.lblValorTotal.Text = "Valor Total:";
-            // 
-            // lblUsuario
-            // 
-            this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.Location = new System.Drawing.Point(12, 714);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(64, 18);
-            this.lblUsuario.TabIndex = 18;
-            this.lblUsuario.Text = "Usuário:";
-            // 
             // colCodigo
             // 
             this.colCodigo.HeaderText = "Código";
@@ -293,6 +247,52 @@
             this.colQtde.HeaderText = "Quantidade";
             this.colQtde.Name = "colQtde";
             this.colQtde.Width = 110;
+            // 
+            // lblQtdeItens
+            // 
+            this.lblQtdeItens.AutoSize = true;
+            this.lblQtdeItens.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQtdeItens.Location = new System.Drawing.Point(16, 614);
+            this.lblQtdeItens.Name = "lblQtdeItens";
+            this.lblQtdeItens.Size = new System.Drawing.Size(129, 29);
+            this.lblQtdeItens.TabIndex = 14;
+            this.lblQtdeItens.Text = "Qtde Itens:";
+            // 
+            // tbxQtdeItens
+            // 
+            this.tbxQtdeItens.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxQtdeItens.Location = new System.Drawing.Point(142, 614);
+            this.tbxQtdeItens.Name = "tbxQtdeItens";
+            this.tbxQtdeItens.Size = new System.Drawing.Size(98, 35);
+            this.tbxQtdeItens.TabIndex = 15;
+            // 
+            // tbxValorTotal
+            // 
+            this.tbxValorTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxValorTotal.Location = new System.Drawing.Point(409, 614);
+            this.tbxValorTotal.Name = "tbxValorTotal";
+            this.tbxValorTotal.Size = new System.Drawing.Size(134, 35);
+            this.tbxValorTotal.TabIndex = 17;
+            // 
+            // lblValorTotal
+            // 
+            this.lblValorTotal.AutoSize = true;
+            this.lblValorTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblValorTotal.Location = new System.Drawing.Point(267, 614);
+            this.lblValorTotal.Name = "lblValorTotal";
+            this.lblValorTotal.Size = new System.Drawing.Size(136, 29);
+            this.lblValorTotal.TabIndex = 16;
+            this.lblValorTotal.Text = "Valor Total:";
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.Location = new System.Drawing.Point(12, 714);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(64, 18);
+            this.lblUsuario.TabIndex = 18;
+            this.lblUsuario.Text = "Usuário:";
             // 
             // Venda
             // 

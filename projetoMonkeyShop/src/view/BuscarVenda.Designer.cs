@@ -32,15 +32,15 @@
             this.lblBuscarVenda = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.colCodVenda = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colData = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnVisualizarVenda = new System.Windows.Forms.Button();
             this.btnGerarRelatorio = new System.Windows.Forms.Button();
             this.rbtnCsv = new System.Windows.Forms.RadioButton();
             this.rbtnXlsx = new System.Windows.Forms.RadioButton();
             this.rbtnPdf = new System.Windows.Forms.RadioButton();
+            this.colCodVenda = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colData = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,28 +82,8 @@
             this.colValor});
             this.dataGridView1.Location = new System.Drawing.Point(21, 109);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(823, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(843, 150);
             this.dataGridView1.TabIndex = 6;
-            // 
-            // colCodVenda
-            // 
-            this.colCodVenda.HeaderText = "Cód Venda";
-            this.colCodVenda.Name = "colCodVenda";
-            // 
-            // colData
-            // 
-            this.colData.HeaderText = "Data";
-            this.colData.Name = "colData";
-            // 
-            // colCliente
-            // 
-            this.colCliente.HeaderText = "Cliente";
-            this.colCliente.Name = "colCliente";
-            // 
-            // colValor
-            // 
-            this.colValor.HeaderText = "Valor";
-            this.colValor.Name = "colValor";
             // 
             // btnVisualizarVenda
             // 
@@ -161,6 +141,30 @@
             this.rbtnPdf.Text = ".PDF";
             this.rbtnPdf.UseVisualStyleBackColor = true;
             // 
+            // colCodVenda
+            // 
+            this.colCodVenda.HeaderText = "Cód Venda";
+            this.colCodVenda.Name = "colCodVenda";
+            this.colCodVenda.Width = 200;
+            // 
+            // colData
+            // 
+            this.colData.HeaderText = "Data";
+            this.colData.Name = "colData";
+            this.colData.Width = 200;
+            // 
+            // colCliente
+            // 
+            this.colCliente.HeaderText = "Cliente";
+            this.colCliente.Name = "colCliente";
+            this.colCliente.Width = 200;
+            // 
+            // colValor
+            // 
+            this.colValor.HeaderText = "Valor";
+            this.colValor.Name = "colValor";
+            this.colValor.Width = 200;
+            // 
             // BuscarVenda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -189,14 +193,14 @@
         private System.Windows.Forms.Label lblBuscarVenda;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colCodVenda;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colData;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colCliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colValor;
         private System.Windows.Forms.Button btnVisualizarVenda;
         private System.Windows.Forms.Button btnGerarRelatorio;
         private System.Windows.Forms.RadioButton rbtnCsv;
         private System.Windows.Forms.RadioButton rbtnXlsx;
         private System.Windows.Forms.RadioButton rbtnPdf;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCodVenda;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colData;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colValor;
     }
 }
