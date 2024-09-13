@@ -32,8 +32,15 @@ namespace projetoMonkeyShop.src.conexao
         */
         public SqlConnection conectar()
         {
-            con = new SqlConnection(@"Persist Security Info=False;User ID= "+usuario+ ";Password= "+senha+ "; Initial Catalog= "+nomeDoBanco+ ";Server= "+servidor+";Encrypt=False;");
-            return null;
+            try
+            {
+                con = new SqlConnection(@"Persist Security Info=False;User ID= " + usuario + ";Password= " + senha + "; Initial Catalog= " + nomeDoBanco + ";Server= " + servidor + ";Encrypt=False;");
+            }
+            catch {
+            
+            }
+            finally { con.Close(); }
+            
         }
     }
 }
