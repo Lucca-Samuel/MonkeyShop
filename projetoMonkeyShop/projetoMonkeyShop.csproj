@@ -53,6 +53,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="src\conexao\Conexao.cs" />
     <Compile Include="src\view\avisos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,7 +172,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="src\conexao\" />
     <Folder Include="src\controller\" />
     <Folder Include="src\dao\" />
     <Folder Include="src\model\" />
