@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using projetoMonkeyShop.src.view;
 using System.Windows.Forms;
+using System.Data;
 
 namespace projetoMonkeyShop.src.conexao
 {
@@ -14,6 +15,9 @@ namespace projetoMonkeyShop.src.conexao
         private bool status = false;
         private string mensagem = "";   //variavel que vai informar o status da conexao
         private SqlConnection con = null;  //variavel para conexao
+        private SqlCommand cm = null; //variavel para comandos sql
+        private SqlDataReader dt = null; //variavel para consulta sql
+
 
         private string servidor = "TAU0588413W10-1";
         private string nomeDoBanco = "monkey_shop";
@@ -56,9 +60,6 @@ namespace projetoMonkeyShop.src.conexao
         public bool ExecultarConsulta(string pSql)
         {
 
-            SqlCommand cm = null;
-            SqlDataReader dt = null;
-
             try
             {
                 cm = new SqlCommand(pSql, con);
@@ -73,10 +74,7 @@ namespace projetoMonkeyShop.src.conexao
 
                 return false;
 
-            } finally
-            {
-                con.Close();
-            } 
+            }
             return true;
         }
 
@@ -84,13 +82,107 @@ namespace projetoMonkeyShop.src.conexao
         public bool ExecutarUpdateDelet (string pSql) {
             try
             {
+                if(con.State != ConnectionState.Open)
+                {
+                    con.Open();
+                }
+                
+                cm= new SqlCommand(pSql, con);
+
+                cm.ExecuteNonQuery();
 
             }
-            catch() {
-            
+            catch(SqlException exception) {
+                MessageBox.Show(exception.Message);
+                return false;
             }
             return true;
         }
 
+        public int ExecutarInsert(string pSql) {
+            int status = 0;
+            cm = null;
+            try
+            {
+                cm = new SqlCommand(pSql, con);
+                cm.ExecuteNonQuery();
+
+                // Consultar o último ID inserido
+                cm.CommandText = "SELECT SCOPE_IDENTITY();";
+
+                // Executar a consulta e recuperar o último ID inserido
+                status = Convert.ToInt32(cm.ExecuteScalar());
+
+            }
+            catch(SqlException exception)
+            {
+                MessageBox.Show(exception.Message);
+                Console.WriteLine(exception.ToString());
+            }
+            return status;
+        }
+
+        public bool FecharConexao(string pSql)
+        {
+            try
+            {
+                if(dt != null && cm != null){
+                dt.Close();
+                cm.Dispose();
+                }
+
+                if(con != null && con.State == ConnectionState.Open)
+                {
+                    con.Close();
+                }
+
+                return true;
+
+            }catch(SqlException exception)
+            {
+                MessageBox.Show(exception.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+        }
+
+        public void SetMensagem(string mensagem)
+        {
+            this.mensagem = mensagem;
+        }
+
+        public void SetCon(SqlConnection con)
+        {
+            this.con = con;
+        }
+
+        public void SetStatement(SqlCommand statement)
+        {
+            this.cm = statement;
+        }
+
+        public void SetResultSet(SqlDataReader resultSet)
+        {
+            this.dt = resultSet;
+        }
+
+        public void SetServidor(string servidor)
+        {
+            this.servidor = servidor;
+        }
+
+        public void SetNomeDoBanco(string nomeDoBanco)
+        {
+            this.nomeDoBanco = nomeDoBanco;
+        }
+
+        public void SetUsuario(string usuario)
+        {
+            this.usuario = usuario;
+        }
+
+        public void SetSenha(string senha)
+        {
+            this.senha = senha;
+        }
     }
 }

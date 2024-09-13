@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace projetoMonkeyShop.src.view
 {
-    /**internal static class Program
+   internal static class Program
     {
         /// <summary>
         /// Ponto de entrada principal para o aplicativo.
@@ -19,5 +19,5 @@ namespace projetoMonkeyShop.src.view
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FrmEstoque());
         }
-    }**/
+    }
 }
