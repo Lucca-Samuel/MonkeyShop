@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,5 +17,34 @@ namespace projetoMonkeyShop.src.view
         {
             InitializeComponent();
         }
+
+        private void btnVendas_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Venda vendaForm = new Venda();
+
+                vendaForm.Show();
+
+            } catch(Exception exception)
+            {
+                MessageBox.Show(exception.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnEstoque_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                FrmEstoque estoqueView = new FrmEstoque();
+
+                estoqueView.Show();
+
+            }catch(Exception exception)
+            {
+                MessageBox.Show(exception.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
     }
 }

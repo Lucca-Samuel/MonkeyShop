@@ -30,7 +30,7 @@
         {
             this.btnVendas = new System.Windows.Forms.Button();
             this.btnEstoque = new System.Windows.Forms.Button();
-            this.btnRelatorios = new System.Windows.Forms.Button();
+            this.btnAdm = new System.Windows.Forms.Button();
             this.btnMensagem = new System.Windows.Forms.Button();
             this.btnTitulo = new System.Windows.Forms.Label();
             this.lblUser = new System.Windows.Forms.Label();
@@ -39,39 +39,41 @@
             // btnVendas
             // 
             this.btnVendas.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVendas.Location = new System.Drawing.Point(330, 86);
+            this.btnVendas.Location = new System.Drawing.Point(313, 86);
             this.btnVendas.Name = "btnVendas";
-            this.btnVendas.Size = new System.Drawing.Size(150, 55);
+            this.btnVendas.Size = new System.Drawing.Size(184, 55);
             this.btnVendas.TabIndex = 0;
             this.btnVendas.Text = "Vendas";
             this.btnVendas.UseVisualStyleBackColor = true;
+            this.btnVendas.Click += new System.EventHandler(this.btnVendas_Click);
             // 
             // btnEstoque
             // 
             this.btnEstoque.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEstoque.Location = new System.Drawing.Point(330, 164);
+            this.btnEstoque.Location = new System.Drawing.Point(313, 161);
             this.btnEstoque.Name = "btnEstoque";
-            this.btnEstoque.Size = new System.Drawing.Size(150, 55);
+            this.btnEstoque.Size = new System.Drawing.Size(184, 55);
             this.btnEstoque.TabIndex = 1;
             this.btnEstoque.Text = "Estoque";
             this.btnEstoque.UseVisualStyleBackColor = true;
+            this.btnEstoque.Click += new System.EventHandler(this.btnEstoque_Click);
             // 
-            // btnRelatorios
+            // btnAdm
             // 
-            this.btnRelatorios.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRelatorios.Location = new System.Drawing.Point(330, 243);
-            this.btnRelatorios.Name = "btnRelatorios";
-            this.btnRelatorios.Size = new System.Drawing.Size(150, 55);
-            this.btnRelatorios.TabIndex = 2;
-            this.btnRelatorios.Text = "Relatórios";
-            this.btnRelatorios.UseVisualStyleBackColor = true;
+            this.btnAdm.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdm.Location = new System.Drawing.Point(313, 314);
+            this.btnAdm.Name = "btnAdm";
+            this.btnAdm.Size = new System.Drawing.Size(185, 55);
+            this.btnAdm.TabIndex = 2;
+            this.btnAdm.Text = "Administrativo";
+            this.btnAdm.UseVisualStyleBackColor = true;
             // 
             // btnMensagem
             // 
             this.btnMensagem.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMensagem.Location = new System.Drawing.Point(330, 325);
+            this.btnMensagem.Location = new System.Drawing.Point(313, 238);
             this.btnMensagem.Name = "btnMensagem";
-            this.btnMensagem.Size = new System.Drawing.Size(150, 55);
+            this.btnMensagem.Size = new System.Drawing.Size(184, 55);
             this.btnMensagem.TabIndex = 3;
             this.btnMensagem.Text = "Mensagem";
             this.btnMensagem.UseVisualStyleBackColor = true;
@@ -104,7 +106,7 @@
             this.Controls.Add(this.lblUser);
             this.Controls.Add(this.btnTitulo);
             this.Controls.Add(this.btnMensagem);
-            this.Controls.Add(this.btnRelatorios);
+            this.Controls.Add(this.btnAdm);
             this.Controls.Add(this.btnEstoque);
             this.Controls.Add(this.btnVendas);
             this.Name = "PaginaInicial";
@@ -118,7 +120,7 @@
 
         private System.Windows.Forms.Button btnVendas;
         private System.Windows.Forms.Button btnEstoque;
-        private System.Windows.Forms.Button btnRelatorios;
+        private System.Windows.Forms.Button btnAdm;
         private System.Windows.Forms.Button btnMensagem;
         private System.Windows.Forms.Label btnTitulo;
         private System.Windows.Forms.Label lblUser;
