@@ -54,6 +54,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="src\conexao\Conexao.cs" />
+    <Compile Include="src\dao\DaoProdutos.cs" />
+    <Compile Include="src\model\MProdutos.cs" />
     <Compile Include="src\view\avisos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,8 +175,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="src\controller\" />
-    <Folder Include="src\dao\" />
-    <Folder Include="src\model\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="src\imagens\mais.png" />
