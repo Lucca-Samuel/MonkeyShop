@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.lblWhatsapp = new System.Windows.Forms.Label();
             this.tbxWhatsapp = new System.Windows.Forms.TextBox();
             this.lblTelefone = new System.Windows.Forms.Label();
@@ -36,7 +35,6 @@
             this.tbxEmail = new System.Windows.Forms.TextBox();
             this.lblNome = new System.Windows.Forms.Label();
             this.tbxNome = new System.Windows.Forms.TextBox();
-            this.btnCadastrar = new System.Windows.Forms.Button();
             this.lblCadastro = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
@@ -59,17 +57,10 @@
             this.tbxLogradouro = new System.Windows.Forms.TextBox();
             this.lblCep = new System.Windows.Forms.Label();
             this.tbxCep = new System.Windows.Forms.TextBox();
+            this.btnCriarProd = new System.Windows.Forms.Button();
+            this.btnSalvarProd = new System.Windows.Forms.Button();
+            this.btnCancelarProd = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(434, 515);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(147, 53);
-            this.btnCancelar.TabIndex = 57;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
             // 
             // lblWhatsapp
             // 
@@ -133,16 +124,6 @@
             this.tbxNome.Size = new System.Drawing.Size(534, 31);
             this.tbxNome.TabIndex = 35;
             // 
-            // btnCadastrar
-            // 
-            this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrar.Location = new System.Drawing.Point(434, 433);
-            this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(147, 53);
-            this.btnCadastrar.TabIndex = 34;
-            this.btnCadastrar.Text = "Cadastrar";
-            this.btnCadastrar.UseVisualStyleBackColor = true;
-            // 
             // lblCadastro
             // 
             this.lblCadastro.AutoSize = true;
@@ -203,7 +184,7 @@
             // 
             this.lblPais.AutoSize = true;
             this.lblPais.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPais.Location = new System.Drawing.Point(742, 295);
+            this.lblPais.Location = new System.Drawing.Point(749, 334);
             this.lblPais.Name = "lblPais";
             this.lblPais.Size = new System.Drawing.Size(54, 25);
             this.lblPais.TabIndex = 79;
@@ -212,7 +193,7 @@
             // tbxPais
             // 
             this.tbxPais.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxPais.Location = new System.Drawing.Point(747, 323);
+            this.tbxPais.Location = new System.Drawing.Point(754, 362);
             this.tbxPais.Name = "tbxPais";
             this.tbxPais.Size = new System.Drawing.Size(272, 31);
             this.tbxPais.TabIndex = 78;
@@ -221,7 +202,7 @@
             // 
             this.lblEstado.AutoSize = true;
             this.lblEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstado.Location = new System.Drawing.Point(633, 295);
+            this.lblEstado.Location = new System.Drawing.Point(640, 334);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(79, 25);
             this.lblEstado.TabIndex = 77;
@@ -230,7 +211,7 @@
             // tbxEstado
             // 
             this.tbxEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxEstado.Location = new System.Drawing.Point(638, 323);
+            this.tbxEstado.Location = new System.Drawing.Point(645, 362);
             this.tbxEstado.Name = "tbxEstado";
             this.tbxEstado.Size = new System.Drawing.Size(88, 31);
             this.tbxEstado.TabIndex = 76;
@@ -239,7 +220,7 @@
             // 
             this.lblCidade.AutoSize = true;
             this.lblCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCidade.Location = new System.Drawing.Point(337, 295);
+            this.lblCidade.Location = new System.Drawing.Point(344, 334);
             this.lblCidade.Name = "lblCidade";
             this.lblCidade.Size = new System.Drawing.Size(80, 25);
             this.lblCidade.TabIndex = 75;
@@ -248,7 +229,7 @@
             // tbxCidade
             // 
             this.tbxCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxCidade.Location = new System.Drawing.Point(342, 323);
+            this.tbxCidade.Location = new System.Drawing.Point(349, 362);
             this.tbxCidade.Name = "tbxCidade";
             this.tbxCidade.Size = new System.Drawing.Size(272, 31);
             this.tbxCidade.TabIndex = 74;
@@ -257,7 +238,7 @@
             // 
             this.lblBairro.AutoSize = true;
             this.lblBairro.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBairro.Location = new System.Drawing.Point(19, 295);
+            this.lblBairro.Location = new System.Drawing.Point(26, 334);
             this.lblBairro.Name = "lblBairro";
             this.lblBairro.Size = new System.Drawing.Size(69, 25);
             this.lblBairro.TabIndex = 73;
@@ -266,7 +247,7 @@
             // tbxBairro
             // 
             this.tbxBairro.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxBairro.Location = new System.Drawing.Point(24, 323);
+            this.tbxBairro.Location = new System.Drawing.Point(31, 362);
             this.tbxBairro.Name = "tbxBairro";
             this.tbxBairro.Size = new System.Drawing.Size(291, 31);
             this.tbxBairro.TabIndex = 72;
@@ -275,7 +256,7 @@
             // 
             this.lblComplemento.AutoSize = true;
             this.lblComplemento.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblComplemento.Location = new System.Drawing.Point(742, 216);
+            this.lblComplemento.Location = new System.Drawing.Point(749, 255);
             this.lblComplemento.Name = "lblComplemento";
             this.lblComplemento.Size = new System.Drawing.Size(144, 25);
             this.lblComplemento.TabIndex = 71;
@@ -284,7 +265,7 @@
             // tbxComplemento
             // 
             this.tbxComplemento.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxComplemento.Location = new System.Drawing.Point(747, 244);
+            this.tbxComplemento.Location = new System.Drawing.Point(754, 283);
             this.tbxComplemento.Name = "tbxComplemento";
             this.tbxComplemento.Size = new System.Drawing.Size(272, 31);
             this.tbxComplemento.TabIndex = 70;
@@ -293,7 +274,7 @@
             // 
             this.lblNumero.AutoSize = true;
             this.lblNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumero.Location = new System.Drawing.Point(576, 216);
+            this.lblNumero.Location = new System.Drawing.Point(583, 255);
             this.lblNumero.Name = "lblNumero";
             this.lblNumero.Size = new System.Drawing.Size(87, 25);
             this.lblNumero.TabIndex = 69;
@@ -302,7 +283,7 @@
             // tbxNumero
             // 
             this.tbxNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxNumero.Location = new System.Drawing.Point(581, 244);
+            this.tbxNumero.Location = new System.Drawing.Point(588, 283);
             this.tbxNumero.Name = "tbxNumero";
             this.tbxNumero.Size = new System.Drawing.Size(135, 31);
             this.tbxNumero.TabIndex = 68;
@@ -311,7 +292,7 @@
             // 
             this.lblLogradouro.AutoSize = true;
             this.lblLogradouro.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLogradouro.Location = new System.Drawing.Point(175, 216);
+            this.lblLogradouro.Location = new System.Drawing.Point(182, 255);
             this.lblLogradouro.Name = "lblLogradouro";
             this.lblLogradouro.Size = new System.Drawing.Size(122, 25);
             this.lblLogradouro.TabIndex = 67;
@@ -320,7 +301,7 @@
             // tbxLogradouro
             // 
             this.tbxLogradouro.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxLogradouro.Location = new System.Drawing.Point(180, 244);
+            this.tbxLogradouro.Location = new System.Drawing.Point(187, 283);
             this.tbxLogradouro.Name = "tbxLogradouro";
             this.tbxLogradouro.Size = new System.Drawing.Size(370, 31);
             this.tbxLogradouro.TabIndex = 66;
@@ -329,7 +310,7 @@
             // 
             this.lblCep.AutoSize = true;
             this.lblCep.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCep.Location = new System.Drawing.Point(19, 216);
+            this.lblCep.Location = new System.Drawing.Point(26, 255);
             this.lblCep.Name = "lblCep";
             this.lblCep.Size = new System.Drawing.Size(55, 25);
             this.lblCep.TabIndex = 65;
@@ -338,16 +319,58 @@
             // tbxCep
             // 
             this.tbxCep.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxCep.Location = new System.Drawing.Point(24, 244);
+            this.tbxCep.Location = new System.Drawing.Point(31, 283);
             this.tbxCep.Name = "tbxCep";
             this.tbxCep.Size = new System.Drawing.Size(135, 31);
             this.tbxCep.TabIndex = 64;
+            // 
+            // btnCriarProd
+            // 
+            this.btnCriarProd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnCriarProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCriarProd.Image = global::projetoMonkeyShop.Properties.Resources._new;
+            this.btnCriarProd.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCriarProd.Location = new System.Drawing.Point(625, 491);
+            this.btnCriarProd.Name = "btnCriarProd";
+            this.btnCriarProd.Size = new System.Drawing.Size(132, 67);
+            this.btnCriarProd.TabIndex = 80;
+            this.btnCriarProd.Text = "Novo";
+            this.btnCriarProd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCriarProd.UseVisualStyleBackColor = true;
+            // 
+            // btnSalvarProd
+            // 
+            this.btnSalvarProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvarProd.Image = global::projetoMonkeyShop.Properties.Resources.save1;
+            this.btnSalvarProd.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSalvarProd.Location = new System.Drawing.Point(423, 491);
+            this.btnSalvarProd.Name = "btnSalvarProd";
+            this.btnSalvarProd.Size = new System.Drawing.Size(132, 67);
+            this.btnSalvarProd.TabIndex = 81;
+            this.btnSalvarProd.Text = "Salvar";
+            this.btnSalvarProd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalvarProd.UseVisualStyleBackColor = true;
+            // 
+            // btnCancelarProd
+            // 
+            this.btnCancelarProd.Image = global::projetoMonkeyShop.Properties.Resources.cancel;
+            this.btnCancelarProd.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCancelarProd.Location = new System.Drawing.Point(208, 491);
+            this.btnCancelarProd.Name = "btnCancelarProd";
+            this.btnCancelarProd.Size = new System.Drawing.Size(132, 67);
+            this.btnCancelarProd.TabIndex = 82;
+            this.btnCancelarProd.Text = "Cancelar";
+            this.btnCancelarProd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancelarProd.UseVisualStyleBackColor = true;
             // 
             // CadastroFornecedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1052, 741);
+            this.Controls.Add(this.btnCriarProd);
+            this.Controls.Add(this.btnSalvarProd);
+            this.Controls.Add(this.btnCancelarProd);
             this.Controls.Add(this.lblPais);
             this.Controls.Add(this.tbxPais);
             this.Controls.Add(this.lblEstado);
@@ -369,7 +392,6 @@
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.tbxCodigo);
-            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.lblWhatsapp);
             this.Controls.Add(this.tbxWhatsapp);
             this.Controls.Add(this.lblTelefone);
@@ -377,7 +399,6 @@
             this.Controls.Add(this.tbxEmail);
             this.Controls.Add(this.lblNome);
             this.Controls.Add(this.tbxNome);
-            this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.lblCadastro);
             this.Name = "CadastroFornecedores";
             this.Text = "CadastroFornecedores";
@@ -387,8 +408,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label lblWhatsapp;
         private System.Windows.Forms.TextBox tbxWhatsapp;
         private System.Windows.Forms.Label lblTelefone;
@@ -396,7 +415,6 @@
         private System.Windows.Forms.TextBox tbxEmail;
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.TextBox tbxNome;
-        private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Label lblCadastro;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblCodigo;
@@ -419,5 +437,8 @@
         private System.Windows.Forms.TextBox tbxLogradouro;
         private System.Windows.Forms.Label lblCep;
         private System.Windows.Forms.TextBox tbxCep;
+        private System.Windows.Forms.Button btnCriarProd;
+        private System.Windows.Forms.Button btnSalvarProd;
+        private System.Windows.Forms.Button btnCancelarProd;
     }
 }

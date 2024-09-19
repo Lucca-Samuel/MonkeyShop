@@ -56,6 +56,12 @@
     <Compile Include="src\conexao\Conexao.cs" />
     <Compile Include="src\dao\DaoProdutos.cs" />
     <Compile Include="src\model\MProdutos.cs" />
+    <Compile Include="src\view\admView\FornecedoresUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\view\admView\FornecedoresUC.Designer.cs">
+      <DependentUpon>FornecedoresUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="src\view\admView\FrmAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +138,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\view\admView\FornecedoresUC.resx">
+      <DependentUpon>FornecedoresUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\view\admView\FrmAdmin.resx">
       <DependentUpon>FrmAdmin.cs</DependentUpon>

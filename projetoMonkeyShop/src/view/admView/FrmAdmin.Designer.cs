@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.pnlMenu = new System.Windows.Forms.Panel();
-            this.btnFornecedores = new System.Windows.Forms.Button();
-            this.btnFuncionarios = new System.Windows.Forms.Button();
-            this.btnRelatorios = new System.Windows.Forms.Button();
             this.btnEstoque = new System.Windows.Forms.Button();
+            this.btnRelatorios = new System.Windows.Forms.Button();
+            this.btnFuncionarios = new System.Windows.Forms.Button();
+            this.btnFornecedores = new System.Windows.Forms.Button();
             this.pnlMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,54 +45,54 @@
             this.pnlMenu.Controls.Add(this.btnFornecedores);
             this.pnlMenu.Location = new System.Drawing.Point(0, 0);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(208, 741);
+            this.pnlMenu.Size = new System.Drawing.Size(215, 741);
             this.pnlMenu.TabIndex = 0;
-            // 
-            // btnFornecedores
-            // 
-            this.btnFornecedores.BackColor = System.Drawing.Color.Black;
-            this.btnFornecedores.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFornecedores.ForeColor = System.Drawing.Color.White;
-            this.btnFornecedores.Location = new System.Drawing.Point(0, 148);
-            this.btnFornecedores.Name = "btnFornecedores";
-            this.btnFornecedores.Size = new System.Drawing.Size(208, 65);
-            this.btnFornecedores.TabIndex = 0;
-            this.btnFornecedores.Text = "Fornecedores";
-            this.btnFornecedores.UseVisualStyleBackColor = false;
-            // 
-            // btnFuncionarios
-            // 
-            this.btnFuncionarios.BackColor = System.Drawing.Color.Black;
-            this.btnFuncionarios.ForeColor = System.Drawing.Color.White;
-            this.btnFuncionarios.Location = new System.Drawing.Point(0, 219);
-            this.btnFuncionarios.Name = "btnFuncionarios";
-            this.btnFuncionarios.Size = new System.Drawing.Size(208, 65);
-            this.btnFuncionarios.TabIndex = 0;
-            this.btnFuncionarios.Text = "Funcionários";
-            this.btnFuncionarios.UseVisualStyleBackColor = false;
-            // 
-            // btnRelatorios
-            // 
-            this.btnRelatorios.BackColor = System.Drawing.Color.Black;
-            this.btnRelatorios.ForeColor = System.Drawing.Color.White;
-            this.btnRelatorios.Location = new System.Drawing.Point(0, 290);
-            this.btnRelatorios.Name = "btnRelatorios";
-            this.btnRelatorios.Size = new System.Drawing.Size(208, 65);
-            this.btnRelatorios.TabIndex = 0;
-            this.btnRelatorios.Text = "Relatórios";
-            this.btnRelatorios.UseVisualStyleBackColor = false;
             // 
             // btnEstoque
             // 
             this.btnEstoque.BackColor = System.Drawing.Color.Black;
             this.btnEstoque.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnEstoque.ForeColor = System.Drawing.Color.White;
-            this.btnEstoque.Location = new System.Drawing.Point(0, 361);
+            this.btnEstoque.Location = new System.Drawing.Point(3, 344);
             this.btnEstoque.Name = "btnEstoque";
             this.btnEstoque.Size = new System.Drawing.Size(208, 65);
             this.btnEstoque.TabIndex = 0;
             this.btnEstoque.Text = "Estoque";
             this.btnEstoque.UseVisualStyleBackColor = false;
+            // 
+            // btnRelatorios
+            // 
+            this.btnRelatorios.BackColor = System.Drawing.Color.Black;
+            this.btnRelatorios.ForeColor = System.Drawing.Color.White;
+            this.btnRelatorios.Location = new System.Drawing.Point(3, 273);
+            this.btnRelatorios.Name = "btnRelatorios";
+            this.btnRelatorios.Size = new System.Drawing.Size(208, 65);
+            this.btnRelatorios.TabIndex = 0;
+            this.btnRelatorios.Text = "Relatórios";
+            this.btnRelatorios.UseVisualStyleBackColor = false;
+            // 
+            // btnFuncionarios
+            // 
+            this.btnFuncionarios.BackColor = System.Drawing.Color.Black;
+            this.btnFuncionarios.ForeColor = System.Drawing.Color.White;
+            this.btnFuncionarios.Location = new System.Drawing.Point(4, 202);
+            this.btnFuncionarios.Name = "btnFuncionarios";
+            this.btnFuncionarios.Size = new System.Drawing.Size(208, 65);
+            this.btnFuncionarios.TabIndex = 0;
+            this.btnFuncionarios.Text = "Funcionários";
+            this.btnFuncionarios.UseVisualStyleBackColor = false;
+            // 
+            // btnFornecedores
+            // 
+            this.btnFornecedores.BackColor = System.Drawing.Color.Black;
+            this.btnFornecedores.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFornecedores.ForeColor = System.Drawing.Color.White;
+            this.btnFornecedores.Location = new System.Drawing.Point(3, 131);
+            this.btnFornecedores.Name = "btnFornecedores";
+            this.btnFornecedores.Size = new System.Drawing.Size(208, 65);
+            this.btnFornecedores.TabIndex = 0;
+            this.btnFornecedores.Text = "Fornecedores";
+            this.btnFornecedores.UseVisualStyleBackColor = false;
             // 
             // FrmAdmin
             // 
