@@ -59,7 +59,7 @@ namespace projetoMonkeyShop.src.dao
         * @param idProduto
         * @return bool
         */
-        private bool ExcluirProduto(int idProduto)
+        public bool ExcluirProduto(int idProduto)
         {
             try
             {
