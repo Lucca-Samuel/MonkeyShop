@@ -54,6 +54,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="src\conexao\Conexao.cs" />
+    <Compile Include="src\controller\CProdutos.cs" />
     <Compile Include="src\dao\DaoProdutos.cs" />
     <Compile Include="src\model\MProdutos.cs" />
     <Compile Include="src\view\admView\FornecedoresUC.cs">
@@ -191,9 +192,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="src\controller\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="src\imagens\mais.png" />
   </ItemGroup>
