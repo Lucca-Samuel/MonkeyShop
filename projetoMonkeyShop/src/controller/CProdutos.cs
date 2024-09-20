@@ -1,4 +1,5 @@
 ﻿using System;
+using projetoMonkeyShop.src.model;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +9,6 @@ namespace projetoMonkeyShop.src.controller
 {
     internal class CProdutos
     {
+
     }
 }
