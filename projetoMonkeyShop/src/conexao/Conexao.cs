@@ -184,5 +184,46 @@ namespace projetoMonkeyShop.src.conexao
         {
             this.senha = senha;
         }
+
+        public string GetMensagem()
+        {
+            return this.mensagem;
+        }
+
+        public SqlConnection GetCon()
+        {
+            return this.con;
+        }
+
+        public SqlCommand GetStatement()
+        {
+            return this.cm;
+        }
+
+        public SqlDataReader GetResultSet()
+        {
+            return this.dt;
+        }
+
+        public string GetServidor()
+        {
+            return this.servidor;
+        }
+
+        public string GetNomeDoBanco()
+        {
+            return this.nomeDoBanco;
+        }
+
+        public string GetUsuario()
+        {
+            return this.usuario;
+        }
+
+        public string GetSenha()
+        {
+            return this.senha;
+        }
+
     }
 }
