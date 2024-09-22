@@ -22,12 +22,13 @@ namespace projetoMonkeyShop.src.dao
             try
             {
                 this.Conectar();
-                string sql = "INSERT INTO tbl_produtos (pro_nome, pro_categoria, pro_modelo, pro_tamanho, pro_cor, pro_qtd, pro_status, pro_preco) " +
-                             "VALUES (@NomeProduto, @CategoriaProduto, @ModeloProduto, @TamanhoProduto, @CorProduto, @QtdProduto, @StatusProduto, @PrecoProduto);";
+                string sql = "INSERT INTO tbl_produtos (pro_cod, pro_nome, pro_categoria, pro_modelo, pro_tamanho, pro_cor, pro_qtd, pro_status, pro_preco) " +
+                             "VALUES (@CodProduto, @NomeProduto, @CategoriaProduto, @ModeloProduto, @TamanhoProduto, @CorProduto, @QtdProduto, @StatusProduto, @PrecoProduto);";
 
                 SqlCommand cmd = new SqlCommand(sql, GetCon());
 
                 // Definindo os parâmetros para evitar SQL Injection
+                cmd.Parameters.AddWithValue("@CodProduto", produto.getCodProduto());
                 cmd.Parameters.AddWithValue("@NomeProduto", produto.getNomeProduto());
                 cmd.Parameters.AddWithValue("@CategoriaProduto", produto.getCategoriaProduto());
                 cmd.Parameters.AddWithValue("@ModeloProduto", produto.getModeloProduto());
@@ -96,6 +97,7 @@ namespace projetoMonkeyShop.src.dao
             {
                 this.Conectar();
                 string sql = "UPDATE tbl_produtos SET " +
+                             "pro_cod = @CodProduto, " +
                              "pro_nome = @NomeProduto, " +
                              "pro_categoria = @CategoriaProduto, " +
                              "pro_modelo = @ModeloProduto, " +
@@ -109,6 +111,7 @@ namespace projetoMonkeyShop.src.dao
                 SqlCommand cmd = new SqlCommand(sql, GetCon());
 
                 // Definindo os parâmetros para evitar SQL Injection
+                cmd.Parameters.AddWithValue("@CodProduto", produto.getCodProduto());
                 cmd.Parameters.AddWithValue("@NomeProduto", produto.getNomeProduto());
                 cmd.Parameters.AddWithValue("@CategoriaProduto", produto.getCategoriaProduto());
                 cmd.Parameters.AddWithValue("@ModeloProduto", produto.getModeloProduto());
@@ -147,7 +150,7 @@ namespace projetoMonkeyShop.src.dao
             try
             {
                 this.Conectar();
-                string sql = "SELECT id_produto, pro_nome, pro_categoria, pro_modelo, pro_tamanho, pro_cor, pro_qtd, pro_status, pro_preco " +
+                string sql = "SELECT id_produto, pro_cod, pro_nome, pro_categoria, pro_modelo, pro_tamanho, pro_cor, pro_qtd, pro_status, pro_preco " +
                              "FROM tbl_produtos WHERE id_produto = @IdProduto";
 
                 using (SqlCommand cmd = new SqlCommand(sql, GetCon()))
@@ -159,14 +162,15 @@ namespace projetoMonkeyShop.src.dao
                         if (reader.Read())
                         {
                             produto.SetIdProduto(reader.GetInt32(0));
-                            produto.SetNomeProduto(reader.GetString(1));
-                            produto.SetCategoriaProduto(reader.GetString(2));
-                            produto.SetModeloProduto(reader.GetString(3));
-                            produto.SetTamanhoProduto(reader.GetString(4));
-                            produto.SetCorProduto(reader.GetString(5));
-                            produto.SetQtdProduto(reader.GetInt32(6));
-                            produto.SetStatusProduto(reader.GetBoolean(7));
-                            produto.SetPrecoProduto(reader.GetDouble(8));
+                            produto.SetCodProduto(reader.GetInt32(1));
+                            produto.SetNomeProduto(reader.GetString(2));
+                            produto.SetCategoriaProduto(reader.GetString(3));
+                            produto.SetModeloProduto(reader.GetString(4));
+                            produto.SetTamanhoProduto(reader.GetString(5));
+                            produto.SetCorProduto(reader.GetString(6));
+                            produto.SetQtdProduto(reader.GetInt32(7));
+                            produto.SetStatusProduto(reader.GetString(8));
+                            produto.SetPrecoProduto(reader.GetDouble(9));
                         }
                     }
                 }
@@ -194,7 +198,7 @@ namespace projetoMonkeyShop.src.dao
             try
             {
                 this.Conectar();
-                string sql = "SELECT id_produto, pro_nome, pro_categoria, pro_modelo, pro_tamanho, pro_cor, pro_qtd, pro_status, pro_preco FROM tbl_produtos";
+                string sql = "SELECT id_produto, pro_cod, pro_nome, pro_categoria, pro_modelo, pro_tamanho, pro_cor, pro_qtd, pro_status, pro_preco FROM tbl_produtos";
 
                 using (SqlCommand cmd = new SqlCommand(sql, GetCon()))
                 {
@@ -204,14 +208,15 @@ namespace projetoMonkeyShop.src.dao
                         {
                             MProdutos produto = new MProdutos();
                             produto.SetIdProduto(reader.GetInt32(0));
-                            produto.SetNomeProduto(reader.GetString(1));
-                            produto.SetCategoriaProduto(reader.GetString(2));
-                            produto.SetModeloProduto(reader.GetString(3));
-                            produto.SetTamanhoProduto(reader.GetString(4));
-                            produto.SetCorProduto(reader.GetString(5));
-                            produto.SetQtdProduto(reader.GetInt32(6));
-                            produto.SetStatusProduto(reader.GetBoolean(7));
-                            produto.SetPrecoProduto(reader.GetDouble(8));
+                            produto.SetCodProduto(reader.GetInt32(1));
+                            produto.SetNomeProduto(reader.GetString(2));
+                            produto.SetCategoriaProduto(reader.GetString(3));
+                            produto.SetModeloProduto(reader.GetString(4));
+                            produto.SetTamanhoProduto(reader.GetString(5));
+                            produto.SetCorProduto(reader.GetString(6));
+                            produto.SetQtdProduto(reader.GetInt32(7));
+                            produto.SetStatusProduto(reader.GetString(8));
+                            produto.SetPrecoProduto(reader.GetDouble(9));
 
                             listaProdutos.Add(produto);
                         }

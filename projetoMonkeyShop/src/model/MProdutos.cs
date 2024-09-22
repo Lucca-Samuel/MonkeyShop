@@ -17,7 +17,7 @@ namespace projetoMonkeyShop.src.model
         private string tamanho_produto;
         private string cor_produto;
         private int qtd_produto;
-        private bool status_produto;
+        private string status_produto;
         private double preco_produto;
 
 
@@ -62,7 +62,7 @@ namespace projetoMonkeyShop.src.model
             return qtd_produto;
         }
 
-        public bool getStatusProduto()
+        public string getStatusProduto()
         {
             return status_produto;
         }
@@ -113,7 +113,7 @@ namespace projetoMonkeyShop.src.model
             this.qtd_produto = qtd_produto;
         }
 
-        public void SetStatusProduto(bool status_produto)
+        public void SetStatusProduto(string status_produto)
         {
             this.status_produto = status_produto;
         }

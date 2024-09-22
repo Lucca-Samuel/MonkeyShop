@@ -19,10 +19,11 @@ namespace projetoMonkeyShop.src.conexao
         private SqlDataReader dt = null; //variavel para consulta sql
 
 
-        private string servidor = "TAU0588413W10-1";
+        //private string servidor = "TAU0588413W10-1";
+        private string servidor = "LUCCA-SOUZA";
         private string nomeDoBanco = "monkey_shop";
-        private string usuario = "senac";
-        private string senha = "senac";
+        private string usuario = "admin";
+        private string senha = "monkey";
 
         public void ConexaoSql(string pServidor, string pNomeDoBanco, string pUsuario, string pSenha)
         {

@@ -78,6 +78,7 @@
             this.tbxId.Name = "tbxId";
             this.tbxId.Size = new System.Drawing.Size(99, 38);
             this.tbxId.TabIndex = 0;
+            this.tbxId.TextChanged += new System.EventHandler(this.tbxId_TextChanged);
             // 
             // tbxCodInc
             // 
@@ -86,6 +87,7 @@
             this.tbxCodInc.Name = "tbxCodInc";
             this.tbxCodInc.Size = new System.Drawing.Size(736, 38);
             this.tbxCodInc.TabIndex = 0;
+            this.tbxCodInc.TextChanged += new System.EventHandler(this.tbxCodInc_TextChanged);
             // 
             // tbxProdName
             // 
@@ -94,6 +96,7 @@
             this.tbxProdName.Name = "tbxProdName";
             this.tbxProdName.Size = new System.Drawing.Size(212, 38);
             this.tbxProdName.TabIndex = 0;
+            this.tbxProdName.TextChanged += new System.EventHandler(this.tbxProdName_TextChanged);
             // 
             // tbxModelo
             // 
@@ -102,6 +105,7 @@
             this.tbxModelo.Name = "tbxModelo";
             this.tbxModelo.Size = new System.Drawing.Size(212, 38);
             this.tbxModelo.TabIndex = 0;
+            this.tbxModelo.TextChanged += new System.EventHandler(this.tbxModelo_TextChanged);
             // 
             // tbxQtd
             // 
@@ -110,6 +114,7 @@
             this.tbxQtd.Name = "tbxQtd";
             this.tbxQtd.Size = new System.Drawing.Size(134, 38);
             this.tbxQtd.TabIndex = 0;
+            this.tbxQtd.TextChanged += new System.EventHandler(this.tbxQtd_TextChanged);
             // 
             // tbxPreco
             // 
@@ -118,6 +123,7 @@
             this.tbxPreco.Name = "tbxPreco";
             this.tbxPreco.Size = new System.Drawing.Size(212, 38);
             this.tbxPreco.TabIndex = 0;
+            this.tbxPreco.TextChanged += new System.EventHandler(this.tbxPreco_TextChanged);
             // 
             // label1
             // 
@@ -269,6 +275,7 @@
             this.btnAlterarProd.Text = "Alterar";
             this.btnAlterarProd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAlterarProd.UseVisualStyleBackColor = true;
+            this.btnAlterarProd.Click += new System.EventHandler(this.btnAlterarProd_Click);
             // 
             // btnCriarProd
             // 
@@ -283,6 +290,7 @@
             this.btnCriarProd.Text = "Novo";
             this.btnCriarProd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCriarProd.UseVisualStyleBackColor = true;
+            this.btnCriarProd.Click += new System.EventHandler(this.btnCriarProd_Click);
             // 
             // btnExcluirProd
             // 
@@ -373,6 +381,7 @@
             this.cbxTamanho.Name = "cbxTamanho";
             this.cbxTamanho.Size = new System.Drawing.Size(138, 39);
             this.cbxTamanho.TabIndex = 6;
+            this.cbxTamanho.SelectedIndexChanged += new System.EventHandler(this.cbxTamanho_SelectedIndexChanged);
             // 
             // cbxCor
             // 
@@ -382,6 +391,7 @@
             this.cbxCor.Name = "cbxCor";
             this.cbxCor.Size = new System.Drawing.Size(92, 39);
             this.cbxCor.TabIndex = 6;
+            this.cbxCor.SelectedIndexChanged += new System.EventHandler(this.cbxCor_SelectedIndexChanged);
             // 
             // cbxStatus
             // 
@@ -391,6 +401,7 @@
             this.cbxStatus.Name = "cbxStatus";
             this.cbxStatus.Size = new System.Drawing.Size(212, 39);
             this.cbxStatus.TabIndex = 6;
+            this.cbxStatus.SelectedIndexChanged += new System.EventHandler(this.cbxStatus_SelectedIndexChanged);
             // 
             // cbxCategoria
             // 
@@ -400,6 +411,7 @@
             this.cbxCategoria.Name = "cbxCategoria";
             this.cbxCategoria.Size = new System.Drawing.Size(208, 39);
             this.cbxCategoria.TabIndex = 6;
+            this.cbxCategoria.SelectedIndexChanged += new System.EventHandler(this.cbxCategoria_SelectedIndexChanged);
             // 
             // btnSalvarProd
             // 
@@ -413,6 +425,7 @@
             this.btnSalvarProd.Text = "Salvar";
             this.btnSalvarProd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSalvarProd.UseVisualStyleBackColor = true;
+            this.btnSalvarProd.Click += new System.EventHandler(this.btnSalvarProd_Click);
             // 
             // FrmEstoque
             // 
