@@ -15,8 +15,8 @@ namespace projetoMonkeyShop.src.conexao
         private bool status = false;
         private string mensagem = "";   //variavel que vai informar o status da conexao
         private SqlConnection con = null;  //variavel para conexao
-        private SqlCommand cm = null; //variavel para comandos sql
-        private SqlDataReader dt = null; //variavel para consulta sql
+        public SqlCommand cm = null; //variavel para comandos sql
+        public SqlDataReader dt = null; //variavel para consulta sql
 
 
         //private string servidor = "TAU0588413W10-1";
@@ -105,7 +105,7 @@ namespace projetoMonkeyShop.src.conexao
             cm = null;
             try
             {
-                cm = new SqlCommand(pSql, con);
+                cm = new SqlCommand(pSql, GetCon());
                 cm.ExecuteNonQuery();
 
                 // Consultar o último ID inserido

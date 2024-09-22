@@ -96,10 +96,11 @@ namespace projetoMonkeyShop.src.view
        */
         private void btnSalvarProd_Click(object sender, EventArgs e)
         {
-            if(salvarAlterar.Equals("salvar"))
+            if (salvarAlterar.Equals("salvar"))
             {
                 this.SalvarProdutos();
-            } else if(salvarAlterar.Equals("alterar"))
+            }
+            else if (salvarAlterar.Equals("alterar"))
             {
                 this.AlterarProdutos();
             }
