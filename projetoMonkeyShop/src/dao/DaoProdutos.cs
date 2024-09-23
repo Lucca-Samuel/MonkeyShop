@@ -85,15 +85,14 @@ namespace projetoMonkeyShop.src.dao
             try
             {
                 this.Conectar();
-                string sql = "DELETE FROM tbl_produtos WHERE id_produto = @IdProduto";
-
+                return this.ExecutarUpdateDelet(
+                        "DELETE FROM tbl_produtos WHERE pro_id = '" + idProduto + "'"
+                    );
+                /*string sql = "DELETE FROM tbl_produtos WHERE pro_id = @IdProduto";
                 SqlCommand cmd = new SqlCommand(sql, GetCon());
-
                 cmd.Parameters.AddWithValue("@IdProduto", idProduto);
                 cmd.ExecuteNonQuery();
-
-
-                return true;
+                return true;*/
             }
             catch (Exception ex)
             {
