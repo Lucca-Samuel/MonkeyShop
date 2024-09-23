@@ -19,8 +19,8 @@ namespace projetoMonkeyShop.src.conexao
         public SqlDataReader dt = null; //variavel para consulta sql
 
 
-        //private string servidor = "TAU0588413W10-1";
-        private string servidor = "LUCCA-SOUZA";
+        private string servidor = "TAU0588413W10-1";
+        //private string servidor = "LUCCA-SOUZA";
         private string nomeDoBanco = "monkey_shop";
         private string usuario = "admin";
         private string senha = "monkey";
@@ -46,9 +46,9 @@ namespace projetoMonkeyShop.src.conexao
                 status= true;
                 mensagem = "Conexão bem sucedida";
             }
-            catch {
-                status= false;
-                mensagem = "Falha ao conectar com o banco";
+            catch(SqlException ex) {
+                status = false;
+                mensagem = $"Falha ao conectar com o banco: {ex.Message}";
             }
             return con; 
         }

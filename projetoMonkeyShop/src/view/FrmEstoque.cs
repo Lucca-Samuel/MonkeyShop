@@ -133,6 +133,7 @@ namespace projetoMonkeyShop.src.view
             tbxQtd.Text = ("");
             cbxStatus.Text = ("");
             tbxPreco.Text = ("");
+            tbxProdName.Text = ("");
         }
 
         private void SalvarProdutos()
@@ -145,6 +146,7 @@ namespace projetoMonkeyShop.src.view
             mProdutos.SetQtdProduto(int.Parse(this.tbxQtd.Text));
             mProdutos.SetStatusProduto(this.cbxStatus.Text);
             mProdutos.SetPrecoProduto(double.Parse(tbxPreco.Text));
+            mProdutos.SetNomeProduto(tbxProdName.Text);
 
             if (cProdutos.salvarProdutoC(mProdutos) > 0)
             {
