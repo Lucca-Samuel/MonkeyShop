@@ -22,11 +22,33 @@ namespace projetoMonkeyShop.src.dao
             try
             {
                 this.Conectar();
-                 string sql = "INSERT INTO tbl_produtos (pro_cod, pro_nome, pro_categoria, pro_modelo, pro_tamanho, pro_cor, pro_qtd, pro_status, pro_preco) " +
-                             "VALUES (@CodProduto, @NomeProduto, @CategoriaProduto, @ModeloProduto, @TamanhoProduto, @CorProduto, @QtdProduto, @StatusProduto, @PrecoProduto);";
+                return this.ExecutarInsert(
+                        "INSERT INTO tbl_produtos("
+                        + "pro_cod,"
+                        + "pro_nome,"
+                        + "pro_categoria,"
+                        + "pro_modelo,"
+                        + "pro_tamanho,"
+                        + "pro_cor,"
+                        + "pro_qtd,"
+                        + "pro_status,"
+                        + "pro_preco"
+                        + ") VALUES ("
+                        + "'" + produto.getCodProduto() + "',"
+                        + "'" + produto.getNomeProduto() + "',"
+                        + "'" + produto.getCategoriaProduto() + "',"
+                        + "'" + produto.getModeloProduto() + "',"
+                        + "'" + produto.getTamanhoProduto() + "',"
+                        + "'" + produto.getCorProduto() + "',"
+                        + "'" + produto.getQtdProduto() + "',"
+                        + "'" + produto.getStatusProduto() + "',"
+                        + "'" + produto.getPrecoProduto() + "'"
+                        +");"
+                    );
 
+                 /*string sql = "INSERT INTO tbl_produtos (pro_cod, pro_nome, pro_categoria, pro_modelo, pro_tamanho, pro_cor, pro_qtd, pro_status, pro_preco) " +
+                             "VALUES (@CodProduto, @NomeProduto, @CategoriaProduto, @ModeloProduto, @TamanhoProduto, @CorProduto, @QtdProduto, @StatusProduto, @PrecoProduto);";
                 SqlCommand cmd = new SqlCommand(sql, GetCon());
-                
                     //Definindo os parâmetros para evitar SQL Injection
                     cmd.Parameters.AddWithValue("@CodProduto", produto.getCodProduto());
                     cmd.Parameters.AddWithValue("@NomeProduto", produto.getNomeProduto());
@@ -37,13 +59,10 @@ namespace projetoMonkeyShop.src.dao
                     cmd.Parameters.AddWithValue("@QtdProduto", produto.getQtdProduto());
                     cmd.Parameters.AddWithValue("@StatusProduto", produto.getStatusProduto());
                     cmd.Parameters.AddWithValue("@PrecoProduto", produto.getPrecoProduto());
-
-                    
-                
-                cmd.ExecuteNonQuery();
-                //Recupera o ID do último produto inserido
-                cmd.CommandText = "SELECT SCOPE_IDENTITY();";
-                return Convert.ToInt32(cmd.ExecuteScalar());
+                    cmd.ExecuteNonQuery();
+                    //Recupera o ID do último produto inserido
+                    cmd.CommandText = "SELECT SCOPE_IDENTITY();";
+                    return Convert.ToInt32(cmd.ExecuteScalar());*/
             }
             catch (Exception ex)
             {
