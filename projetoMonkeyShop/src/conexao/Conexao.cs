@@ -15,8 +15,9 @@ namespace projetoMonkeyShop.src.conexao
         private bool status = false;
         private string mensagem = "";   //variavel que vai informar o status da conexao
         private SqlConnection con = null;  //variavel para conexao
-        public SqlCommand cm = null; //variavel para comandos sql
-        public SqlDataReader dt = null; //variavel para consulta sql
+        private SqlCommand cm = null; //variavel para comandos sql
+        private SqlDataReader dt = null; //variavel para consulta sql
+
 
 
         //private string servidor = "LUCCA-SOUZA";
