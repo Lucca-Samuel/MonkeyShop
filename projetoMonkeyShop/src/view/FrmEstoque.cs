@@ -138,7 +138,8 @@ namespace projetoMonkeyShop.src.view
 
         private void SalvarProdutos()
         {
-            mProdutos.SetCodProduto(int.Parse(this.tbxCodInc.Text));
+            
+            mProdutos.SetCodProduto(long.Parse(this.tbxCodInc.Text));
             mProdutos.SetCategoriaProduto(this.cbxCategoria.Text);
             mProdutos.SetModeloProduto(this.tbxModelo.Text);
             mProdutos.SetTamanhoProduto(this.cbxTamanho.Text);
@@ -148,16 +149,21 @@ namespace projetoMonkeyShop.src.view
             mProdutos.SetPrecoProduto(double.Parse(tbxPreco.Text));
             mProdutos.SetNomeProduto(tbxProdName.Text);
 
-            if (cProdutos.salvarProdutoC(mProdutos) > 0)
+            try
             {
-                MessageBox.Show("Produto cadastrado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.LimparCampos();
-                this.HabilitarCampos(false);
+                if (cProdutos.salvarProdutoC(mProdutos) > 0)
+                {
+                    MessageBox.Show("Produto cadastrado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.LimparCampos();
+                    this.HabilitarCampos(false);
+                }
             }
-            else
+            catch(Exception ex)
             {
-                MessageBox.Show("Erro ao cadastrar produtos", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MessageBox.Show("Erro ao cadastrar produtos", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message);
             }
+            
         }
 
         private void AlterarProdutos()

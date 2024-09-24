@@ -10,7 +10,7 @@ namespace projetoMonkeyShop.src.model
     internal class MProdutos
     {
         private int id_produto;
-        private int cod_produto;
+        private long cod_produto;
         private string nome_produto;
         private string categoria_produto;
         private string modelo_produto;
@@ -27,7 +27,7 @@ namespace projetoMonkeyShop.src.model
             return id_produto;
         }
 
-        public int getCodProduto()
+        public long getCodProduto()
         {
             return cod_produto;
         }
@@ -78,7 +78,7 @@ namespace projetoMonkeyShop.src.model
             this.id_produto = id_produto;
         }
 
-        public void SetCodProduto(int cod_produto)
+        public void SetCodProduto(long cod_produto)
         {
             this.cod_produto = cod_produto;
         }
