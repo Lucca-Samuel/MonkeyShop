@@ -81,6 +81,15 @@ namespace projetoMonkeyShop.src.view
         }
 
         /**
+         * Cancela a operação
+        */
+        private void btnCancelarProd_Click(object sender, EventArgs e)
+        {
+            HabilitarCampos(false);
+            this.LimparCampos();
+        }
+
+        /**
         * Informa que será alterado um produto
         */
 
@@ -89,6 +98,29 @@ namespace projetoMonkeyShop.src.view
         {
             HabilitarCampos(true);
             salvarAlterar = "alterar";
+            int linha = this.dgvProdutos.CurrentRow.Index;
+
+            try
+            {
+                int codigoProduto = (int)this.dgvProdutos.Rows[linha].Cells[0].Value;
+
+                mProdutos = cProdutos.retornarProdutoC(codigoProduto);
+
+                tbxId.Text = mProdutos.getIdProduto().ToString();
+                tbxCodInc.Text = mProdutos.getCodProduto().ToString();
+                tbxProdName.Text = mProdutos.getNomeProduto();
+                cbxCategoria.Text = mProdutos.getCategoriaProduto();
+                tbxModelo.Text = mProdutos.getModeloProduto();
+                cbxTamanho.Text = mProdutos.getTamanhoProduto();
+                cbxCor.Text = mProdutos.getCorProduto();
+                tbxQtd.Text = mProdutos.getQtdProduto().ToString();
+                cbxStatus.Text = mProdutos.getStatusProduto();
+                tbxPreco.Text = mProdutos.getPrecoProduto().ToString();
+            } catch (Exception ex)
+            {
+                MessageBox.Show(this, "Código invalido ou Registro não selecionado", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                HabilitarCampos(false);
+            }
         }
 
         /**
@@ -188,5 +220,7 @@ namespace projetoMonkeyShop.src.view
                 MessageBox.Show("Erro ao alterar produto", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        
     }
 }

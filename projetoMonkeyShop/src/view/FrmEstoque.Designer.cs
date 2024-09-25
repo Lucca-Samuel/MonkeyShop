@@ -52,7 +52,7 @@
             this.btnAlterarProd = new System.Windows.Forms.Button();
             this.btnCriarProd = new System.Windows.Forms.Button();
             this.btnExcluirProd = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvProdutos = new System.Windows.Forms.DataGridView();
             this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCod = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeProd = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,7 +68,7 @@
             this.cbxStatus = new System.Windows.Forms.ComboBox();
             this.cbxCategoria = new System.Windows.Forms.ComboBox();
             this.btnSalvarProd = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).BeginInit();
             this.SuspendLayout();
             // 
             // tbxId
@@ -263,6 +263,7 @@
             this.btnCancelarProd.Text = "Cancelar";
             this.btnCancelarProd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancelarProd.UseVisualStyleBackColor = true;
+            this.btnCancelarProd.Click += new System.EventHandler(this.btnCancelarProd_Click);
             // 
             // btnAlterarProd
             // 
@@ -304,10 +305,10 @@
             this.btnExcluirProd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnExcluirProd.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dgvProdutos
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProdutos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colId,
             this.colCod,
             this.nomeProd,
@@ -318,10 +319,10 @@
             this.colQtd,
             this.colStatus,
             this.colPreco});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 362);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1011, 294);
-            this.dataGridView1.TabIndex = 5;
+            this.dgvProdutos.Location = new System.Drawing.Point(12, 362);
+            this.dgvProdutos.Name = "dgvProdutos";
+            this.dgvProdutos.Size = new System.Drawing.Size(1011, 294);
+            this.dgvProdutos.TabIndex = 5;
             // 
             // colId
             // 
@@ -436,7 +437,7 @@
             this.Controls.Add(this.cbxCategoria);
             this.Controls.Add(this.cbxStatus);
             this.Controls.Add(this.cbxTamanho);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvProdutos);
             this.Controls.Add(this.btnCriarProd);
             this.Controls.Add(this.btnSalvarProd);
             this.Controls.Add(this.btnAlterarProd);
@@ -464,7 +465,7 @@
             this.Name = "FrmEstoque";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmEstoque";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -496,7 +497,7 @@
         private System.Windows.Forms.Button btnSalvarProd;
         private System.Windows.Forms.Button btnCriarProd;
         private System.Windows.Forms.Button btnExcluirProd;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvProdutos;
         private System.Windows.Forms.ComboBox cbxTamanho;
         private System.Windows.Forms.ComboBox cbxCor;
         private System.Windows.Forms.ComboBox cbxStatus;
