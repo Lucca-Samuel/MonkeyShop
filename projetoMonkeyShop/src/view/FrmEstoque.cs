@@ -200,7 +200,7 @@ namespace projetoMonkeyShop.src.view
             }
             catch(Exception ex)
             {
-                //MessageBox.Show("Erro ao cadastrar produtos", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Erro ao cadastrar produtos", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 MessageBox.Show(ex.Message);
             }
             
