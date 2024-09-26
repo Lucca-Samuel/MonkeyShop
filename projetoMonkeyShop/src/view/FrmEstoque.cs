@@ -232,10 +232,30 @@ namespace projetoMonkeyShop.src.view
 
         private void CarregarProdutos()
         {
-            listaModelProdutos = cProdutos.retornarListaProdutoC();
+            /*listaModelProdutos = cProdutos.retornarListaProdutoC();
+            var modelo = (DataTable)dgvProdutos.DataSource;
+            //modelo.Rows.Clear();
+
+            for (int i = 0; i < listaModelProdutos.Count; i++)
+            {
+
+                modelo.Rows.Add(new object[]
+                {
+                    listaModelProdutos[i].getIdProduto(),
+                    listaModelProdutos[i].getCodProduto(),
+                    listaModelProdutos[i].getNomeProduto(),
+                    listaModelProdutos[i].getModeloProduto(),
+                    listaModelProdutos[i].getTamanhoProduto(),
+                    listaModelProdutos[i].getCorProduto(),
+                    listaModelProdutos[i].getQtdProduto(),
+                    listaModelProdutos[i].getStatusProduto(),
+                    listaModelProdutos[i].getPrecoProduto()
+                });
+            }*/
+
+            /*listaModelProdutos = cProdutos.retornarListaProdutoC();
             var dataGridView = dgvProdutos;
             dataGridView.Rows.Clear();
-
             foreach (var produto in listaModelProdutos)
             {
                 dataGridView.Rows.Add(
@@ -249,7 +269,7 @@ namespace projetoMonkeyShop.src.view
                     produto.getStatusProduto(),
                     produto.getPrecoProduto()
                 );
-            }
+            }*/
         }
 
         

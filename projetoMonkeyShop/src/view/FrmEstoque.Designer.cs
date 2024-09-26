@@ -53,16 +53,6 @@
             this.btnCriarProd = new System.Windows.Forms.Button();
             this.btnExcluirProd = new System.Windows.Forms.Button();
             this.dgvProdutos = new System.Windows.Forms.DataGridView();
-            this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCod = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomeProd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colModelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTamanho = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colQtd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPreco = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cbxTamanho = new System.Windows.Forms.ComboBox();
             this.cbxCor = new System.Windows.Forms.ComboBox();
             this.cbxStatus = new System.Windows.Forms.ComboBox();
@@ -308,71 +298,10 @@
             // dgvProdutos
             // 
             this.dgvProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProdutos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colId,
-            this.colCod,
-            this.nomeProd,
-            this.colCategoria,
-            this.colModelo,
-            this.colTamanho,
-            this.colCor,
-            this.colQtd,
-            this.colStatus,
-            this.colPreco});
             this.dgvProdutos.Location = new System.Drawing.Point(12, 362);
             this.dgvProdutos.Name = "dgvProdutos";
             this.dgvProdutos.Size = new System.Drawing.Size(1011, 294);
             this.dgvProdutos.TabIndex = 5;
-            // 
-            // colId
-            // 
-            this.colId.HeaderText = "ID";
-            this.colId.Name = "colId";
-            // 
-            // colCod
-            // 
-            this.colCod.HeaderText = "Cod/Barras";
-            this.colCod.Name = "colCod";
-            // 
-            // nomeProd
-            // 
-            this.nomeProd.HeaderText = "Column1";
-            this.nomeProd.Name = "nomeProd";
-            // 
-            // colCategoria
-            // 
-            this.colCategoria.HeaderText = "Categoria";
-            this.colCategoria.Name = "colCategoria";
-            // 
-            // colModelo
-            // 
-            this.colModelo.HeaderText = "Modelo";
-            this.colModelo.Name = "colModelo";
-            // 
-            // colTamanho
-            // 
-            this.colTamanho.HeaderText = "Tamanho";
-            this.colTamanho.Name = "colTamanho";
-            // 
-            // colCor
-            // 
-            this.colCor.HeaderText = "Cor";
-            this.colCor.Name = "colCor";
-            // 
-            // colQtd
-            // 
-            this.colQtd.HeaderText = "Quantidade";
-            this.colQtd.Name = "colQtd";
-            // 
-            // colStatus
-            // 
-            this.colStatus.HeaderText = "Status";
-            this.colStatus.Name = "colStatus";
-            // 
-            // colPreco
-            // 
-            this.colPreco.HeaderText = "Preço";
-            this.colPreco.Name = "colPreco";
             // 
             // cbxTamanho
             // 
@@ -502,15 +431,5 @@
         private System.Windows.Forms.ComboBox cbxCor;
         private System.Windows.Forms.ComboBox cbxStatus;
         private System.Windows.Forms.ComboBox cbxCategoria;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colCod;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nomeProd;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colCategoria;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colModelo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colTamanho;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colCor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colQtd;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colStatus;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colPreco;
     }
 }
