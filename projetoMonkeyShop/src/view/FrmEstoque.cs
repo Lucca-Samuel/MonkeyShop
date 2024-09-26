@@ -28,6 +28,7 @@ namespace projetoMonkeyShop.src.view
             InitializeComponent();
             HabilitarCampos(false);
             this.tbxId.Enabled = false;
+            CarregarProdutos();
         }
 
         private void tbxId_TextChanged(object sender, EventArgs e)
@@ -128,13 +129,19 @@ namespace projetoMonkeyShop.src.view
        */
         private void btnSalvarProd_Click(object sender, EventArgs e)
         {
-            if (salvarAlterar.Equals("salvar"))
+            if(tbxCodInc.Text == "" || tbxProdName.Text == "" || cbxCategoria.Text == "" || tbxProdName.Text == "" || cbxCor.Text == "" || tbxQtd.Text == "" || cbxStatus.Text == "" || tbxPreco.Text == "")
             {
-                this.SalvarProdutos();
-            }
-            else if (salvarAlterar.Equals("alterar"))
+                MessageBox.Show("Todos os campos devem ser preenchidos corretamente.", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }else
             {
-                this.AlterarProdutos();
+                if (salvarAlterar.Equals("salvar"))
+                {
+                    this.SalvarProdutos();
+                }
+                else if (salvarAlterar.Equals("alterar"))
+                {
+                    this.AlterarProdutos();
+                }
             }
         }
 
@@ -186,6 +193,7 @@ namespace projetoMonkeyShop.src.view
                 if (cProdutos.salvarProdutoC(mProdutos) > 0)
                 {
                     MessageBox.Show("Produto cadastrado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.CarregarProdutos();
                     this.LimparCampos();
                     this.HabilitarCampos(false);
                 }
@@ -212,12 +220,35 @@ namespace projetoMonkeyShop.src.view
             if (cProdutos.alterarProdutoC(mProdutos))
             {
                 MessageBox.Show("Produto Alterado com sucesso com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.CarregarProdutos();
                 this.LimparCampos();
                 this.HabilitarCampos(false);
             }
             else
             {
                 MessageBox.Show("Erro ao alterar produto", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void CarregarProdutos()
+        {
+            listaModelProdutos = cProdutos.retornarListaProdutoC();
+            var dataGridView = dgvProdutos;
+            dataGridView.Rows.Clear();
+
+            foreach (var produto in listaModelProdutos)
+            {
+                dataGridView.Rows.Add(
+                    produto.getIdProduto(),
+                    produto.getCodProduto(),
+                    produto.getNomeProduto(),
+                    produto.getModeloProduto(),
+                    produto.getTamanhoProduto(),
+                    produto.getCorProduto(),
+                    produto.getQtdProduto(),
+                    produto.getStatusProduto(),
+                    produto.getPrecoProduto()
+                );
             }
         }
 
