@@ -58,6 +58,16 @@
             this.cbxStatus = new System.Windows.Forms.ComboBox();
             this.cbxCategoria = new System.Windows.Forms.ComboBox();
             this.btnSalvarProd = new System.Windows.Forms.Button();
+            this.idProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomeProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoriaProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.modeloProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tamanhoProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.corProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.qtdProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precoProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -222,6 +232,7 @@
             this.tbxBuscarProd.Name = "tbxBuscarProd";
             this.tbxBuscarProd.Size = new System.Drawing.Size(846, 38);
             this.tbxBuscarProd.TabIndex = 0;
+            this.tbxBuscarProd.TextChanged += new System.EventHandler(this.tbxBuscarProd_TextChanged);
             // 
             // label11
             // 
@@ -241,6 +252,7 @@
             this.btnBuscarProd.TabIndex = 2;
             this.btnBuscarProd.Text = "Buscar";
             this.btnBuscarProd.UseVisualStyleBackColor = true;
+            this.btnBuscarProd.Click += new System.EventHandler(this.btnBuscarProd_Click);
             // 
             // btnCancelarProd
             // 
@@ -298,6 +310,17 @@
             // dgvProdutos
             // 
             this.dgvProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProdutos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idProduto,
+            this.codProduto,
+            this.nomeProduto,
+            this.categoriaProduto,
+            this.modeloProduto,
+            this.tamanhoProduto,
+            this.corProduto,
+            this.qtdProduto,
+            this.statusProduto,
+            this.precoProduto});
             this.dgvProdutos.Location = new System.Drawing.Point(12, 362);
             this.dgvProdutos.Name = "dgvProdutos";
             this.dgvProdutos.Size = new System.Drawing.Size(1011, 294);
@@ -356,6 +379,56 @@
             this.btnSalvarProd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSalvarProd.UseVisualStyleBackColor = true;
             this.btnSalvarProd.Click += new System.EventHandler(this.btnSalvarProd_Click);
+            // 
+            // idProduto
+            // 
+            this.idProduto.HeaderText = "ID";
+            this.idProduto.Name = "idProduto";
+            // 
+            // codProduto
+            // 
+            this.codProduto.HeaderText = "Cod/Barras";
+            this.codProduto.Name = "codProduto";
+            // 
+            // nomeProduto
+            // 
+            this.nomeProduto.HeaderText = "Produto";
+            this.nomeProduto.Name = "nomeProduto";
+            // 
+            // categoriaProduto
+            // 
+            this.categoriaProduto.HeaderText = "Categoria";
+            this.categoriaProduto.Name = "categoriaProduto";
+            // 
+            // modeloProduto
+            // 
+            this.modeloProduto.HeaderText = "Modelo";
+            this.modeloProduto.Name = "modeloProduto";
+            // 
+            // tamanhoProduto
+            // 
+            this.tamanhoProduto.HeaderText = "Tamanho";
+            this.tamanhoProduto.Name = "tamanhoProduto";
+            // 
+            // corProduto
+            // 
+            this.corProduto.HeaderText = "Cor";
+            this.corProduto.Name = "corProduto";
+            // 
+            // qtdProduto
+            // 
+            this.qtdProduto.HeaderText = "QTD";
+            this.qtdProduto.Name = "qtdProduto";
+            // 
+            // statusProduto
+            // 
+            this.statusProduto.HeaderText = "Status";
+            this.statusProduto.Name = "statusProduto";
+            // 
+            // precoProduto
+            // 
+            this.precoProduto.HeaderText = "Preco";
+            this.precoProduto.Name = "precoProduto";
             // 
             // FrmEstoque
             // 
@@ -431,5 +504,15 @@
         private System.Windows.Forms.ComboBox cbxCor;
         private System.Windows.Forms.ComboBox cbxStatus;
         private System.Windows.Forms.ComboBox cbxCategoria;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idProduto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codProduto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomeProduto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn categoriaProduto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn modeloProduto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tamanhoProduto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn corProduto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn qtdProduto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn statusProduto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precoProduto;
     }
 }
