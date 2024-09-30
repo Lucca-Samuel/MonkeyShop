@@ -28,7 +28,7 @@ namespace projetoMonkeyShop.src.view
             InitializeComponent();
             HabilitarCampos(false);
             this.tbxId.Enabled = false;
-            //CarregarProdutos();
+            CarregarProdutos();
         }
 
         private void tbxId_TextChanged(object sender, EventArgs e)
@@ -141,54 +141,57 @@ namespace projetoMonkeyShop.src.view
                 if (salvarAlterar.Equals("salvar"))
                 {
                     this.SalvarProdutos();
+                    this.CarregarProdutos();
                 }
                 else if (salvarAlterar.Equals("alterar"))
                 {
                     this.AlterarProdutos();
+                    this.CarregarProdutos();
                 }
             }
         }
 
         private void btnBuscarProd_Click(object sender, EventArgs e)
         {
-            string pesquisaProduto = tbxBuscarProd.Text.Trim();
+            listaModelProdutos = cProdutos.RetornarListaProdutos();
 
-            // Verifica se o campo de pesquisa não está vazio e é numérico
-            if (!string.IsNullOrEmpty(pesquisaProduto) && long.TryParse(pesquisaProduto, out long codProduto))
+        }
+
+        /*private void btnBuscarProd_Click(object sender, EventArgs e)
+        {
+            if (long.TryParse(tbxBuscarProd.Text.Trim(), out long codProduto))
             {
-                try
+                // Chama o método do Dão para retornar os produtos
+                MProdutos produto = cProdutos.RetornarProdutosDGV(codProduto);
+
+                // Limpa a tabela antes de adicionar novos resultados
+                dgvProdutos.DataSource = null;
+                dgvProdutos.Rows.Clear();
+
+                // Verifica se o produto foi encontrado e adiciona ao DataGridView
+                if (produto != null)
                 {
-                    // Chama o método para retornar o produto usando apenas o código
-                    MProdutos produto = cProdutos.RetornarProdutosDGV(codProduto);
-
-                    // Limpa a DataGridView antes de adicionar novos resultados
-                    dgvProdutos.Rows.Clear();
-
-                    // Verifica se o produto foi encontrado
-                    if (produto != null && produto.getIdProduto() != 0)
-                    {
-                        // Adiciona o produto à DataGridView
-                        dgvProdutos.Rows.Add(produto.getIdProduto(), produto.getCodProduto(), produto.getNomeProduto(),
-                            produto.getCategoriaProduto(), produto.getModeloProduto(), produto.getTamanhoProduto(),
-                            produto.getCorProduto(), produto.getQtdProduto(), produto.getStatusProduto(),
-                            produto.getPrecoProduto());
-                    }
-                    else
-                    {
-                        MessageBox.Show("Produto não encontrado.");
-                    }
+                    dgvProdutos.Rows.Add(produto.getIdProduto(),
+                                          produto.getCodProduto(),
+                                          produto.getNomeProduto(),
+                                          produto.getCategoriaProduto(),
+                                          produto.getModeloProduto(),
+                                          produto.getTamanhoProduto(),
+                                          produto.getCorProduto(),
+                                          produto.getQtdProduto(),
+                                          produto.getStatusProduto(),
+                                          produto.getPrecoProduto()); 
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show("Erro ao buscar o produto: " + ex.Message);
+                    MessageBox.Show("Nenhum produto encontrado.");
                 }
             }
             else
             {
-                // Mensagem de erro se o código for inválido
-                MessageBox.Show("Por favor, informe um código de produto válido.");
+                MessageBox.Show("Código de produto inválido.");
             }
-        }
+        }*/
 
         private void HabilitarCampos(bool status)
         {
@@ -272,6 +275,39 @@ namespace projetoMonkeyShop.src.view
             else
             {
                 MessageBox.Show("Erro ao alterar produto", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void CarregarProdutos()
+        {
+            try
+            {
+                listaModelProdutos = cProdutos.RetornarListaProdutos();
+                dgvProdutos.DataSource = null;
+                dgvProdutos.Rows.Clear();
+
+                int cont = listaModelProdutos.Count;
+                for (int i = 0; i < cont; i++)
+                {
+                    dgvProdutos.Rows.Add(new object[] {
+
+                        listaModelProdutos[i].getIdProduto(),
+                        listaModelProdutos[i].getCodProduto(),
+                        listaModelProdutos[i].getNomeProduto(),
+                        listaModelProdutos[i].getCategoriaProduto(),
+                        listaModelProdutos[i].getModeloProduto(),
+                        listaModelProdutos[i].getTamanhoProduto(),
+                        listaModelProdutos[i].getCorProduto(),
+                        listaModelProdutos[i].getQtdProduto(),
+                        listaModelProdutos[i].getStatusProduto(),
+                        listaModelProdutos[i].getPrecoProduto()
+                    });
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
             }
         }
 
