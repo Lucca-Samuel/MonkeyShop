@@ -151,10 +151,34 @@ namespace projetoMonkeyShop.src.view
             }
         }
 
+        private void btnExcluirProd_Click(object sender, EventArgs e)
+        {
+            int linha = this.dgvProdutos.CurrentRow.Index;
+            int codigoProduto = (int)this.dgvProdutos.Rows[linha].Cells[0].Value;
+            DialogResult confirmacao = MessageBox.Show(this, "Tem certeza que deseja excluir este produto?", "Confirmação", MessageBoxButtons.YesNo);
+            
+            if(confirmacao == DialogResult.Yes)
+            {
+                if (cProdutos.excluirProdutoC(codigoProduto))
+                {
+                    MessageBox.Show("Produto excluido com sucesso!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.CarregarProdutos();
+                }
+                else
+                {
+                    MessageBox.Show("Erro ao tentar excluir produto", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }else
+            {
+                MessageBox.Show("Operação cancelada com sucesso!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            HabilitarCampos(false);
+        }
+
         private void btnBuscarProd_Click(object sender, EventArgs e)
         {
+            string procurar = tbxBuscarProd.Text;
             listaModelProdutos = cProdutos.RetornarListaProdutos();
-
         }
 
         /*private void btnBuscarProd_Click(object sender, EventArgs e)

@@ -61,9 +61,9 @@ namespace projetoMonkeyShop.src.controller
             return this.daoProdutos.RetornarListaDeProdutos();
         }
 
-        /*public MProdutos RetornarProdutosDGV(long codProduto)
+        public MProdutos RetornarProdutosDGV(long codProduto)
         {
             return this.daoProdutos.RetornarProdutosDGV(codProduto);
-        }*/
+        }
     }
 }

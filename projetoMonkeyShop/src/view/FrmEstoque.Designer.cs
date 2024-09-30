@@ -53,11 +53,6 @@
             this.btnCriarProd = new System.Windows.Forms.Button();
             this.btnExcluirProd = new System.Windows.Forms.Button();
             this.dgvProdutos = new System.Windows.Forms.DataGridView();
-            this.cbxTamanho = new System.Windows.Forms.ComboBox();
-            this.cbxCor = new System.Windows.Forms.ComboBox();
-            this.cbxStatus = new System.Windows.Forms.ComboBox();
-            this.cbxCategoria = new System.Windows.Forms.ComboBox();
-            this.btnSalvarProd = new System.Windows.Forms.Button();
             this.idProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,6 +63,11 @@
             this.qtdProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precoProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cbxTamanho = new System.Windows.Forms.ComboBox();
+            this.cbxCor = new System.Windows.Forms.ComboBox();
+            this.cbxStatus = new System.Windows.Forms.ComboBox();
+            this.cbxCategoria = new System.Windows.Forms.ComboBox();
+            this.btnSalvarProd = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -306,6 +306,7 @@
             this.btnExcluirProd.Text = "Excluir";
             this.btnExcluirProd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnExcluirProd.UseVisualStyleBackColor = true;
+            this.btnExcluirProd.Click += new System.EventHandler(this.btnExcluirProd_Click);
             // 
             // dgvProdutos
             // 
@@ -325,6 +326,56 @@
             this.dgvProdutos.Name = "dgvProdutos";
             this.dgvProdutos.Size = new System.Drawing.Size(1011, 294);
             this.dgvProdutos.TabIndex = 5;
+            // 
+            // idProduto
+            // 
+            this.idProduto.HeaderText = "ID";
+            this.idProduto.Name = "idProduto";
+            // 
+            // codProduto
+            // 
+            this.codProduto.HeaderText = "Cod/Barras";
+            this.codProduto.Name = "codProduto";
+            // 
+            // nomeProduto
+            // 
+            this.nomeProduto.HeaderText = "Produto";
+            this.nomeProduto.Name = "nomeProduto";
+            // 
+            // categoriaProduto
+            // 
+            this.categoriaProduto.HeaderText = "Categoria";
+            this.categoriaProduto.Name = "categoriaProduto";
+            // 
+            // modeloProduto
+            // 
+            this.modeloProduto.HeaderText = "Modelo";
+            this.modeloProduto.Name = "modeloProduto";
+            // 
+            // tamanhoProduto
+            // 
+            this.tamanhoProduto.HeaderText = "Tamanho";
+            this.tamanhoProduto.Name = "tamanhoProduto";
+            // 
+            // corProduto
+            // 
+            this.corProduto.HeaderText = "Cor";
+            this.corProduto.Name = "corProduto";
+            // 
+            // qtdProduto
+            // 
+            this.qtdProduto.HeaderText = "QTD";
+            this.qtdProduto.Name = "qtdProduto";
+            // 
+            // statusProduto
+            // 
+            this.statusProduto.HeaderText = "Status";
+            this.statusProduto.Name = "statusProduto";
+            // 
+            // precoProduto
+            // 
+            this.precoProduto.HeaderText = "Preco";
+            this.precoProduto.Name = "precoProduto";
             // 
             // cbxTamanho
             // 
@@ -379,56 +430,6 @@
             this.btnSalvarProd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSalvarProd.UseVisualStyleBackColor = true;
             this.btnSalvarProd.Click += new System.EventHandler(this.btnSalvarProd_Click);
-            // 
-            // idProduto
-            // 
-            this.idProduto.HeaderText = "ID";
-            this.idProduto.Name = "idProduto";
-            // 
-            // codProduto
-            // 
-            this.codProduto.HeaderText = "Cod/Barras";
-            this.codProduto.Name = "codProduto";
-            // 
-            // nomeProduto
-            // 
-            this.nomeProduto.HeaderText = "Produto";
-            this.nomeProduto.Name = "nomeProduto";
-            // 
-            // categoriaProduto
-            // 
-            this.categoriaProduto.HeaderText = "Categoria";
-            this.categoriaProduto.Name = "categoriaProduto";
-            // 
-            // modeloProduto
-            // 
-            this.modeloProduto.HeaderText = "Modelo";
-            this.modeloProduto.Name = "modeloProduto";
-            // 
-            // tamanhoProduto
-            // 
-            this.tamanhoProduto.HeaderText = "Tamanho";
-            this.tamanhoProduto.Name = "tamanhoProduto";
-            // 
-            // corProduto
-            // 
-            this.corProduto.HeaderText = "Cor";
-            this.corProduto.Name = "corProduto";
-            // 
-            // qtdProduto
-            // 
-            this.qtdProduto.HeaderText = "QTD";
-            this.qtdProduto.Name = "qtdProduto";
-            // 
-            // statusProduto
-            // 
-            this.statusProduto.HeaderText = "Status";
-            this.statusProduto.Name = "statusProduto";
-            // 
-            // precoProduto
-            // 
-            this.precoProduto.HeaderText = "Preco";
-            this.precoProduto.Name = "precoProduto";
             // 
             // FrmEstoque
             // 

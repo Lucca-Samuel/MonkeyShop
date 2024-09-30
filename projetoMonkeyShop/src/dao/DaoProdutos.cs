@@ -4,6 +4,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.Common;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
@@ -234,54 +235,34 @@ namespace projetoMonkeyShop.src.dao
             return listaProdutos;
         }
 
-        /*public MProdutos RetornarProdutosDGV(long codProduto)
+        public MProdutos RetornarProdutosDGV(long codProduto)
         {
             MProdutos produto = new MProdutos();
             DataTable dt = new DataTable();
+            //DataAdapter da = new DataAdapter();
 
             try
             {
                 this.Conectar();
-                string query = "SELECT pro_id, pro_cod, pro_nome, pro_categoria, pro_modelo, pro_tamanho, pro_cor, pro_qtd, pro_status, pro_preco " +
+                this.ExecultarConsulta( "SELECT pro_id, pro_cod, pro_nome, pro_categoria, pro_modelo, pro_tamanho, pro_cor, pro_qtd, pro_status, pro_preco " +
                    "FROM tbl_produtos " +
-                   "WHERE pro_cod LIKE ('%" + codProduto + "%')";
+                   "WHERE pro_cod LIKE ('%" + codProduto + "%');");
 
-                // Executa a consulta
-                if (this.ExecultarConsulta(query)) // Verifica se a consulta foi bem-sucedida
-                {
-                    // Fechar o DataReader antes de continuar
-                    this.FecharConexao(string.Empty);
-
-                    // Usando SqlDataAdapter para preencher o DataTable
-                    using (SqlDataAdapter da = new SqlDataAdapter(this.GetStatement()))
-                    {
-                        da.Fill(dt); // Preenche o DataTable
-                    }
-
-                    // Verifica se há resultados
-                    if (dt.Rows.Count > 0)
-                    {
-                        DataRow row = dt.Rows[0]; // Pega a primeira linha de resultado
-                        produto.SetIdProduto(row.Field<int>("pro_id"));
-                        produto.SetCodProduto(row.Field<long>("pro_cod"));
-                        produto.SetNomeProduto(row.Field<string>("pro_nome"));
-                        produto.SetCategoriaProduto(row.Field<string>("pro_categoria"));
-                        produto.SetModeloProduto(row.Field<string>("pro_modelo"));
-                        produto.SetTamanhoProduto(row.Field<string>("pro_tamanho"));
-                        produto.SetCorProduto(row.Field<string>("pro_cor"));
-                        produto.SetQtdProduto(row.Field<int>("pro_qtd"));
-                        produto.SetStatusProduto(row.Field<string>("pro_status"));
-                        produto.SetPrecoProduto(row.Field<float>("pro_preco"));
-                    }
-                    else
-                    {
-                        return null; // Retorna null se não houver produtos
-                    }
+                while (this.GetResultSet().NextResult())
+                { 
+                    produto.SetIdProduto(this.GetResultSet().GetInt32(0));
+                    produto.SetCodProduto(this.GetResultSet().GetInt64(1));
+                    produto.SetNomeProduto(this.GetResultSet().GetString(2));
+                    produto.SetCategoriaProduto(this.GetResultSet().GetString(3));
+                    produto.SetModeloProduto(this.GetResultSet().GetString(4));
+                    produto.SetTamanhoProduto(this.GetResultSet().GetString(5));
+                    produto.SetCorProduto(this.GetResultSet().GetString(6));
+                    produto.SetQtdProduto(this.GetResultSet().GetInt32(7));
+                    produto.SetStatusProduto(this.GetResultSet().GetString(8));
+                    produto.SetPrecoProduto(this.GetResultSet().GetFloat(9));
                 }
-                else
-                {
-                    return null; // Retorna null se a consulta falhar
-                }
+
+
             }
             catch (Exception ex)
             {
@@ -295,7 +276,7 @@ namespace projetoMonkeyShop.src.dao
             }
 
             return produto;
-        }*/
+        }
         
 
 
