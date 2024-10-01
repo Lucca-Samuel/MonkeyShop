@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using projetoMonkeyShop.src.model;
 using projetoMonkeyShop.src.controller;
+using System.Data.SqlClient;
 
 
 namespace projetoMonkeyShop.src.view
@@ -28,7 +29,6 @@ namespace projetoMonkeyShop.src.view
             InitializeComponent();
             HabilitarCampos(false);
             this.tbxId.Enabled = false;
-            CarregarProdutos();
         }
 
         private void tbxId_TextChanged(object sender, EventArgs e)
@@ -141,12 +141,10 @@ namespace projetoMonkeyShop.src.view
                 if (salvarAlterar.Equals("salvar"))
                 {
                     this.SalvarProdutos();
-                    this.CarregarProdutos();
                 }
                 else if (salvarAlterar.Equals("alterar"))
                 {
                     this.AlterarProdutos();
-                    this.CarregarProdutos();
                 }
             }
         }
@@ -162,7 +160,6 @@ namespace projetoMonkeyShop.src.view
                 if (cProdutos.excluirProdutoC(codigoProduto))
                 {
                     MessageBox.Show("Produto excluido com sucesso!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.CarregarProdutos();
                 }
                 else
                 {
@@ -177,45 +174,38 @@ namespace projetoMonkeyShop.src.view
 
         private void btnBuscarProd_Click(object sender, EventArgs e)
         {
-            string procurar = tbxBuscarProd.Text;
-            listaModelProdutos = cProdutos.RetornarListaProdutos();
-        }
+            SqlConnection cn = new SqlConnection(@"Persist Security Info=False;User ID=senac;Password=senac;Initial Catalog=monkey_shop;Server=TAU0588413W10-1;Encrypt=False;");
 
-        /*private void btnBuscarProd_Click(object sender, EventArgs e)
-        {
-            if (long.TryParse(tbxBuscarProd.Text.Trim(), out long codProduto))
+            SqlCommand cm = new SqlCommand();
+
+            SqlDataReader dt;
+
+            if(tbxBuscarProd.Text != "")
             {
-                // Chama o método do Dão para retornar os produtos
-                MProdutos produto = cProdutos.RetornarProdutosDGV(codProduto);
-
-                // Limpa a tabela antes de adicionar novos resultados
-                dgvProdutos.DataSource = null;
-                dgvProdutos.Rows.Clear();
-
-                // Verifica se o produto foi encontrado e adiciona ao DataGridView
-                if (produto != null)
+                try
                 {
-                    dgvProdutos.Rows.Add(produto.getIdProduto(),
-                                          produto.getCodProduto(),
-                                          produto.getNomeProduto(),
-                                          produto.getCategoriaProduto(),
-                                          produto.getModeloProduto(),
-                                          produto.getTamanhoProduto(),
-                                          produto.getCorProduto(),
-                                          produto.getQtdProduto(),
-                                          produto.getStatusProduto(),
-                                          produto.getPrecoProduto()); 
-                }
-                else
+                    cm.Connection= cn;
+                    cn.Open();
+                    cm.CommandText = "select * from tbl_produtos where pro_cod like('%" + tbxBuscarProd.Text + "')";
+
+                    SqlDataAdapter da = new SqlDataAdapter();
+                    DataTable dy = new DataTable();
+
+                    da.SelectCommand = cm;
+                    da.Fill(dy);
+
+                    dgvProdutos.DataSource = dy;
+                    cn.Close();
+                }catch(Exception ex)
                 {
-                    MessageBox.Show("Nenhum produto encontrado.");
+                    MessageBox.Show(ex.Message);
                 }
             }
             else
             {
-                MessageBox.Show("Código de produto inválido.");
+                dgvProdutos.DataSource = null;
             }
-        }*/
+        }
 
         private void HabilitarCampos(bool status)
         {
@@ -301,73 +291,6 @@ namespace projetoMonkeyShop.src.view
                 MessageBox.Show("Erro ao alterar produto", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        private void CarregarProdutos()
-        {
-            try
-            {
-                listaModelProdutos = cProdutos.RetornarListaProdutos();
-                dgvProdutos.DataSource = null;
-                dgvProdutos.Rows.Clear();
-
-                int cont = listaModelProdutos.Count;
-                for (int i = 0; i < cont; i++)
-                {
-                    dgvProdutos.Rows.Add(new object[] {
-
-                        listaModelProdutos[i].getIdProduto(),
-                        listaModelProdutos[i].getCodProduto(),
-                        listaModelProdutos[i].getNomeProduto(),
-                        listaModelProdutos[i].getCategoriaProduto(),
-                        listaModelProdutos[i].getModeloProduto(),
-                        listaModelProdutos[i].getTamanhoProduto(),
-                        listaModelProdutos[i].getCorProduto(),
-                        listaModelProdutos[i].getQtdProduto(),
-                        listaModelProdutos[i].getStatusProduto(),
-                        listaModelProdutos[i].getPrecoProduto()
-                    });
-                }
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-                Console.WriteLine(ex.Message);
-            }
-        }
-
-
-
-        /*private void CarregarProdutos()
-        {
-            try
-            {
-                listaModelProdutos = cProdutos.retornarListaProdutoC();
-                var modelo = (DataTable)dgvProdutos.DataSource;
-                //modelo.Rows.Clear();
-
-                for (int i = 0; i < listaModelProdutos.Count; i++)
-                {
-
-                    modelo.Rows.Add(new object[]
-                    {
-                    listaModelProdutos[i].getIdProduto(),
-                    listaModelProdutos[i].getCodProduto(),
-                    listaModelProdutos[i].getNomeProduto(),
-                    listaModelProdutos[i].getModeloProduto(),
-                    listaModelProdutos[i].getTamanhoProduto(),
-                    listaModelProdutos[i].getCorProduto(),
-                    listaModelProdutos[i].getQtdProduto(),
-                    listaModelProdutos[i].getStatusProduto(),
-                    listaModelProdutos[i].getPrecoProduto()
-                    });
-                }
-
-            }catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }*/
-
 
     }
 }
