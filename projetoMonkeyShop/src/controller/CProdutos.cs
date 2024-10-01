@@ -51,19 +51,5 @@ namespace projetoMonkeyShop.src.controller
         {
             return this.daoProdutos.RetornarProduto(pCodigo);
         }
-
-        /**
-         * Retorna uma lista de produtos
-         * @return ArrayList
-         */
-         public List<MProdutos> RetornarListaProdutos()
-        {
-            return this.daoProdutos.RetornarListaDeProdutos();
-        }
-
-        public MProdutos RetornarProdutosDGV(long codProduto)
-        {
-            return this.daoProdutos.RetornarProdutosDGV(codProduto);
-        }
     }
 }

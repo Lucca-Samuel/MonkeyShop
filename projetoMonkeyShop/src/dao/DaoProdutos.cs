@@ -103,14 +103,14 @@ namespace projetoMonkeyShop.src.dao
                 this.Conectar();
                 return this.ExecutarUpdateDelet(
                         "UPDATE tbl_produtos SET "
-                        + "pro_nome = '" + produto.getNomeProduto()+"',"
                         + "pro_categoria = '" + produto.getCategoriaProduto()+"',"
                         + "pro_modelo = '" + produto.getModeloProduto()+"',"
                         + "pro_tamanho = '" + produto.getTamanhoProduto()+"',"
                         + "pro_cor = '" + produto.getCorProduto()+"',"
                         + "pro_qtd = '" + produto.getQtdProduto()+"',"
                         + "pro_status = '" + produto.getStatusProduto()+"',"
-                        + "pro_preco = '" + produto.getPrecoProduto()+"'"
+                        + "pro_preco = '" + produto.getPrecoProduto()+"',"
+                        + "pro_nome = '" + produto.getNomeProduto() + "'"
                         + " WHERE pro_id = '" + produto.getIdProduto()+"'"
                     );
 
@@ -149,7 +149,7 @@ namespace projetoMonkeyShop.src.dao
                         + "pro_cor, "
                         + "pro_qtd, "
                         + "pro_status, "
-                        + "pro_preco"
+                        + "pro_preco "
                         + "FROM tbl_produtos WHERE pro_id = '" + idProduto + "';"
                     );
                 while(this.GetResultSet().NextResult())
@@ -177,109 +177,7 @@ namespace projetoMonkeyShop.src.dao
 
             return produto;
         }
-
-        /**
-        * Retorna uma lista completa de produtos
-        * @return List<MProdutos>
-        */
-        public List<MProdutos> RetornarListaDeProdutos()
-        {
-            List<MProdutos> listaProdutos = new List<MProdutos>();
-          
-            try
-            {
-                this.Conectar();
-               this.ExecultarConsulta(
-                        "SELECT "
-                        + "pro_id, "
-                        + "pro_cod, "
-                        + "pro_nome, "
-                        + "pro_categoria, "
-                        + "pro_modelo, "
-                        + "pro_tamanho, "
-                        + "pro_cor, "
-                        + "pro_qtd, "
-                        + "pro_status, "
-                        + "pro_preco "
-                        + "FROM tbl_produtos;" 
-               );
-
-                while(this.GetResultSet().NextResult())
-                {
-                    MProdutos produto = new MProdutos();
-
-                    produto.SetIdProduto(this.GetResultSet().GetInt32(0));
-                    produto.SetCodProduto(this.GetResultSet().GetInt64(1));
-                    produto.SetNomeProduto(this.GetResultSet().GetString(2));
-                    produto.SetCategoriaProduto(this.GetResultSet().GetString(3));
-                    produto.SetModeloProduto(this.GetResultSet().GetString(4));
-                    produto.SetTamanhoProduto(this.GetResultSet().GetString(5));
-                    produto.SetCorProduto(this.GetResultSet().GetString(6));
-                    produto.SetQtdProduto(this.GetResultSet().GetInt32(7));
-                    produto.SetStatusProduto(this.GetResultSet().GetString(8));
-                    produto.SetPrecoProduto(this.GetResultSet().GetFloat(9));
-                    listaProdutos.Add( produto );
-                }
-
-                
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Erro ao retornar lista de produtos: " + ex.Message);
-            }
-            finally
-            {
-                this.FecharConexao("");
-            }
-
-            return listaProdutos;
-        }
-
-        public MProdutos RetornarProdutosDGV(long codProduto)
-        {
-            MProdutos produto = new MProdutos();
-            DataTable dt = new DataTable();
-            //DataAdapter da = new DataAdapter();
-
-            try
-            {
-                this.Conectar();
-                this.ExecultarConsulta( "SELECT pro_id, pro_cod, pro_nome, pro_categoria, pro_modelo, pro_tamanho, pro_cor, pro_qtd, pro_status, pro_preco " +
-                   "FROM tbl_produtos " +
-                   "WHERE pro_cod LIKE ('%" + codProduto + "%');");
-
-                while (this.GetResultSet().NextResult())
-                { 
-                    produto.SetIdProduto(this.GetResultSet().GetInt32(0));
-                    produto.SetCodProduto(this.GetResultSet().GetInt64(1));
-                    produto.SetNomeProduto(this.GetResultSet().GetString(2));
-                    produto.SetCategoriaProduto(this.GetResultSet().GetString(3));
-                    produto.SetModeloProduto(this.GetResultSet().GetString(4));
-                    produto.SetTamanhoProduto(this.GetResultSet().GetString(5));
-                    produto.SetCorProduto(this.GetResultSet().GetString(6));
-                    produto.SetQtdProduto(this.GetResultSet().GetInt32(7));
-                    produto.SetStatusProduto(this.GetResultSet().GetString(8));
-                    produto.SetPrecoProduto(this.GetResultSet().GetFloat(9));
-                }
-
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-                Console.WriteLine(ex.Message);
-                return null;
-            }
-            finally
-            {
-                this.FecharConexao("");
-            }
-
-            return produto;
-        }
-        
-
-
+ 
     }
 }
 

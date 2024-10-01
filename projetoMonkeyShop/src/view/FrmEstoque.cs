@@ -107,20 +107,33 @@ namespace projetoMonkeyShop.src.view
 
             try
             {
-                int codigoProduto = (int)this.dgvProdutos.Rows[linha].Cells[0].Value;
+                tbxId.Text = dgvProdutos.SelectedRows[0].Cells[0].Value.ToString();
+                tbxCodInc.Text = dgvProdutos.SelectedRows[0].Cells[1].Value.ToString();
+                tbxProdName.Text = dgvProdutos.SelectedRows[0].Cells[2].Value.ToString();
+                cbxCategoria.Text = dgvProdutos.SelectedRows[0].Cells[3].Value.ToString();
+                tbxModelo.Text = dgvProdutos.SelectedRows[0].Cells[4].Value.ToString();
+                cbxTamanho.Text = dgvProdutos.SelectedRows[0].Cells[5].Value.ToString();
+                cbxCor.Text = dgvProdutos.SelectedRows[0].Cells[6].Value.ToString();
+                tbxQtd.Text = dgvProdutos.SelectedRows[0].Cells[7].Value.ToString();
+                cbxStatus.Text = dgvProdutos.SelectedRows[0].Cells[8].Value.ToString();
+                tbxPreco.Text = dgvProdutos.SelectedRows[0].Cells[9].Value.ToString();
 
-                mProdutos = cProdutos.retornarProdutoC(codigoProduto);
+                
+                //int codigoProduto = (int)this.dgvProdutos.Rows[linha].Cells[0].Value;
+                //mProdutos = cProdutos.retornarProdutoC(codigoProduto);
+                //tbxId.Text = mProdutos.getIdProduto().ToString();
+                //tbxCodInc.Text = mProdutos.getCodProduto().ToString();
+                //tbxProdName.Text = mProdutos.getNomeProduto();
+                //cbxCategoria.Text = mProdutos.getCategoriaProduto();
+                //tbxModelo.Text = mProdutos.getModeloProduto();
+                //cbxTamanho.Text = mProdutos.getTamanhoProduto();
+                //cbxCor.Text = mProdutos.getCorProduto();
+                //tbxQtd.Text = mProdutos.getQtdProduto().ToString();
+                //cbxStatus.Text = mProdutos.getStatusProduto();
+                //tbxPreco.Text = mProdutos.getPrecoProduto().ToString();
+                 
 
-                tbxId.Text = mProdutos.getIdProduto().ToString();
-                tbxCodInc.Text = mProdutos.getCodProduto().ToString();
-                tbxProdName.Text = mProdutos.getNomeProduto();
-                cbxCategoria.Text = mProdutos.getCategoriaProduto();
-                tbxModelo.Text = mProdutos.getModeloProduto();
-                cbxTamanho.Text = mProdutos.getTamanhoProduto();
-                cbxCor.Text = mProdutos.getCorProduto();
-                tbxQtd.Text = mProdutos.getQtdProduto().ToString();
-                cbxStatus.Text = mProdutos.getStatusProduto();
-                tbxPreco.Text = mProdutos.getPrecoProduto().ToString();
+                tbxCodInc.Enabled = false;
             } catch (Exception ex)
             {
                 MessageBox.Show(this, "Código invalido ou Registro não selecionado", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -186,7 +199,7 @@ namespace projetoMonkeyShop.src.view
                 {
                     cm.Connection= cn;
                     cn.Open();
-                    cm.CommandText = "select * from tbl_produtos where pro_cod like('%" + tbxBuscarProd.Text + "')";
+                    cm.CommandText = "select pro_id, pro_cod, pro_nome, pro_categoria, pro_modelo, pro_tamanho, pro_cor, pro_qtd, pro_status, pro_preco from tbl_produtos where pro_cod like('%" + tbxBuscarProd.Text + "')";
 
                     SqlDataAdapter da = new SqlDataAdapter();
                     DataTable dy = new DataTable();
@@ -195,10 +208,13 @@ namespace projetoMonkeyShop.src.view
                     da.Fill(dy);
 
                     dgvProdutos.DataSource = dy;
-                    cn.Close();
                 }catch(Exception ex)
                 {
                     MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    cn.Close();
                 }
             }
             else
@@ -270,7 +286,8 @@ namespace projetoMonkeyShop.src.view
 
         private void AlterarProdutos()
         {
-            mProdutos.SetCodProduto(int.Parse(this.tbxCodInc.Text));
+            mProdutos.SetIdProduto(int.Parse(this.tbxId.Text));
+            mProdutos.SetCodProduto(long.Parse(this.tbxCodInc.Text));
             mProdutos.SetCategoriaProduto(this.cbxCategoria.Text);
             mProdutos.SetModeloProduto(this.tbxModelo.Text);
             mProdutos.SetTamanhoProduto(this.cbxTamanho.Text);
@@ -278,6 +295,7 @@ namespace projetoMonkeyShop.src.view
             mProdutos.SetQtdProduto(int.Parse(this.tbxQtd.Text));
             mProdutos.SetStatusProduto(this.cbxStatus.Text);
             mProdutos.SetPrecoProduto(double.Parse(tbxPreco.Text));
+            mProdutos.SetNomeProduto(tbxProdName.Text);
 
             if (cProdutos.alterarProdutoC(mProdutos))
             {
