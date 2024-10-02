@@ -14,6 +14,7 @@ namespace projetoMonkeyShop.src.model
         private string produto_fornecedor;
         private string telefone_fornecedor;
         private string celular_fornecedor;
+        private string email_fornecedor;
         private string nome_contato_fornecedor;
         private string cep_fornecedor;
         private string logradouro_fornecedor;
@@ -53,6 +54,11 @@ namespace projetoMonkeyShop.src.model
         public string getCelularFornecedor()
         {
             return celular_fornecedor;
+        }
+
+        public string getEmailFornecedor()
+        {
+            return email_fornecedor;
         }
 
         public string getNomeContatoFornecedor()
@@ -129,6 +135,11 @@ namespace projetoMonkeyShop.src.model
         public void setCelularFornecedor(string celular_fornecedor)
         {
             this.celular_fornecedor = celular_fornecedor;
+        }
+
+        public void setEmailFornecedor(string email_fornecedor)
+        {
+            this.email_fornecedor = email_fornecedor;
         }
 
         public void setNomeContatoFornecedor(string nome_contato_fornecedor)

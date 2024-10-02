@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.gbxDadosBasicos = new System.Windows.Forms.GroupBox();
-            this.tbxIdFornecedor = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.tbxNomeFor = new System.Windows.Forms.TextBox();
-            this.tbxCNPJ = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.tbxProdutoFor = new System.Windows.Forms.TextBox();
+            this.tbxCNPJ = new System.Windows.Forms.TextBox();
+            this.tbxNomeFor = new System.Windows.Forms.TextBox();
+            this.tbxIdFornecedor = new System.Windows.Forms.TextBox();
             this.gbxContatos = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -47,24 +47,24 @@
             this.tbxCelular = new System.Windows.Forms.TextBox();
             this.tbxTelefone = new System.Windows.Forms.TextBox();
             this.gbxEnderecos = new System.Windows.Forms.GroupBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.tbxComplemento = new System.Windows.Forms.TextBox();
+            this.tbxEstado = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.tbxCidade = new System.Windows.Forms.TextBox();
             this.tbxBairro = new System.Windows.Forms.TextBox();
             this.tbxNumero = new System.Windows.Forms.TextBox();
             this.tbxLogradouro = new System.Windows.Forms.TextBox();
             this.tbxCEP = new System.Windows.Forms.TextBox();
-            this.tbxCidade = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.tbxEstado = new System.Windows.Forms.ComboBox();
             this.gbxInfos = new System.Windows.Forms.GroupBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
-            this.btnSalvarProd = new System.Windows.Forms.Button();
-            this.btnCancelarProd = new System.Windows.Forms.Button();
-            this.tbxComplemento = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
+            this.btnSalvarFornecedor = new System.Windows.Forms.Button();
+            this.btnCancelarFornecedor = new System.Windows.Forms.Button();
             this.gbxDadosBasicos.SuspendLayout();
             this.gbxContatos.SuspendLayout();
             this.gbxEnderecos.SuspendLayout();
@@ -89,31 +89,14 @@
             this.gbxDadosBasicos.TabStop = false;
             this.gbxDadosBasicos.Text = "Dados Básicos";
             // 
-            // tbxIdFornecedor
+            // label4
             // 
-            this.tbxIdFornecedor.Location = new System.Drawing.Point(6, 41);
-            this.tbxIdFornecedor.Multiline = true;
-            this.tbxIdFornecedor.Name = "tbxIdFornecedor";
-            this.tbxIdFornecedor.Size = new System.Drawing.Size(127, 25);
-            this.tbxIdFornecedor.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(20, 16);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "ID";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(185, 25);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(104, 16);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Nome Fantasia*";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(507, 25);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(118, 16);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Produto Fornecido";
             // 
             // label3
             // 
@@ -124,22 +107,31 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "CNPJ*";
             // 
-            // label4
+            // label2
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(507, 25);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(118, 16);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Produto Fornecido";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(185, 25);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(104, 16);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Nome Fantasia*";
             // 
-            // tbxNomeFor
+            // label1
             // 
-            this.tbxNomeFor.Location = new System.Drawing.Point(188, 41);
-            this.tbxNomeFor.Multiline = true;
-            this.tbxNomeFor.Name = "tbxNomeFor";
-            this.tbxNomeFor.Size = new System.Drawing.Size(127, 25);
-            this.tbxNomeFor.TabIndex = 1;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(20, 16);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "ID";
+            // 
+            // tbxProdutoFor
+            // 
+            this.tbxProdutoFor.Location = new System.Drawing.Point(510, 41);
+            this.tbxProdutoFor.Multiline = true;
+            this.tbxProdutoFor.Name = "tbxProdutoFor";
+            this.tbxProdutoFor.Size = new System.Drawing.Size(127, 25);
+            this.tbxProdutoFor.TabIndex = 1;
             // 
             // tbxCNPJ
             // 
@@ -149,13 +141,21 @@
             this.tbxCNPJ.Size = new System.Drawing.Size(127, 25);
             this.tbxCNPJ.TabIndex = 1;
             // 
-            // tbxProdutoFor
+            // tbxNomeFor
             // 
-            this.tbxProdutoFor.Location = new System.Drawing.Point(510, 41);
-            this.tbxProdutoFor.Multiline = true;
-            this.tbxProdutoFor.Name = "tbxProdutoFor";
-            this.tbxProdutoFor.Size = new System.Drawing.Size(127, 25);
-            this.tbxProdutoFor.TabIndex = 1;
+            this.tbxNomeFor.Location = new System.Drawing.Point(188, 41);
+            this.tbxNomeFor.Multiline = true;
+            this.tbxNomeFor.Name = "tbxNomeFor";
+            this.tbxNomeFor.Size = new System.Drawing.Size(127, 25);
+            this.tbxNomeFor.TabIndex = 1;
+            // 
+            // tbxIdFornecedor
+            // 
+            this.tbxIdFornecedor.Location = new System.Drawing.Point(6, 41);
+            this.tbxIdFornecedor.Multiline = true;
+            this.tbxIdFornecedor.Name = "tbxIdFornecedor";
+            this.tbxIdFornecedor.Size = new System.Drawing.Size(127, 25);
+            this.tbxIdFornecedor.TabIndex = 1;
             // 
             // gbxContatos
             // 
@@ -267,99 +267,22 @@
             this.gbxEnderecos.TabStop = false;
             this.gbxEnderecos.Text = "Informações de Localidade";
             // 
-            // label9
+            // label15
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(3, 102);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(48, 16);
-            this.label9.TabIndex = 2;
-            this.label9.Text = "Bairro*";
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(452, 25);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(91, 16);
+            this.label15.TabIndex = 11;
+            this.label15.Text = "Complemento";
             // 
-            // label10
+            // tbxComplemento
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(284, 25);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(60, 16);
-            this.label10.TabIndex = 2;
-            this.label10.Text = "Número*";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(6, 25);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(39, 16);
-            this.label11.TabIndex = 2;
-            this.label11.Text = "CEP*";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(148, 25);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(82, 16);
-            this.label12.TabIndex = 2;
-            this.label12.Text = "Logradouro*";
-            // 
-            // tbxBairro
-            // 
-            this.tbxBairro.Location = new System.Drawing.Point(6, 118);
-            this.tbxBairro.Multiline = true;
-            this.tbxBairro.Name = "tbxBairro";
-            this.tbxBairro.Size = new System.Drawing.Size(127, 25);
-            this.tbxBairro.TabIndex = 1;
-            // 
-            // tbxNumero
-            // 
-            this.tbxNumero.Location = new System.Drawing.Point(287, 41);
-            this.tbxNumero.Multiline = true;
-            this.tbxNumero.Name = "tbxNumero";
-            this.tbxNumero.Size = new System.Drawing.Size(127, 25);
-            this.tbxNumero.TabIndex = 1;
-            // 
-            // tbxLogradouro
-            // 
-            this.tbxLogradouro.Location = new System.Drawing.Point(151, 41);
-            this.tbxLogradouro.Multiline = true;
-            this.tbxLogradouro.Name = "tbxLogradouro";
-            this.tbxLogradouro.Size = new System.Drawing.Size(127, 25);
-            this.tbxLogradouro.TabIndex = 1;
-            // 
-            // tbxCEP
-            // 
-            this.tbxCEP.Location = new System.Drawing.Point(6, 41);
-            this.tbxCEP.Multiline = true;
-            this.tbxCEP.Name = "tbxCEP";
-            this.tbxCEP.Size = new System.Drawing.Size(127, 25);
-            this.tbxCEP.TabIndex = 1;
-            // 
-            // tbxCidade
-            // 
-            this.tbxCidade.Location = new System.Drawing.Point(151, 119);
-            this.tbxCidade.Multiline = true;
-            this.tbxCidade.Name = "tbxCidade";
-            this.tbxCidade.Size = new System.Drawing.Size(127, 25);
-            this.tbxCidade.TabIndex = 1;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(148, 103);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(56, 16);
-            this.label13.TabIndex = 2;
-            this.label13.Text = "Cidade*";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(287, 100);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(55, 16);
-            this.label14.TabIndex = 2;
-            this.label14.Text = "Estado*";
+            this.tbxComplemento.Location = new System.Drawing.Point(455, 41);
+            this.tbxComplemento.Multiline = true;
+            this.tbxComplemento.Name = "tbxComplemento";
+            this.tbxComplemento.Size = new System.Drawing.Size(348, 129);
+            this.tbxComplemento.TabIndex = 10;
             // 
             // tbxEstado
             // 
@@ -397,6 +320,100 @@
             this.tbxEstado.Size = new System.Drawing.Size(127, 24);
             this.tbxEstado.TabIndex = 3;
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(148, 103);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(56, 16);
+            this.label13.TabIndex = 2;
+            this.label13.Text = "Cidade*";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(287, 100);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(55, 16);
+            this.label14.TabIndex = 2;
+            this.label14.Text = "Estado*";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(3, 102);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(48, 16);
+            this.label9.TabIndex = 2;
+            this.label9.Text = "Bairro*";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(284, 25);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(60, 16);
+            this.label10.TabIndex = 2;
+            this.label10.Text = "Número*";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(6, 25);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(39, 16);
+            this.label11.TabIndex = 2;
+            this.label11.Text = "CEP*";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(148, 25);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(82, 16);
+            this.label12.TabIndex = 2;
+            this.label12.Text = "Logradouro*";
+            // 
+            // tbxCidade
+            // 
+            this.tbxCidade.Location = new System.Drawing.Point(151, 119);
+            this.tbxCidade.Multiline = true;
+            this.tbxCidade.Name = "tbxCidade";
+            this.tbxCidade.Size = new System.Drawing.Size(127, 25);
+            this.tbxCidade.TabIndex = 1;
+            // 
+            // tbxBairro
+            // 
+            this.tbxBairro.Location = new System.Drawing.Point(6, 118);
+            this.tbxBairro.Multiline = true;
+            this.tbxBairro.Name = "tbxBairro";
+            this.tbxBairro.Size = new System.Drawing.Size(127, 25);
+            this.tbxBairro.TabIndex = 1;
+            // 
+            // tbxNumero
+            // 
+            this.tbxNumero.Location = new System.Drawing.Point(287, 41);
+            this.tbxNumero.Multiline = true;
+            this.tbxNumero.Name = "tbxNumero";
+            this.tbxNumero.Size = new System.Drawing.Size(127, 25);
+            this.tbxNumero.TabIndex = 1;
+            // 
+            // tbxLogradouro
+            // 
+            this.tbxLogradouro.Location = new System.Drawing.Point(151, 41);
+            this.tbxLogradouro.Multiline = true;
+            this.tbxLogradouro.Name = "tbxLogradouro";
+            this.tbxLogradouro.Size = new System.Drawing.Size(127, 25);
+            this.tbxLogradouro.TabIndex = 1;
+            // 
+            // tbxCEP
+            // 
+            this.tbxCEP.Location = new System.Drawing.Point(6, 41);
+            this.tbxCEP.Multiline = true;
+            this.tbxCEP.Name = "tbxCEP";
+            this.tbxCEP.Size = new System.Drawing.Size(127, 25);
+            this.tbxCEP.TabIndex = 1;
+            // 
             // gbxInfos
             // 
             this.gbxInfos.Controls.Add(this.textBox6);
@@ -416,55 +433,39 @@
             this.textBox6.Size = new System.Drawing.Size(804, 151);
             this.textBox6.TabIndex = 2;
             // 
-            // btnSalvarProd
+            // btnSalvarFornecedor
             // 
-            this.btnSalvarProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvarProd.Image = global::projetoMonkeyShop.Properties.Resources.save1;
-            this.btnSalvarProd.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSalvarProd.Location = new System.Drawing.Point(673, 624);
-            this.btnSalvarProd.Name = "btnSalvarProd";
-            this.btnSalvarProd.Size = new System.Drawing.Size(150, 55);
-            this.btnSalvarProd.TabIndex = 6;
-            this.btnSalvarProd.Text = "Salvar";
-            this.btnSalvarProd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalvarProd.UseVisualStyleBackColor = true;
+            this.btnSalvarFornecedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvarFornecedor.Image = global::projetoMonkeyShop.Properties.Resources.save1;
+            this.btnSalvarFornecedor.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSalvarFornecedor.Location = new System.Drawing.Point(673, 624);
+            this.btnSalvarFornecedor.Name = "btnSalvarFornecedor";
+            this.btnSalvarFornecedor.Size = new System.Drawing.Size(150, 55);
+            this.btnSalvarFornecedor.TabIndex = 6;
+            this.btnSalvarFornecedor.Text = "Salvar";
+            this.btnSalvarFornecedor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalvarFornecedor.UseVisualStyleBackColor = true;
+            this.btnSalvarFornecedor.Click += new System.EventHandler(this.btnSalvarFornecedor_Click);
             // 
-            // btnCancelarProd
+            // btnCancelarFornecedor
             // 
-            this.btnCancelarProd.Image = global::projetoMonkeyShop.Properties.Resources.cancel;
-            this.btnCancelarProd.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancelarProd.Location = new System.Drawing.Point(517, 624);
-            this.btnCancelarProd.Name = "btnCancelarProd";
-            this.btnCancelarProd.Size = new System.Drawing.Size(150, 55);
-            this.btnCancelarProd.TabIndex = 9;
-            this.btnCancelarProd.Text = "Cancelar";
-            this.btnCancelarProd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelarProd.UseVisualStyleBackColor = true;
-            // 
-            // tbxComplemento
-            // 
-            this.tbxComplemento.Location = new System.Drawing.Point(455, 41);
-            this.tbxComplemento.Multiline = true;
-            this.tbxComplemento.Name = "tbxComplemento";
-            this.tbxComplemento.Size = new System.Drawing.Size(348, 129);
-            this.tbxComplemento.TabIndex = 10;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(452, 25);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(91, 16);
-            this.label15.TabIndex = 11;
-            this.label15.Text = "Complemento";
+            this.btnCancelarFornecedor.Image = global::projetoMonkeyShop.Properties.Resources.cancel;
+            this.btnCancelarFornecedor.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCancelarFornecedor.Location = new System.Drawing.Point(517, 624);
+            this.btnCancelarFornecedor.Name = "btnCancelarFornecedor";
+            this.btnCancelarFornecedor.Size = new System.Drawing.Size(150, 55);
+            this.btnCancelarFornecedor.TabIndex = 9;
+            this.btnCancelarFornecedor.Text = "Cancelar";
+            this.btnCancelarFornecedor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancelarFornecedor.UseVisualStyleBackColor = true;
             // 
             // FornecedoresUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.Controls.Add(this.btnSalvarProd);
-            this.Controls.Add(this.btnCancelarProd);
+            this.Controls.Add(this.btnSalvarFornecedor);
+            this.Controls.Add(this.btnCancelarFornecedor);
             this.Controls.Add(this.gbxInfos);
             this.Controls.Add(this.gbxEnderecos);
             this.Controls.Add(this.gbxContatos);
@@ -518,8 +519,8 @@
         private System.Windows.Forms.TextBox tbxCidade;
         private System.Windows.Forms.GroupBox gbxInfos;
         private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Button btnSalvarProd;
-        private System.Windows.Forms.Button btnCancelarProd;
+        private System.Windows.Forms.Button btnSalvarFornecedor;
+        private System.Windows.Forms.Button btnCancelarFornecedor;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox tbxComplemento;
     }
