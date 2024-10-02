@@ -37,17 +37,38 @@
             this.tbxNomeFor = new System.Windows.Forms.TextBox();
             this.tbxCNPJ = new System.Windows.Forms.TextBox();
             this.tbxProdutoFor = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gbxContatos = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.tbxContato = new System.Windows.Forms.TextBox();
+            this.tbxEmail = new System.Windows.Forms.TextBox();
+            this.tbxCelular = new System.Windows.Forms.TextBox();
+            this.tbxTelefone = new System.Windows.Forms.TextBox();
+            this.gbxEnderecos = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.tbxBairro = new System.Windows.Forms.TextBox();
+            this.tbxNumero = new System.Windows.Forms.TextBox();
+            this.tbxLogradouro = new System.Windows.Forms.TextBox();
+            this.tbxCEP = new System.Windows.Forms.TextBox();
+            this.tbxCidade = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.tbxEstado = new System.Windows.Forms.ComboBox();
+            this.gbxInfos = new System.Windows.Forms.GroupBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.btnSalvarProd = new System.Windows.Forms.Button();
+            this.btnCancelarProd = new System.Windows.Forms.Button();
+            this.tbxComplemento = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.gbxDadosBasicos.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.gbxContatos.SuspendLayout();
+            this.gbxEnderecos.SuspendLayout();
+            this.gbxInfos.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbxDadosBasicos
@@ -106,7 +127,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(588, 25);
+            this.label4.Location = new System.Drawing.Point(507, 25);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(118, 16);
             this.label4.TabIndex = 2;
@@ -130,111 +151,334 @@
             // 
             // tbxProdutoFor
             // 
-            this.tbxProdutoFor.Location = new System.Drawing.Point(591, 41);
+            this.tbxProdutoFor.Location = new System.Drawing.Point(510, 41);
             this.tbxProdutoFor.Multiline = true;
             this.tbxProdutoFor.Name = "tbxProdutoFor";
             this.tbxProdutoFor.Size = new System.Drawing.Size(127, 25);
             this.tbxProdutoFor.TabIndex = 1;
             // 
-            // groupBox1
+            // gbxContatos
             // 
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(13, 134);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(816, 95);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Dados Básicos";
+            this.gbxContatos.Controls.Add(this.label5);
+            this.gbxContatos.Controls.Add(this.label6);
+            this.gbxContatos.Controls.Add(this.label7);
+            this.gbxContatos.Controls.Add(this.label8);
+            this.gbxContatos.Controls.Add(this.tbxContato);
+            this.gbxContatos.Controls.Add(this.tbxEmail);
+            this.gbxContatos.Controls.Add(this.tbxCelular);
+            this.gbxContatos.Controls.Add(this.tbxTelefone);
+            this.gbxContatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbxContatos.Location = new System.Drawing.Point(13, 134);
+            this.gbxContatos.Name = "gbxContatos";
+            this.gbxContatos.Size = new System.Drawing.Size(816, 95);
+            this.gbxContatos.TabIndex = 1;
+            this.gbxContatos.TabStop = false;
+            this.gbxContatos.Text = "Contatos";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(588, 25);
+            this.label5.Location = new System.Drawing.Point(452, 25);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(118, 16);
+            this.label5.Size = new System.Drawing.Size(112, 16);
             this.label5.TabIndex = 2;
-            this.label5.Text = "Produto Fornecido";
+            this.label5.Text = "Nome do Contato";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(359, 25);
+            this.label6.Location = new System.Drawing.Point(306, 25);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(47, 16);
+            this.label6.Size = new System.Drawing.Size(46, 16);
             this.label6.TabIndex = 2;
-            this.label6.Text = "CNPJ*";
+            this.label6.Text = "Email*";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(185, 25);
+            this.label7.Location = new System.Drawing.Point(6, 25);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(104, 16);
+            this.label7.Size = new System.Drawing.Size(66, 16);
             this.label7.TabIndex = 2;
-            this.label7.Text = "Nome Fantasia*";
+            this.label7.Text = "Telefone*";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 25);
+            this.label8.Location = new System.Drawing.Point(148, 25);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(20, 16);
+            this.label8.Size = new System.Drawing.Size(54, 16);
             this.label8.TabIndex = 2;
-            this.label8.Text = "ID";
+            this.label8.Text = "Celular*";
             // 
-            // textBox1
+            // tbxContato
             // 
-            this.textBox1.Location = new System.Drawing.Point(591, 41);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(127, 25);
-            this.textBox1.TabIndex = 1;
+            this.tbxContato.Location = new System.Drawing.Point(455, 41);
+            this.tbxContato.Multiline = true;
+            this.tbxContato.Name = "tbxContato";
+            this.tbxContato.Size = new System.Drawing.Size(127, 25);
+            this.tbxContato.TabIndex = 1;
             // 
-            // textBox2
+            // tbxEmail
             // 
-            this.textBox2.Location = new System.Drawing.Point(362, 41);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(127, 25);
-            this.textBox2.TabIndex = 1;
+            this.tbxEmail.Location = new System.Drawing.Point(309, 41);
+            this.tbxEmail.Multiline = true;
+            this.tbxEmail.Name = "tbxEmail";
+            this.tbxEmail.Size = new System.Drawing.Size(127, 25);
+            this.tbxEmail.TabIndex = 1;
             // 
-            // textBox3
+            // tbxCelular
             // 
-            this.textBox3.Location = new System.Drawing.Point(188, 41);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(127, 25);
-            this.textBox3.TabIndex = 1;
+            this.tbxCelular.Location = new System.Drawing.Point(151, 41);
+            this.tbxCelular.Multiline = true;
+            this.tbxCelular.Name = "tbxCelular";
+            this.tbxCelular.Size = new System.Drawing.Size(127, 25);
+            this.tbxCelular.TabIndex = 1;
             // 
-            // textBox4
+            // tbxTelefone
             // 
-            this.textBox4.Location = new System.Drawing.Point(6, 41);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(127, 25);
-            this.textBox4.TabIndex = 1;
+            this.tbxTelefone.Location = new System.Drawing.Point(6, 41);
+            this.tbxTelefone.Multiline = true;
+            this.tbxTelefone.Name = "tbxTelefone";
+            this.tbxTelefone.Size = new System.Drawing.Size(127, 25);
+            this.tbxTelefone.TabIndex = 1;
+            // 
+            // gbxEnderecos
+            // 
+            this.gbxEnderecos.Controls.Add(this.label15);
+            this.gbxEnderecos.Controls.Add(this.tbxComplemento);
+            this.gbxEnderecos.Controls.Add(this.tbxEstado);
+            this.gbxEnderecos.Controls.Add(this.label13);
+            this.gbxEnderecos.Controls.Add(this.label14);
+            this.gbxEnderecos.Controls.Add(this.label9);
+            this.gbxEnderecos.Controls.Add(this.label10);
+            this.gbxEnderecos.Controls.Add(this.label11);
+            this.gbxEnderecos.Controls.Add(this.label12);
+            this.gbxEnderecos.Controls.Add(this.tbxCidade);
+            this.gbxEnderecos.Controls.Add(this.tbxBairro);
+            this.gbxEnderecos.Controls.Add(this.tbxNumero);
+            this.gbxEnderecos.Controls.Add(this.tbxLogradouro);
+            this.gbxEnderecos.Controls.Add(this.tbxCEP);
+            this.gbxEnderecos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbxEnderecos.Location = new System.Drawing.Point(13, 235);
+            this.gbxEnderecos.Name = "gbxEnderecos";
+            this.gbxEnderecos.Size = new System.Drawing.Size(816, 176);
+            this.gbxEnderecos.TabIndex = 2;
+            this.gbxEnderecos.TabStop = false;
+            this.gbxEnderecos.Text = "Informações de Localidade";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(3, 102);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(48, 16);
+            this.label9.TabIndex = 2;
+            this.label9.Text = "Bairro*";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(284, 25);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(60, 16);
+            this.label10.TabIndex = 2;
+            this.label10.Text = "Número*";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(6, 25);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(39, 16);
+            this.label11.TabIndex = 2;
+            this.label11.Text = "CEP*";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(148, 25);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(82, 16);
+            this.label12.TabIndex = 2;
+            this.label12.Text = "Logradouro*";
+            // 
+            // tbxBairro
+            // 
+            this.tbxBairro.Location = new System.Drawing.Point(6, 118);
+            this.tbxBairro.Multiline = true;
+            this.tbxBairro.Name = "tbxBairro";
+            this.tbxBairro.Size = new System.Drawing.Size(127, 25);
+            this.tbxBairro.TabIndex = 1;
+            // 
+            // tbxNumero
+            // 
+            this.tbxNumero.Location = new System.Drawing.Point(287, 41);
+            this.tbxNumero.Multiline = true;
+            this.tbxNumero.Name = "tbxNumero";
+            this.tbxNumero.Size = new System.Drawing.Size(127, 25);
+            this.tbxNumero.TabIndex = 1;
+            // 
+            // tbxLogradouro
+            // 
+            this.tbxLogradouro.Location = new System.Drawing.Point(151, 41);
+            this.tbxLogradouro.Multiline = true;
+            this.tbxLogradouro.Name = "tbxLogradouro";
+            this.tbxLogradouro.Size = new System.Drawing.Size(127, 25);
+            this.tbxLogradouro.TabIndex = 1;
+            // 
+            // tbxCEP
+            // 
+            this.tbxCEP.Location = new System.Drawing.Point(6, 41);
+            this.tbxCEP.Multiline = true;
+            this.tbxCEP.Name = "tbxCEP";
+            this.tbxCEP.Size = new System.Drawing.Size(127, 25);
+            this.tbxCEP.TabIndex = 1;
+            // 
+            // tbxCidade
+            // 
+            this.tbxCidade.Location = new System.Drawing.Point(151, 119);
+            this.tbxCidade.Multiline = true;
+            this.tbxCidade.Name = "tbxCidade";
+            this.tbxCidade.Size = new System.Drawing.Size(127, 25);
+            this.tbxCidade.TabIndex = 1;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(148, 103);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(56, 16);
+            this.label13.TabIndex = 2;
+            this.label13.Text = "Cidade*";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(287, 100);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(55, 16);
+            this.label14.TabIndex = 2;
+            this.label14.Text = "Estado*";
+            // 
+            // tbxEstado
+            // 
+            this.tbxEstado.FormattingEnabled = true;
+            this.tbxEstado.Items.AddRange(new object[] {
+            "AC",
+            "AL",
+            "AP",
+            "AM",
+            "BA",
+            "CE",
+            "DF",
+            "ES",
+            "GO",
+            "MA",
+            "MT",
+            "MS",
+            "MG",
+            "PA",
+            "PB",
+            "PR",
+            "PE",
+            "PI",
+            "RJ",
+            "RN",
+            "RS",
+            "RO",
+            "RR",
+            "SC",
+            "SP",
+            "SE",
+            "TO"});
+            this.tbxEstado.Location = new System.Drawing.Point(287, 119);
+            this.tbxEstado.Name = "tbxEstado";
+            this.tbxEstado.Size = new System.Drawing.Size(127, 24);
+            this.tbxEstado.TabIndex = 3;
+            // 
+            // gbxInfos
+            // 
+            this.gbxInfos.Controls.Add(this.textBox6);
+            this.gbxInfos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbxInfos.Location = new System.Drawing.Point(13, 417);
+            this.gbxInfos.Name = "gbxInfos";
+            this.gbxInfos.Size = new System.Drawing.Size(816, 176);
+            this.gbxInfos.TabIndex = 3;
+            this.gbxInfos.TabStop = false;
+            this.gbxInfos.Text = "Informações importantes sobre o fornecedor";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(6, 19);
+            this.textBox6.Multiline = true;
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(804, 151);
+            this.textBox6.TabIndex = 2;
+            // 
+            // btnSalvarProd
+            // 
+            this.btnSalvarProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvarProd.Image = global::projetoMonkeyShop.Properties.Resources.save1;
+            this.btnSalvarProd.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSalvarProd.Location = new System.Drawing.Point(673, 624);
+            this.btnSalvarProd.Name = "btnSalvarProd";
+            this.btnSalvarProd.Size = new System.Drawing.Size(150, 55);
+            this.btnSalvarProd.TabIndex = 6;
+            this.btnSalvarProd.Text = "Salvar";
+            this.btnSalvarProd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalvarProd.UseVisualStyleBackColor = true;
+            // 
+            // btnCancelarProd
+            // 
+            this.btnCancelarProd.Image = global::projetoMonkeyShop.Properties.Resources.cancel;
+            this.btnCancelarProd.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCancelarProd.Location = new System.Drawing.Point(517, 624);
+            this.btnCancelarProd.Name = "btnCancelarProd";
+            this.btnCancelarProd.Size = new System.Drawing.Size(150, 55);
+            this.btnCancelarProd.TabIndex = 9;
+            this.btnCancelarProd.Text = "Cancelar";
+            this.btnCancelarProd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancelarProd.UseVisualStyleBackColor = true;
+            // 
+            // tbxComplemento
+            // 
+            this.tbxComplemento.Location = new System.Drawing.Point(455, 41);
+            this.tbxComplemento.Multiline = true;
+            this.tbxComplemento.Name = "tbxComplemento";
+            this.tbxComplemento.Size = new System.Drawing.Size(348, 129);
+            this.tbxComplemento.TabIndex = 10;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(452, 25);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(91, 16);
+            this.label15.TabIndex = 11;
+            this.label15.Text = "Complemento";
             // 
             // FornecedoresUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.btnSalvarProd);
+            this.Controls.Add(this.btnCancelarProd);
+            this.Controls.Add(this.gbxInfos);
+            this.Controls.Add(this.gbxEnderecos);
+            this.Controls.Add(this.gbxContatos);
             this.Controls.Add(this.gbxDadosBasicos);
             this.Name = "FornecedoresUC";
             this.Size = new System.Drawing.Size(841, 741);
             this.gbxDadosBasicos.ResumeLayout(false);
             this.gbxDadosBasicos.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gbxContatos.ResumeLayout(false);
+            this.gbxContatos.PerformLayout();
+            this.gbxEnderecos.ResumeLayout(false);
+            this.gbxEnderecos.PerformLayout();
+            this.gbxInfos.ResumeLayout(false);
+            this.gbxInfos.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -250,14 +494,33 @@
         private System.Windows.Forms.TextBox tbxProdutoFor;
         private System.Windows.Forms.TextBox tbxCNPJ;
         private System.Windows.Forms.TextBox tbxNomeFor;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gbxContatos;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox tbxContato;
+        private System.Windows.Forms.TextBox tbxEmail;
+        private System.Windows.Forms.TextBox tbxCelular;
+        private System.Windows.Forms.TextBox tbxTelefone;
+        private System.Windows.Forms.GroupBox gbxEnderecos;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox tbxBairro;
+        private System.Windows.Forms.TextBox tbxNumero;
+        private System.Windows.Forms.TextBox tbxLogradouro;
+        private System.Windows.Forms.TextBox tbxCEP;
+        private System.Windows.Forms.ComboBox tbxEstado;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox tbxCidade;
+        private System.Windows.Forms.GroupBox gbxInfos;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Button btnSalvarProd;
+        private System.Windows.Forms.Button btnCancelarProd;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox tbxComplemento;
     }
 }

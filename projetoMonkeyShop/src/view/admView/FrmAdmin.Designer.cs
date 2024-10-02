@@ -39,7 +39,7 @@
             // 
             // pnlMenu
             // 
-            this.pnlMenu.BackColor = System.Drawing.Color.Gray;
+            this.pnlMenu.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.pnlMenu.Controls.Add(this.btnEstoque);
             this.pnlMenu.Controls.Add(this.btnRelatorios);
             this.pnlMenu.Controls.Add(this.btnFuncionarios);
@@ -52,7 +52,7 @@
             // btnEstoque
             // 
             this.btnEstoque.BackColor = System.Drawing.Color.Black;
-            this.btnEstoque.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.btnEstoque.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEstoque.ForeColor = System.Drawing.Color.White;
             this.btnEstoque.Location = new System.Drawing.Point(3, 344);
             this.btnEstoque.Name = "btnEstoque";
@@ -64,6 +64,7 @@
             // btnRelatorios
             // 
             this.btnRelatorios.BackColor = System.Drawing.Color.Black;
+            this.btnRelatorios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRelatorios.ForeColor = System.Drawing.Color.White;
             this.btnRelatorios.Location = new System.Drawing.Point(3, 273);
             this.btnRelatorios.Name = "btnRelatorios";
@@ -75,6 +76,7 @@
             // btnFuncionarios
             // 
             this.btnFuncionarios.BackColor = System.Drawing.Color.Black;
+            this.btnFuncionarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFuncionarios.ForeColor = System.Drawing.Color.White;
             this.btnFuncionarios.Location = new System.Drawing.Point(4, 202);
             this.btnFuncionarios.Name = "btnFuncionarios";
@@ -86,7 +88,7 @@
             // btnFornecedores
             // 
             this.btnFornecedores.BackColor = System.Drawing.Color.Black;
-            this.btnFornecedores.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFornecedores.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFornecedores.ForeColor = System.Drawing.Color.White;
             this.btnFornecedores.Location = new System.Drawing.Point(3, 131);
             this.btnFornecedores.Name = "btnFornecedores";
@@ -97,16 +99,17 @@
             // 
             // fornecedoresUC1
             // 
-            this.fornecedoresUC1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.fornecedoresUC1.Location = new System.Drawing.Point(211, 0);
+            this.fornecedoresUC1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.fornecedoresUC1.Location = new System.Drawing.Point(209, 0);
             this.fornecedoresUC1.Name = "fornecedoresUC1";
-            this.fornecedoresUC1.Size = new System.Drawing.Size(841, 741);
+            this.fornecedoresUC1.Size = new System.Drawing.Size(849, 741);
             this.fornecedoresUC1.TabIndex = 1;
             // 
             // FrmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(1052, 741);
             this.Controls.Add(this.pnlMenu);
             this.Controls.Add(this.fornecedoresUC1);
