@@ -56,6 +56,7 @@
     <Compile Include="src\conexao\Conexao.cs" />
     <Compile Include="src\controller\CProdutos.cs" />
     <Compile Include="src\dao\DaoProdutos.cs" />
+    <Compile Include="src\model\MMensagens.cs" />
     <Compile Include="src\model\MProdutos.cs" />
     <Compile Include="src\view\admView\FornecedoresUC.cs">
       <SubType>UserControl</SubType>
@@ -117,6 +118,18 @@
     <Compile Include="src\view\Logout.Designer.cs">
       <DependentUpon>Logout.cs</DependentUpon>
     </Compile>
+    <Compile Include="src\view\criarMensagem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\view\criarMensagem.Designer.cs">
+      <DependentUpon>criarMensagem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\view\mostrarMensagem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\view\mostrarMensagem.Designer.cs">
+      <DependentUpon>mostrarMensagem.cs</DependentUpon>
+    </Compile>
     <Compile Include="src\view\Pagamento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +182,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="src\view\Logout.resx">
       <DependentUpon>Logout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\view\criarMensagem.resx">
+      <DependentUpon>criarMensagem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\view\mostrarMensagem.resx">
+      <DependentUpon>mostrarMensagem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\view\Pagamento.resx">
       <DependentUpon>Pagamento.cs</DependentUpon>
