@@ -33,6 +33,7 @@
             this.btnRelatorios = new System.Windows.Forms.Button();
             this.btnFuncionarios = new System.Windows.Forms.Button();
             this.btnFornecedores = new System.Windows.Forms.Button();
+            this.fornecedoresUC1 = new projetoMonkeyShop.src.view.admView.FornecedoresUC();
             this.pnlMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -94,12 +95,21 @@
             this.btnFornecedores.Text = "Fornecedores";
             this.btnFornecedores.UseVisualStyleBackColor = false;
             // 
+            // fornecedoresUC1
+            // 
+            this.fornecedoresUC1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.fornecedoresUC1.Location = new System.Drawing.Point(211, 0);
+            this.fornecedoresUC1.Name = "fornecedoresUC1";
+            this.fornecedoresUC1.Size = new System.Drawing.Size(841, 741);
+            this.fornecedoresUC1.TabIndex = 1;
+            // 
             // FrmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1052, 741);
             this.Controls.Add(this.pnlMenu);
+            this.Controls.Add(this.fornecedoresUC1);
             this.Name = "FrmAdmin";
             this.Text = "FrmAdmin";
             this.pnlMenu.ResumeLayout(false);
@@ -114,5 +124,6 @@
         private System.Windows.Forms.Button btnEstoque;
         private System.Windows.Forms.Button btnRelatorios;
         private System.Windows.Forms.Button btnFuncionarios;
+        private FornecedoresUC fornecedoresUC1;
     }
 }

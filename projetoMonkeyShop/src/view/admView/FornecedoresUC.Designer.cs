@@ -28,19 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.gbxDadosBasicos = new System.Windows.Forms.GroupBox();
             this.SuspendLayout();
+            // 
+            // gbxDadosBasicos
+            // 
+            this.gbxDadosBasicos.Location = new System.Drawing.Point(13, 12);
+            this.gbxDadosBasicos.Name = "gbxDadosBasicos";
+            this.gbxDadosBasicos.Size = new System.Drawing.Size(816, 108);
+            this.gbxDadosBasicos.TabIndex = 0;
+            this.gbxDadosBasicos.TabStop = false;
+            this.gbxDadosBasicos.Text = "Dados Básicos";
             // 
             // FornecedoresUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.Controls.Add(this.gbxDadosBasicos);
             this.Name = "FornecedoresUC";
-            this.Size = new System.Drawing.Size(837, 741);
+            this.Size = new System.Drawing.Size(841, 741);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.GroupBox gbxDadosBasicos;
     }
 }
