@@ -310,6 +310,13 @@
             // 
             this.cbxTamanho.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxTamanho.FormattingEnabled = true;
+            this.cbxTamanho.Items.AddRange(new object[] {
+            "P",
+            "M",
+            "G",
+            "GG",
+            "XG",
+            "XGG"});
             this.cbxTamanho.Location = new System.Drawing.Point(719, 113);
             this.cbxTamanho.Name = "cbxTamanho";
             this.cbxTamanho.Size = new System.Drawing.Size(138, 39);
@@ -320,9 +327,45 @@
             // 
             this.cbxCor.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxCor.FormattingEnabled = true;
+            this.cbxCor.Items.AddRange(new object[] {
+            "Branco",
+            "Preto",
+            "Azul",
+            "Azul claro",
+            "Azul escuro",
+            "Vermelho",
+            "Verde",
+            "Verde claro",
+            "Verde escuro",
+            "Amarelo",
+            "Laranja",
+            "Roxo",
+            "Rosa",
+            "Rosa claro",
+            "Cinza",
+            "Cinza claro",
+            "Cinza escuro",
+            "Marrom",
+            "Bege",
+            "Vinho",
+            "Turquesa",
+            "Aqua",
+            "Dourado",
+            "Prata",
+            "Mostarda",
+            "Lavanda",
+            "Salmon",
+            "Pêssego",
+            "Índigo",
+            "Ciano",
+            "Sépia",
+            "Caramelo",
+            "Terracota",
+            "Petroleo",
+            "Bordô"});
             this.cbxCor.Location = new System.Drawing.Point(884, 113);
             this.cbxCor.Name = "cbxCor";
-            this.cbxCor.Size = new System.Drawing.Size(92, 39);
+            this.cbxCor.Size = new System.Drawing.Size(126, 39);
             this.cbxCor.TabIndex = 6;
             this.cbxCor.SelectedIndexChanged += new System.EventHandler(this.cbxCor_SelectedIndexChanged);
             // 
@@ -330,6 +373,9 @@
             // 
             this.cbxStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxStatus.FormattingEnabled = true;
+            this.cbxStatus.Items.AddRange(new object[] {
+            "Estoque",
+            "Sem Estoque"});
             this.cbxStatus.Location = new System.Drawing.Point(172, 196);
             this.cbxStatus.Name = "cbxStatus";
             this.cbxStatus.Size = new System.Drawing.Size(212, 39);
@@ -340,6 +386,27 @@
             // 
             this.cbxCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxCategoria.FormattingEnabled = true;
+            this.cbxCategoria.Items.AddRange(new object[] {
+            "Camisas",
+            "Blusas",
+            "T-shirts",
+            "Regatas",
+            "Saias",
+            "Calças",
+            "Shorts",
+            "Bermudas",
+            "Macacões",
+            "Jaquetas",
+            "Casacos",
+            "Cardigans",
+            "Suéteres",
+            "Bonés",
+            "Chapéus",
+            "Meias",
+            "Bolsas",
+            "Shoulder Bags",
+            "Mochilas",
+            "Óculos de sol"});
             this.cbxCategoria.Location = new System.Drawing.Point(245, 112);
             this.cbxCategoria.Name = "cbxCategoria";
             this.cbxCategoria.Size = new System.Drawing.Size(208, 39);
