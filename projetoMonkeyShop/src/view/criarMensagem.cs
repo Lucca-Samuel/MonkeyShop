@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace projetoMonkeyShop.src.view
 {
-    public partial class btnExcluirMsg : Form
+    public partial class criarMensagem : UserControl
     {
-        public btnExcluirMsg()
+        public criarMensagem()
         {
             InitializeComponent();
         }
