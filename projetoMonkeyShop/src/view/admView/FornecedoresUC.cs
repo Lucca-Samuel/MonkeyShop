@@ -1,6 +1,7 @@
 ﻿using projetoMonkeyShop.src.controller;
 using projetoMonkeyShop.src.model;
 using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,11 +17,12 @@ namespace projetoMonkeyShop.src.view.admView
     {
         CFornecedores cFornecedor = new CFornecedores();
         MFornecedores mFornecedor = new MFornecedores();
-        string salvarAlterar;
+        public string salvarAlterar;
 
         public FornecedoresUC()
         {
             InitializeComponent();
+            tbxIdFornecedor.Enabled = false;
         }
 
         private void btnSalvarFornecedor_Click(object sender, EventArgs e)
@@ -28,23 +30,14 @@ namespace projetoMonkeyShop.src.view.admView
             this.SalvarFornecedor();
         }
 
-        private void HabilitarCampos(bool status)
+        private void btnCancelarFornecedor_Click(object sender, EventArgs e)
         {
-            tbxNomeFor.Enabled = status;
-            tbxCNPJ.Enabled = status;
-            tbxProdutoFor.Enabled = status;
-            tbxTelefone.Enabled = status;
-            tbxCelular.Enabled = status;
-            tbxEmail.Enabled = status;
-            tbxContato.Enabled = status;
-            tbxCEP.Enabled = status;
-            tbxLogradouro.Enabled = status;
-            tbxNumero.Enabled = status;
-            tbxBairro.Enabled = status;
-            tbxCidade.Enabled = status;
-            tbxEstado.Enabled = status;
-            tbxLogradouro.Enabled = status;
-            tbxFornecedorInfos.Enabled = status;
+            DialogResult confirmacao = MessageBox.Show(this, "Tem certeza que deseja cancelar o cadastro?", "Confirmação", MessageBoxButtons.YesNo);
+
+            if(confirmacao == DialogResult.Yes)
+            {
+                this.LimparCampos();
+            }
         }
 
         private void LimparCampos()
@@ -90,7 +83,6 @@ namespace projetoMonkeyShop.src.view.admView
                 {
                     MessageBox.Show("Fornecedor cadastrado com sucesso cadastrado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.LimparCampos();
-                    this.HabilitarCampos(false);
                 }
             }catch(Exception ex)
             {

@@ -10,16 +10,17 @@ using System.Windows.Forms;
 
 namespace projetoMonkeyShop.src.view.admView
 {
-    public partial class FrmAdmin : Form
+    public partial class MenuFornecedor : UserControl
     {
-        public FrmAdmin()
+
+        public MenuFornecedor()
         {
             InitializeComponent();
         }
 
-        private void FrmAdmin_Load(object sender, EventArgs e)
+        private void btnNovo_Click(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

@@ -82,7 +82,7 @@
             this.gbxDadosBasicos.Controls.Add(this.tbxNomeFor);
             this.gbxDadosBasicos.Controls.Add(this.tbxIdFornecedor);
             this.gbxDadosBasicos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbxDadosBasicos.Location = new System.Drawing.Point(13, 12);
+            this.gbxDadosBasicos.Location = new System.Drawing.Point(15, 4);
             this.gbxDadosBasicos.Name = "gbxDadosBasicos";
             this.gbxDadosBasicos.Size = new System.Drawing.Size(816, 95);
             this.gbxDadosBasicos.TabIndex = 0;
@@ -92,7 +92,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(507, 25);
+            this.label4.Location = new System.Drawing.Point(537, 25);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(118, 16);
             this.label4.TabIndex = 2;
@@ -127,7 +127,7 @@
             // 
             // tbxProdutoFor
             // 
-            this.tbxProdutoFor.Location = new System.Drawing.Point(510, 41);
+            this.tbxProdutoFor.Location = new System.Drawing.Point(540, 41);
             this.tbxProdutoFor.Multiline = true;
             this.tbxProdutoFor.Name = "tbxProdutoFor";
             this.tbxProdutoFor.Size = new System.Drawing.Size(127, 25);
@@ -138,7 +138,7 @@
             this.tbxCNPJ.Location = new System.Drawing.Point(362, 41);
             this.tbxCNPJ.Multiline = true;
             this.tbxCNPJ.Name = "tbxCNPJ";
-            this.tbxCNPJ.Size = new System.Drawing.Size(127, 25);
+            this.tbxCNPJ.Size = new System.Drawing.Size(151, 25);
             this.tbxCNPJ.TabIndex = 1;
             // 
             // tbxNomeFor
@@ -168,7 +168,7 @@
             this.gbxContatos.Controls.Add(this.tbxCelular);
             this.gbxContatos.Controls.Add(this.tbxTelefone);
             this.gbxContatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbxContatos.Location = new System.Drawing.Point(13, 134);
+            this.gbxContatos.Location = new System.Drawing.Point(15, 126);
             this.gbxContatos.Name = "gbxContatos";
             this.gbxContatos.Size = new System.Drawing.Size(816, 95);
             this.gbxContatos.TabIndex = 1;
@@ -260,7 +260,7 @@
             this.gbxEnderecos.Controls.Add(this.tbxLogradouro);
             this.gbxEnderecos.Controls.Add(this.tbxCEP);
             this.gbxEnderecos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbxEnderecos.Location = new System.Drawing.Point(13, 235);
+            this.gbxEnderecos.Location = new System.Drawing.Point(15, 227);
             this.gbxEnderecos.Name = "gbxEnderecos";
             this.gbxEnderecos.Size = new System.Drawing.Size(816, 176);
             this.gbxEnderecos.TabIndex = 2;
@@ -418,7 +418,7 @@
             // 
             this.gbxInfos.Controls.Add(this.tbxFornecedorInfos);
             this.gbxInfos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbxInfos.Location = new System.Drawing.Point(13, 417);
+            this.gbxInfos.Location = new System.Drawing.Point(15, 409);
             this.gbxInfos.Name = "gbxInfos";
             this.gbxInfos.Size = new System.Drawing.Size(816, 176);
             this.gbxInfos.TabIndex = 3;
@@ -438,7 +438,7 @@
             this.btnSalvarFornecedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvarFornecedor.Image = global::projetoMonkeyShop.Properties.Resources.save1;
             this.btnSalvarFornecedor.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSalvarFornecedor.Location = new System.Drawing.Point(673, 624);
+            this.btnSalvarFornecedor.Location = new System.Drawing.Point(675, 616);
             this.btnSalvarFornecedor.Name = "btnSalvarFornecedor";
             this.btnSalvarFornecedor.Size = new System.Drawing.Size(150, 55);
             this.btnSalvarFornecedor.TabIndex = 6;
@@ -451,13 +451,14 @@
             // 
             this.btnCancelarFornecedor.Image = global::projetoMonkeyShop.Properties.Resources.cancel;
             this.btnCancelarFornecedor.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancelarFornecedor.Location = new System.Drawing.Point(517, 624);
+            this.btnCancelarFornecedor.Location = new System.Drawing.Point(519, 616);
             this.btnCancelarFornecedor.Name = "btnCancelarFornecedor";
             this.btnCancelarFornecedor.Size = new System.Drawing.Size(150, 55);
             this.btnCancelarFornecedor.TabIndex = 9;
             this.btnCancelarFornecedor.Text = "Cancelar";
             this.btnCancelarFornecedor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancelarFornecedor.UseVisualStyleBackColor = true;
+            this.btnCancelarFornecedor.Click += new System.EventHandler(this.btnCancelarFornecedor_Click);
             // 
             // FornecedoresUC
             // 

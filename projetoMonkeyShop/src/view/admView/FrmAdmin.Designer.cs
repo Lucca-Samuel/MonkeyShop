@@ -33,6 +33,7 @@
             this.btnRelatorios = new System.Windows.Forms.Button();
             this.btnFuncionarios = new System.Windows.Forms.Button();
             this.btnFornecedores = new System.Windows.Forms.Button();
+            this.menuFornecedor1 = new projetoMonkeyShop.src.view.admView.MenuFornecedor();
             this.fornecedoresUC1 = new projetoMonkeyShop.src.view.admView.FornecedoresUC();
             this.pnlMenu.SuspendLayout();
             this.SuspendLayout();
@@ -97,24 +98,34 @@
             this.btnFornecedores.Text = "Fornecedores";
             this.btnFornecedores.UseVisualStyleBackColor = false;
             // 
+            // menuFornecedor1
+            // 
+            this.menuFornecedor1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.menuFornecedor1.Location = new System.Drawing.Point(203, 0);
+            this.menuFornecedor1.Name = "menuFornecedor1";
+            this.menuFornecedor1.Size = new System.Drawing.Size(300, 51);
+            this.menuFornecedor1.TabIndex = 2;
+            // 
             // fornecedoresUC1
             // 
             this.fornecedoresUC1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.fornecedoresUC1.Location = new System.Drawing.Point(209, 0);
+            this.fornecedoresUC1.Location = new System.Drawing.Point(217, 57);
             this.fornecedoresUC1.Name = "fornecedoresUC1";
-            this.fornecedoresUC1.Size = new System.Drawing.Size(849, 741);
-            this.fornecedoresUC1.TabIndex = 1;
+            this.fornecedoresUC1.Size = new System.Drawing.Size(833, 738);
+            this.fornecedoresUC1.TabIndex = 3;
             // 
             // FrmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.ClientSize = new System.Drawing.Size(1052, 741);
             this.Controls.Add(this.pnlMenu);
+            this.Controls.Add(this.menuFornecedor1);
             this.Controls.Add(this.fornecedoresUC1);
             this.Name = "FrmAdmin";
             this.Text = "FrmAdmin";
+            this.Load += new System.EventHandler(this.FrmAdmin_Load);
             this.pnlMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -127,6 +138,7 @@
         private System.Windows.Forms.Button btnEstoque;
         private System.Windows.Forms.Button btnRelatorios;
         private System.Windows.Forms.Button btnFuncionarios;
+        private MenuFornecedor menuFornecedor1;
         private FornecedoresUC fornecedoresUC1;
     }
 }
