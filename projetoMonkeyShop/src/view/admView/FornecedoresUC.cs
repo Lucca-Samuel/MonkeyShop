@@ -25,7 +25,45 @@ namespace projetoMonkeyShop.src.view.admView
 
         private void btnSalvarFornecedor_Click(object sender, EventArgs e)
         {
+            this.SalvarFornecedor();
+        }
 
+        private void HabilitarCampos(bool status)
+        {
+            tbxNomeFor.Enabled = status;
+            tbxCNPJ.Enabled = status;
+            tbxProdutoFor.Enabled = status;
+            tbxTelefone.Enabled = status;
+            tbxCelular.Enabled = status;
+            tbxEmail.Enabled = status;
+            tbxContato.Enabled = status;
+            tbxCEP.Enabled = status;
+            tbxLogradouro.Enabled = status;
+            tbxNumero.Enabled = status;
+            tbxBairro.Enabled = status;
+            tbxCidade.Enabled = status;
+            tbxEstado.Enabled = status;
+            tbxLogradouro.Enabled = status;
+            tbxFornecedorInfos.Enabled = status;
+        }
+
+        private void LimparCampos()
+        {
+            tbxNomeFor.Text = ("");
+            tbxCNPJ.Text = ("");
+            tbxProdutoFor.Text = ("");
+            tbxTelefone.Text = ("");
+            tbxCelular.Text = ("");
+            tbxEmail.Text = ("");
+            tbxContato.Text = ("");
+            tbxCEP.Text = ("");
+            tbxLogradouro.Text = ("");
+            tbxNumero.Text = ("");
+            tbxBairro.Text = ("");
+            tbxCidade.Text = ("");
+            tbxEstado.Text = ("");
+            tbxLogradouro.Text = ("");
+            tbxFornecedorInfos.Text = ("");
         }
 
         private void SalvarFornecedor()
@@ -36,7 +74,29 @@ namespace projetoMonkeyShop.src.view.admView
             mFornecedor.setTelefoneFornecedor(this.tbxTelefone.Text);
             mFornecedor.setCelularFornecedor(this.tbxCelular.Text);
             mFornecedor.setEmailFornecedor(this.tbxEmail.Text);
-            mFornecedor.setNomeContatoFornecedor(this.tbxNomeFor.Text);
+            mFornecedor.setNomeContatoFornecedor(this.tbxContato.Text);
+            mFornecedor.setCepFornecedor(this.tbxCEP.Text);
+            mFornecedor.setLogradouroFornecedor(this.tbxLogradouro.Text);
+            mFornecedor.setNumeroLogradouroFornecedor(int.Parse(this.tbxNumero.Text));
+            mFornecedor.setBairroFornecedor(this.tbxBairro.Text);
+            mFornecedor.setCidadeFornecedor(this.tbxCidade.Text);
+            mFornecedor.setUfFornecedor(this.tbxEstado.Text);
+            mFornecedor.setComplementoLogradouroFornecedor(this.tbxLogradouro.Text);
+            mFornecedor.setInfoImportantFornecedor(this.tbxFornecedorInfos.Text);
+
+            try
+            {
+                if(cFornecedor.salvarProdutoC(mFornecedor) > 0)
+                {
+                    MessageBox.Show("Fornecedor cadastrado com sucesso cadastrado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.LimparCampos();
+                    this.HabilitarCampos(false);
+                }
+            }catch(Exception ex)
+            {
+                MessageBox.Show("Erro ao cadastrar Fornecedor", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

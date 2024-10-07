@@ -62,7 +62,7 @@
             this.tbxLogradouro = new System.Windows.Forms.TextBox();
             this.tbxCEP = new System.Windows.Forms.TextBox();
             this.gbxInfos = new System.Windows.Forms.GroupBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.tbxFornecedorInfos = new System.Windows.Forms.TextBox();
             this.btnSalvarFornecedor = new System.Windows.Forms.Button();
             this.btnCancelarFornecedor = new System.Windows.Forms.Button();
             this.gbxDadosBasicos.SuspendLayout();
@@ -416,7 +416,7 @@
             // 
             // gbxInfos
             // 
-            this.gbxInfos.Controls.Add(this.textBox6);
+            this.gbxInfos.Controls.Add(this.tbxFornecedorInfos);
             this.gbxInfos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbxInfos.Location = new System.Drawing.Point(13, 417);
             this.gbxInfos.Name = "gbxInfos";
@@ -425,13 +425,13 @@
             this.gbxInfos.TabStop = false;
             this.gbxInfos.Text = "Informações importantes sobre o fornecedor";
             // 
-            // textBox6
+            // tbxFornecedorInfos
             // 
-            this.textBox6.Location = new System.Drawing.Point(6, 19);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(804, 151);
-            this.textBox6.TabIndex = 2;
+            this.tbxFornecedorInfos.Location = new System.Drawing.Point(6, 19);
+            this.tbxFornecedorInfos.Multiline = true;
+            this.tbxFornecedorInfos.Name = "tbxFornecedorInfos";
+            this.tbxFornecedorInfos.Size = new System.Drawing.Size(804, 151);
+            this.tbxFornecedorInfos.TabIndex = 2;
             // 
             // btnSalvarFornecedor
             // 
@@ -518,7 +518,7 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox tbxCidade;
         private System.Windows.Forms.GroupBox gbxInfos;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox tbxFornecedorInfos;
         private System.Windows.Forms.Button btnSalvarFornecedor;
         private System.Windows.Forms.Button btnCancelarFornecedor;
         private System.Windows.Forms.Label label15;

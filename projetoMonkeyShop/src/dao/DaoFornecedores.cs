@@ -51,7 +51,7 @@ namespace projetoMonkeyShop.src.dao
                     + "'" + fornecedor.getNomeContatoFornecedor() + "',"
                     + "'" + fornecedor.getCepFornecedor() + "',"
                     + "'" + fornecedor.getLogradouroFornecedor() + "',"
-                    + "'" + fornecedor.getNumeroLogradouroFornecedor() + ","
+                    + "'" + fornecedor.getNumeroLogradouroFornecedor() + "',"
                     + "'" + fornecedor.getComplementoLogradouroFornecedor() + "',"
                     + "'" + fornecedor.getBairroFornecedor() + "',"
                     + "'" + fornecedor.getCidadeFornecedor() + "',"
