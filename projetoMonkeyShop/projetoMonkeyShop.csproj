@@ -61,6 +61,12 @@
     <Compile Include="src\dao\DaoProdutos.cs" />
     <Compile Include="src\model\MFornecedores.cs" />
     <Compile Include="src\model\MProdutos.cs" />
+    <Compile Include="src\view\admView\Capa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\view\admView\Capa.Designer.cs">
+      <DependentUpon>Capa.cs</DependentUpon>
+    </Compile>
     <Compile Include="src\view\admView\FornecedoresUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -149,6 +155,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\view\admView\Capa.resx">
+      <DependentUpon>Capa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\view\admView\FornecedoresUC.resx">
       <DependentUpon>FornecedoresUC.cs</DependentUpon>

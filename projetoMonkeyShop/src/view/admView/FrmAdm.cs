@@ -19,13 +19,28 @@ namespace projetoMonkeyShop.src.view.admView
 
         private void btnFornecedores_Click(object sender, EventArgs e)
         {
-            MenuFornecedor menu = new MenuFornecedor();
-            menu.Show();
+            FornecedoresUC fornecedores = new FornecedoresUC();
+            fornecedores.BringToFront(); // Leva o controle para frente
+        }
+
+        private void btnProdutos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnVendas_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnFuncionarios_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void fornecedoresUC1_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void pnlMain_Paint(object sender, PaintEventArgs e)
@@ -37,6 +52,5 @@ namespace projetoMonkeyShop.src.view.admView
         {
 
         }
-
     }
 }
