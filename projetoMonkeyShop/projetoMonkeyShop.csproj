@@ -67,11 +67,11 @@
     <Compile Include="src\view\admView\FornecedoresUC.Designer.cs">
       <DependentUpon>FornecedoresUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\view\admView\FrmAdmin.cs">
+    <Compile Include="src\view\admView\FrmAdm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="src\view\admView\FrmAdmin.Designer.cs">
-      <DependentUpon>FrmAdmin.cs</DependentUpon>
+    <Compile Include="src\view\admView\FrmAdm.Designer.cs">
+      <DependentUpon>FrmAdm.cs</DependentUpon>
     </Compile>
     <Compile Include="src\view\admView\MenuFornecedor.cs">
       <SubType>UserControl</SubType>
@@ -153,8 +153,8 @@
     <EmbeddedResource Include="src\view\admView\FornecedoresUC.resx">
       <DependentUpon>FornecedoresUC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\view\admView\FrmAdmin.resx">
-      <DependentUpon>FrmAdmin.cs</DependentUpon>
+    <EmbeddedResource Include="src\view\admView\FrmAdm.resx">
+      <DependentUpon>FrmAdm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\view\admView\MenuFornecedor.resx">
       <DependentUpon>MenuFornecedor.cs</DependentUpon>

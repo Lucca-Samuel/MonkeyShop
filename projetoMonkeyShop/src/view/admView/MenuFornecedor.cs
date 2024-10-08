@@ -16,11 +16,18 @@ namespace projetoMonkeyShop.src.view.admView
         public MenuFornecedor()
         {
             InitializeComponent();
+            //this.Visible= false;
+            //this.Hide();
         }
 
         private void btnNovo_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void MenuFornecedor_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

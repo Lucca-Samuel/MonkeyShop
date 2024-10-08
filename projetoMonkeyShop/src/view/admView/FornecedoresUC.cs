@@ -23,6 +23,8 @@ namespace projetoMonkeyShop.src.view.admView
         {
             InitializeComponent();
             tbxIdFornecedor.Enabled = false;
+            //this.Visible = false;
+            //this.Hide();
         }
 
         private void btnSalvarFornecedor_Click(object sender, EventArgs e)

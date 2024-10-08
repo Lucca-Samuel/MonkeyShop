@@ -438,7 +438,7 @@
             this.btnSalvarFornecedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvarFornecedor.Image = global::projetoMonkeyShop.Properties.Resources.save1;
             this.btnSalvarFornecedor.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSalvarFornecedor.Location = new System.Drawing.Point(675, 616);
+            this.btnSalvarFornecedor.Location = new System.Drawing.Point(676, 600);
             this.btnSalvarFornecedor.Name = "btnSalvarFornecedor";
             this.btnSalvarFornecedor.Size = new System.Drawing.Size(150, 55);
             this.btnSalvarFornecedor.TabIndex = 6;
@@ -451,7 +451,7 @@
             // 
             this.btnCancelarFornecedor.Image = global::projetoMonkeyShop.Properties.Resources.cancel;
             this.btnCancelarFornecedor.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancelarFornecedor.Location = new System.Drawing.Point(519, 616);
+            this.btnCancelarFornecedor.Location = new System.Drawing.Point(520, 600);
             this.btnCancelarFornecedor.Name = "btnCancelarFornecedor";
             this.btnCancelarFornecedor.Size = new System.Drawing.Size(150, 55);
             this.btnCancelarFornecedor.TabIndex = 9;
@@ -472,7 +472,7 @@
             this.Controls.Add(this.gbxContatos);
             this.Controls.Add(this.gbxDadosBasicos);
             this.Name = "FornecedoresUC";
-            this.Size = new System.Drawing.Size(841, 741);
+            this.Size = new System.Drawing.Size(841, 682);
             this.gbxDadosBasicos.ResumeLayout(false);
             this.gbxDadosBasicos.PerformLayout();
             this.gbxContatos.ResumeLayout(false);
