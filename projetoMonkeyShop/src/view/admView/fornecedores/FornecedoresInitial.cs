@@ -31,11 +31,6 @@ namespace projetoMonkeyShop.src.view.admView.fornecedores
             frmcadastroFornecedores.Show();
         }
 
-        private void btnCancelarFor_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnExcluirFor_Click(object sender, EventArgs e)
         {
 

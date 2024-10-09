@@ -35,13 +35,12 @@
             this.btnCriarFor = new System.Windows.Forms.Button();
             this.btnAlterarFor = new System.Windows.Forms.Button();
             this.btnExcluirFor = new System.Windows.Forms.Button();
-            this.btnCancelarFor = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFornecedores)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 215);
+            this.textBox1.Location = new System.Drawing.Point(12, 91);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(872, 40);
@@ -51,9 +50,9 @@
             // 
             this.dgvFornecedores.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvFornecedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvFornecedores.Location = new System.Drawing.Point(12, 276);
+            this.dgvFornecedores.Location = new System.Drawing.Point(12, 151);
             this.dgvFornecedores.Name = "dgvFornecedores";
-            this.dgvFornecedores.Size = new System.Drawing.Size(1013, 200);
+            this.dgvFornecedores.Size = new System.Drawing.Size(999, 406);
             this.dgvFornecedores.TabIndex = 11;
             // 
             // btnPesquisarFor
@@ -62,7 +61,7 @@
             this.btnPesquisarFor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPesquisarFor.Image = ((System.Drawing.Image)(resources.GetObject("btnPesquisarFor.Image")));
             this.btnPesquisarFor.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnPesquisarFor.Location = new System.Drawing.Point(915, 215);
+            this.btnPesquisarFor.Location = new System.Drawing.Point(901, 91);
             this.btnPesquisarFor.Name = "btnPesquisarFor";
             this.btnPesquisarFor.Size = new System.Drawing.Size(110, 40);
             this.btnPesquisarFor.TabIndex = 12;
@@ -76,7 +75,7 @@
             this.btnCriarFor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCriarFor.Image = global::projetoMonkeyShop.Properties.Resources._new;
             this.btnCriarFor.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCriarFor.Location = new System.Drawing.Point(901, 527);
+            this.btnCriarFor.Location = new System.Drawing.Point(12, 12);
             this.btnCriarFor.Name = "btnCriarFor";
             this.btnCriarFor.Size = new System.Drawing.Size(110, 50);
             this.btnCriarFor.TabIndex = 13;
@@ -89,7 +88,7 @@
             // 
             this.btnAlterarFor.Image = global::projetoMonkeyShop.Properties.Resources.edit;
             this.btnAlterarFor.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAlterarFor.Location = new System.Drawing.Point(774, 527);
+            this.btnAlterarFor.Location = new System.Drawing.Point(142, 12);
             this.btnAlterarFor.Name = "btnAlterarFor";
             this.btnAlterarFor.Size = new System.Drawing.Size(110, 50);
             this.btnAlterarFor.TabIndex = 14;
@@ -102,7 +101,7 @@
             // 
             this.btnExcluirFor.Image = ((System.Drawing.Image)(resources.GetObject("btnExcluirFor.Image")));
             this.btnExcluirFor.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnExcluirFor.Location = new System.Drawing.Point(515, 527);
+            this.btnExcluirFor.Location = new System.Drawing.Point(278, 12);
             this.btnExcluirFor.Name = "btnExcluirFor";
             this.btnExcluirFor.Size = new System.Drawing.Size(110, 50);
             this.btnExcluirFor.TabIndex = 15;
@@ -110,19 +109,6 @@
             this.btnExcluirFor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnExcluirFor.UseVisualStyleBackColor = true;
             this.btnExcluirFor.Click += new System.EventHandler(this.btnExcluirFor_Click);
-            // 
-            // btnCancelarFor
-            // 
-            this.btnCancelarFor.Image = global::projetoMonkeyShop.Properties.Resources.cancel;
-            this.btnCancelarFor.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancelarFor.Location = new System.Drawing.Point(645, 527);
-            this.btnCancelarFor.Name = "btnCancelarFor";
-            this.btnCancelarFor.Size = new System.Drawing.Size(110, 50);
-            this.btnCancelarFor.TabIndex = 16;
-            this.btnCancelarFor.Text = "Cancelar";
-            this.btnCancelarFor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelarFor.UseVisualStyleBackColor = true;
-            this.btnCancelarFor.Click += new System.EventHandler(this.btnCancelarFor_Click);
             // 
             // FornecedoresInitial
             // 
@@ -135,7 +121,6 @@
             this.Controls.Add(this.btnCriarFor);
             this.Controls.Add(this.btnAlterarFor);
             this.Controls.Add(this.btnExcluirFor);
-            this.Controls.Add(this.btnCancelarFor);
             this.Controls.Add(this.dgvFornecedores);
             this.Name = "FornecedoresInitial";
             this.Text = "FornecedoresInitial";
@@ -152,7 +137,6 @@
         private System.Windows.Forms.Button btnCriarFor;
         private System.Windows.Forms.Button btnAlterarFor;
         private System.Windows.Forms.Button btnExcluirFor;
-        private System.Windows.Forms.Button btnCancelarFor;
         private System.Windows.Forms.DataGridView dgvFornecedores;
     }
 }
