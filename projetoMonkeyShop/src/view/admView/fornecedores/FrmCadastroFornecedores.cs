@@ -1,8 +1,6 @@
 ﻿using projetoMonkeyShop.src.controller;
 using projetoMonkeyShop.src.model;
-using projetoMonkeyShop.src.view.admView.fornecedores;
 using System;
-using System.CodeDom;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,21 +10,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace projetoMonkeyShop.src.view.admView
+namespace projetoMonkeyShop.src.view.admView.fornecedores
 {
-    public partial class FornecedoresUC : UserControl
+    public partial class FrmCadastroFornecedores : Form
     {
         CFornecedores cFornecedor = new CFornecedores();
         MFornecedores mFornecedor = new MFornecedores();
-        FrmForenecedores frmFornecedores = new FrmForenecedores();
         public string salvarAlterar;
 
-        public FornecedoresUC()
+        public FrmCadastroFornecedores()
         {
             InitializeComponent();
             tbxIdFornecedor.Enabled = false;
-            //this.Visible = false;
-            //this.Hide();
         }
 
         private void btnSalvarFornecedor_Click(object sender, EventArgs e)
@@ -38,7 +33,7 @@ namespace projetoMonkeyShop.src.view.admView
         {
             DialogResult confirmacao = MessageBox.Show(this, "Tem certeza que deseja cancelar o cadastro?", "Confirmação", MessageBoxButtons.YesNo);
 
-            if(confirmacao == DialogResult.Yes)
+            if (confirmacao == DialogResult.Yes)
             {
                 this.LimparCampos();
             }
@@ -84,18 +79,24 @@ namespace projetoMonkeyShop.src.view.admView
 
             try
             {
-                if(cFornecedor.salvarProdutoC(mFornecedor) > 0)
+                if (cFornecedor.salvarProdutoC(mFornecedor) > 0)
                 {
                     MessageBox.Show("Fornecedor cadastrado com sucesso cadastrado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.LimparCampos();
 
-                    frmFornecedores.Close();
+                    this.Close();
                 }
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show("Erro ao cadastrar Fornecedor", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void FrmCadastroFornecedores_Load(object sender, EventArgs e)
+        {
+            MessageBox.Show(salvarAlterar);
         }
     }
 }

@@ -1,16 +1,16 @@
 ﻿namespace projetoMonkeyShop.src.view.admView.fornecedores
 {
-    partial class FornecedoresMain
+    partial class FornecedoresInitial
     {
-        /// <summary> 
-        /// Variável de designer necessária.
+        /// <summary>
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary> 
-        /// Limpar os recursos que estão sendo usados.
+        /// <summary>
+        /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">true se for necessário descartar os recursos gerenciados; caso contrário, false.</param>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,33 +20,55 @@
             base.Dispose(disposing);
         }
 
-        #region Código gerado pelo Designer de Componentes
+        #region Windows Form Designer generated code
 
-        /// <summary> 
-        /// Método necessário para suporte ao Designer - não modifique 
-        /// o conteúdo deste método com o editor de código.
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FornecedoresMain));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FornecedoresInitial));
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.dgvFornecedores = new System.Windows.Forms.DataGridView();
+            this.btnPesquisarFor = new System.Windows.Forms.Button();
             this.btnCriarFor = new System.Windows.Forms.Button();
             this.btnAlterarFor = new System.Windows.Forms.Button();
             this.btnExcluirFor = new System.Windows.Forms.Button();
             this.btnCancelarFor = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btnPesquisarFor = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFornecedores)).BeginInit();
             this.SuspendLayout();
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(12, 215);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(872, 40);
+            this.textBox1.TabIndex = 17;
             // 
             // dgvFornecedores
             // 
             this.dgvFornecedores.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvFornecedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvFornecedores.Location = new System.Drawing.Point(15, 416);
+            this.dgvFornecedores.Location = new System.Drawing.Point(12, 276);
             this.dgvFornecedores.Name = "dgvFornecedores";
-            this.dgvFornecedores.Size = new System.Drawing.Size(810, 200);
-            this.dgvFornecedores.TabIndex = 0;
+            this.dgvFornecedores.Size = new System.Drawing.Size(1013, 200);
+            this.dgvFornecedores.TabIndex = 11;
+            // 
+            // btnPesquisarFor
+            // 
+            this.btnPesquisarFor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnPesquisarFor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPesquisarFor.Image = ((System.Drawing.Image)(resources.GetObject("btnPesquisarFor.Image")));
+            this.btnPesquisarFor.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPesquisarFor.Location = new System.Drawing.Point(915, 215);
+            this.btnPesquisarFor.Name = "btnPesquisarFor";
+            this.btnPesquisarFor.Size = new System.Drawing.Size(110, 40);
+            this.btnPesquisarFor.TabIndex = 12;
+            this.btnPesquisarFor.Text = "Pesquisar";
+            this.btnPesquisarFor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPesquisarFor.UseVisualStyleBackColor = true;
             // 
             // btnCriarFor
             // 
@@ -54,10 +76,10 @@
             this.btnCriarFor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCriarFor.Image = global::projetoMonkeyShop.Properties.Resources._new;
             this.btnCriarFor.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCriarFor.Location = new System.Drawing.Point(715, 664);
+            this.btnCriarFor.Location = new System.Drawing.Point(901, 527);
             this.btnCriarFor.Name = "btnCriarFor";
             this.btnCriarFor.Size = new System.Drawing.Size(110, 50);
-            this.btnCriarFor.TabIndex = 5;
+            this.btnCriarFor.TabIndex = 13;
             this.btnCriarFor.Text = "Novo";
             this.btnCriarFor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCriarFor.UseVisualStyleBackColor = true;
@@ -67,65 +89,47 @@
             // 
             this.btnAlterarFor.Image = global::projetoMonkeyShop.Properties.Resources.edit;
             this.btnAlterarFor.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAlterarFor.Location = new System.Drawing.Point(588, 664);
+            this.btnAlterarFor.Location = new System.Drawing.Point(774, 527);
             this.btnAlterarFor.Name = "btnAlterarFor";
             this.btnAlterarFor.Size = new System.Drawing.Size(110, 50);
-            this.btnAlterarFor.TabIndex = 7;
+            this.btnAlterarFor.TabIndex = 14;
             this.btnAlterarFor.Text = "Alterar";
             this.btnAlterarFor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAlterarFor.UseVisualStyleBackColor = true;
+            this.btnAlterarFor.Click += new System.EventHandler(this.btnAlterarFor_Click);
             // 
             // btnExcluirFor
             // 
             this.btnExcluirFor.Image = ((System.Drawing.Image)(resources.GetObject("btnExcluirFor.Image")));
             this.btnExcluirFor.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnExcluirFor.Location = new System.Drawing.Point(329, 664);
+            this.btnExcluirFor.Location = new System.Drawing.Point(515, 527);
             this.btnExcluirFor.Name = "btnExcluirFor";
             this.btnExcluirFor.Size = new System.Drawing.Size(110, 50);
-            this.btnExcluirFor.TabIndex = 8;
+            this.btnExcluirFor.TabIndex = 15;
             this.btnExcluirFor.Text = "Excluir";
             this.btnExcluirFor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnExcluirFor.UseVisualStyleBackColor = true;
+            this.btnExcluirFor.Click += new System.EventHandler(this.btnExcluirFor_Click);
             // 
             // btnCancelarFor
             // 
             this.btnCancelarFor.Image = global::projetoMonkeyShop.Properties.Resources.cancel;
             this.btnCancelarFor.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancelarFor.Location = new System.Drawing.Point(459, 664);
+            this.btnCancelarFor.Location = new System.Drawing.Point(645, 527);
             this.btnCancelarFor.Name = "btnCancelarFor";
             this.btnCancelarFor.Size = new System.Drawing.Size(110, 50);
-            this.btnCancelarFor.TabIndex = 9;
+            this.btnCancelarFor.TabIndex = 16;
             this.btnCancelarFor.Text = "Cancelar";
             this.btnCancelarFor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancelarFor.UseVisualStyleBackColor = true;
+            this.btnCancelarFor.Click += new System.EventHandler(this.btnCancelarFor_Click);
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(15, 355);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(672, 40);
-            this.textBox1.TabIndex = 10;
-            // 
-            // btnPesquisarFor
-            // 
-            this.btnPesquisarFor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnPesquisarFor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPesquisarFor.Image = ((System.Drawing.Image)(resources.GetObject("btnPesquisarFor.Image")));
-            this.btnPesquisarFor.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnPesquisarFor.Location = new System.Drawing.Point(715, 355);
-            this.btnPesquisarFor.Name = "btnPesquisarFor";
-            this.btnPesquisarFor.Size = new System.Drawing.Size(110, 40);
-            this.btnPesquisarFor.TabIndex = 5;
-            this.btnPesquisarFor.Text = "Pesquisar";
-            this.btnPesquisarFor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPesquisarFor.UseVisualStyleBackColor = true;
-            // 
-            // FornecedoresMain
+            // FornecedoresInitial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.ClientSize = new System.Drawing.Size(1037, 589);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnPesquisarFor);
             this.Controls.Add(this.btnCriarFor);
@@ -133,9 +137,8 @@
             this.Controls.Add(this.btnExcluirFor);
             this.Controls.Add(this.btnCancelarFor);
             this.Controls.Add(this.dgvFornecedores);
-            this.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.Name = "FornecedoresMain";
-            this.Size = new System.Drawing.Size(841, 738);
+            this.Name = "FornecedoresInitial";
+            this.Text = "FornecedoresInitial";
             ((System.ComponentModel.ISupportInitialize)(this.dgvFornecedores)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -144,12 +147,12 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgvFornecedores;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnPesquisarFor;
         private System.Windows.Forms.Button btnCriarFor;
         private System.Windows.Forms.Button btnAlterarFor;
         private System.Windows.Forms.Button btnExcluirFor;
         private System.Windows.Forms.Button btnCancelarFor;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button btnPesquisarFor;
+        private System.Windows.Forms.DataGridView dgvFornecedores;
     }
 }

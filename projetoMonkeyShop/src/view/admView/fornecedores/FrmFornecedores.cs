@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace projetoMonkeyShop.src.view.admView
+namespace projetoMonkeyShop.src.view.admView.fornecedores
 {
-    public partial class Capa : UserControl
+    public partial class FrmFornecedores : Form
     {
-        public Capa()
+        public FrmFornecedores()
         {
             InitializeComponent();
         }

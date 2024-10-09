@@ -1,4 +1,5 @@
 ﻿using System;
+using projetoMonkeyShop.src.view.admView.fornecedores;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,8 @@ namespace projetoMonkeyShop.src.view.admView
 {
     public partial class FrmAdm : Form
     {
+        FornecedoresInitial frmFornecedoresMain = new FornecedoresInitial();
+
         public FrmAdm()
         {
             InitializeComponent();
@@ -19,8 +22,7 @@ namespace projetoMonkeyShop.src.view.admView
 
         private void btnFornecedores_Click(object sender, EventArgs e)
         {
-            FornecedoresUC fornecedores = new FornecedoresUC();
-            fornecedores.BringToFront(); // Leva o controle para frente
+            frmFornecedoresMain.Show();
         }
 
         private void btnProdutos_Click(object sender, EventArgs e)

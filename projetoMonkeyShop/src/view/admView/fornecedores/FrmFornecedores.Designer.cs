@@ -1,6 +1,6 @@
 ﻿namespace projetoMonkeyShop.src.view.admView.fornecedores
 {
-    partial class FrmForenecedores
+    partial class FrmFornecedores
     {
         /// <summary>
         /// Required designer variable.
@@ -28,31 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.fornecedoresUC1 = new projetoMonkeyShop.src.view.admView.FornecedoresUC();
-            this.SuspendLayout();
-            // 
-            // fornecedoresUC1
-            // 
-            this.fornecedoresUC1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.fornecedoresUC1.Location = new System.Drawing.Point(-5, -3);
-            this.fornecedoresUC1.Name = "fornecedoresUC1";
-            this.fornecedoresUC1.Size = new System.Drawing.Size(841, 682);
-            this.fornecedoresUC1.TabIndex = 0;
-            // 
-            // FrmForenecedores
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(836, 670);
-            this.Controls.Add(this.fornecedoresUC1);
-            this.Name = "FrmForenecedores";
-            this.Text = "FrmForenecedores";
-            this.ResumeLayout(false);
-
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Text = "FrmFornecedores";
         }
 
         #endregion
-
-        private FornecedoresUC fornecedoresUC1;
     }
 }

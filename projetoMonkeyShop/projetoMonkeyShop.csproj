@@ -61,41 +61,23 @@
     <Compile Include="src\dao\DaoProdutos.cs" />
     <Compile Include="src\model\MFornecedores.cs" />
     <Compile Include="src\model\MProdutos.cs" />
-    <Compile Include="src\view\admView\Capa.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="src\view\admView\Capa.Designer.cs">
-      <DependentUpon>Capa.cs</DependentUpon>
-    </Compile>
-    <Compile Include="src\view\admView\fornecedores\FornecedoresMain.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="src\view\admView\fornecedores\FornecedoresMain.Designer.cs">
-      <DependentUpon>FornecedoresMain.cs</DependentUpon>
-    </Compile>
-    <Compile Include="src\view\admView\fornecedores\FornecedoresUC.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="src\view\admView\fornecedores\FornecedoresUC.Designer.cs">
-      <DependentUpon>FornecedoresUC.cs</DependentUpon>
-    </Compile>
-    <Compile Include="src\view\admView\fornecedores\FrmForenecedores.cs">
+    <Compile Include="src\view\admView\fornecedores\FornecedoresInitial.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="src\view\admView\fornecedores\FrmForenecedores.Designer.cs">
-      <DependentUpon>FrmForenecedores.cs</DependentUpon>
+    <Compile Include="src\view\admView\fornecedores\FornecedoresInitial.Designer.cs">
+      <DependentUpon>FornecedoresInitial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\view\admView\fornecedores\FrmCadastroFornecedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\view\admView\fornecedores\FrmCadastroFornecedores.Designer.cs">
+      <DependentUpon>FrmCadastroFornecedores.cs</DependentUpon>
     </Compile>
     <Compile Include="src\view\admView\FrmAdm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="src\view\admView\FrmAdm.Designer.cs">
       <DependentUpon>FrmAdm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="src\view\admView\fornecedores\MenuFornecedor.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="src\view\admView\fornecedores\MenuFornecedor.Designer.cs">
-      <DependentUpon>MenuFornecedor.cs</DependentUpon>
     </Compile>
     <Compile Include="src\view\avisos.cs">
       <SubType>Form</SubType>
@@ -168,23 +150,14 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\view\admView\Capa.resx">
-      <DependentUpon>Capa.cs</DependentUpon>
+    <EmbeddedResource Include="src\view\admView\fornecedores\FornecedoresInitial.resx">
+      <DependentUpon>FornecedoresInitial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\view\admView\fornecedores\FornecedoresMain.resx">
-      <DependentUpon>FornecedoresMain.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="src\view\admView\fornecedores\FornecedoresUC.resx">
-      <DependentUpon>FornecedoresUC.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="src\view\admView\fornecedores\FrmForenecedores.resx">
-      <DependentUpon>FrmForenecedores.cs</DependentUpon>
+    <EmbeddedResource Include="src\view\admView\fornecedores\FrmCadastroFornecedores.resx">
+      <DependentUpon>FrmCadastroFornecedores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\view\admView\FrmAdm.resx">
       <DependentUpon>FrmAdm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="src\view\admView\fornecedores\MenuFornecedor.resx">
-      <DependentUpon>MenuFornecedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\view\avisos.resx">
       <DependentUpon>avisos.cs</DependentUpon>

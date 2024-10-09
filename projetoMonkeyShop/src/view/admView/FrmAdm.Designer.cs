@@ -35,7 +35,6 @@
             this.btnProdutos = new System.Windows.Forms.Button();
             this.btnFuncionarios = new System.Windows.Forms.Button();
             this.btnVendas = new System.Windows.Forms.Button();
-            this.fornecedoresMain1 = new projetoMonkeyShop.src.view.admView.fornecedores.FornecedoresMain();
             this.pnlMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -44,7 +43,6 @@
             // 
             this.pnlMain.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.pnlMain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlMain.Controls.Add(this.fornecedoresMain1);
             this.pnlMain.Controls.Add(this.pictureBox1);
             this.pnlMain.Controls.Add(this.btnFornecedores);
             this.pnlMain.Controls.Add(this.btnProdutos);
@@ -118,15 +116,6 @@
             this.btnVendas.UseVisualStyleBackColor = true;
             this.btnVendas.Click += new System.EventHandler(this.btnVendas_Click);
             // 
-            // fornecedoresMain1
-            // 
-            this.fornecedoresMain1.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.fornecedoresMain1.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.fornecedoresMain1.Location = new System.Drawing.Point(206, -1);
-            this.fornecedoresMain1.Name = "fornecedoresMain1";
-            this.fornecedoresMain1.Size = new System.Drawing.Size(841, 738);
-            this.fornecedoresMain1.TabIndex = 4;
-            // 
             // FrmAdm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -150,6 +139,5 @@
         private System.Windows.Forms.Button btnProdutos;
         private System.Windows.Forms.Button btnFuncionarios;
         private System.Windows.Forms.Button btnVendas;
-        private fornecedores.FornecedoresMain fornecedoresMain1;
     }
 }

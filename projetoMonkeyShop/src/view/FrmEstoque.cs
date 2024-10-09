@@ -308,7 +308,6 @@ namespace projetoMonkeyShop.src.view
             {
                 MessageBox.Show("Erro ao alterar produto", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
+        } 
     }
 }
