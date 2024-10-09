@@ -1,5 +1,6 @@
 ﻿using projetoMonkeyShop.src.controller;
 using projetoMonkeyShop.src.model;
+using projetoMonkeyShop.src.view.admView.fornecedores;
 using System;
 using System.CodeDom;
 using System.Collections.Generic;
@@ -17,6 +18,7 @@ namespace projetoMonkeyShop.src.view.admView
     {
         CFornecedores cFornecedor = new CFornecedores();
         MFornecedores mFornecedor = new MFornecedores();
+        FrmForenecedores frmFornecedores = new FrmForenecedores();
         public string salvarAlterar;
 
         public FornecedoresUC()
@@ -59,6 +61,7 @@ namespace projetoMonkeyShop.src.view.admView
             tbxEstado.Text = ("");
             tbxLogradouro.Text = ("");
             tbxFornecedorInfos.Text = ("");
+            tbxComplemento.Text = ("");
         }
 
         private void SalvarFornecedor()
@@ -85,6 +88,8 @@ namespace projetoMonkeyShop.src.view.admView
                 {
                     MessageBox.Show("Fornecedor cadastrado com sucesso cadastrado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.LimparCampos();
+
+                    frmFornecedores.Close();
                 }
             }catch(Exception ex)
             {

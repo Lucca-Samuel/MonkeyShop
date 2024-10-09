@@ -67,11 +67,23 @@
     <Compile Include="src\view\admView\Capa.Designer.cs">
       <DependentUpon>Capa.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\view\admView\FornecedoresUC.cs">
+    <Compile Include="src\view\admView\fornecedores\FornecedoresMain.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="src\view\admView\FornecedoresUC.Designer.cs">
+    <Compile Include="src\view\admView\fornecedores\FornecedoresMain.Designer.cs">
+      <DependentUpon>FornecedoresMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\view\admView\fornecedores\FornecedoresUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\view\admView\fornecedores\FornecedoresUC.Designer.cs">
       <DependentUpon>FornecedoresUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\view\admView\fornecedores\FrmForenecedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\view\admView\fornecedores\FrmForenecedores.Designer.cs">
+      <DependentUpon>FrmForenecedores.cs</DependentUpon>
     </Compile>
     <Compile Include="src\view\admView\FrmAdm.cs">
       <SubType>Form</SubType>
@@ -79,10 +91,10 @@
     <Compile Include="src\view\admView\FrmAdm.Designer.cs">
       <DependentUpon>FrmAdm.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\view\admView\MenuFornecedor.cs">
+    <Compile Include="src\view\admView\fornecedores\MenuFornecedor.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="src\view\admView\MenuFornecedor.Designer.cs">
+    <Compile Include="src\view\admView\fornecedores\MenuFornecedor.Designer.cs">
       <DependentUpon>MenuFornecedor.cs</DependentUpon>
     </Compile>
     <Compile Include="src\view\avisos.cs">
@@ -159,13 +171,19 @@
     <EmbeddedResource Include="src\view\admView\Capa.resx">
       <DependentUpon>Capa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\view\admView\FornecedoresUC.resx">
+    <EmbeddedResource Include="src\view\admView\fornecedores\FornecedoresMain.resx">
+      <DependentUpon>FornecedoresMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\view\admView\fornecedores\FornecedoresUC.resx">
       <DependentUpon>FornecedoresUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\view\admView\fornecedores\FrmForenecedores.resx">
+      <DependentUpon>FrmForenecedores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\view\admView\FrmAdm.resx">
       <DependentUpon>FrmAdm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\view\admView\MenuFornecedor.resx">
+    <EmbeddedResource Include="src\view\admView\fornecedores\MenuFornecedor.resx">
       <DependentUpon>MenuFornecedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\view\avisos.resx">

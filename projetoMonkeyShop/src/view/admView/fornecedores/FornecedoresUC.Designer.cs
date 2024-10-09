@@ -136,6 +136,7 @@
             // tbxCNPJ
             // 
             this.tbxCNPJ.Location = new System.Drawing.Point(362, 41);
+            this.tbxCNPJ.MaxLength = 18;
             this.tbxCNPJ.Multiline = true;
             this.tbxCNPJ.Name = "tbxCNPJ";
             this.tbxCNPJ.Size = new System.Drawing.Size(151, 25);

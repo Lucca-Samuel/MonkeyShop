@@ -35,8 +35,7 @@
             this.btnProdutos = new System.Windows.Forms.Button();
             this.btnFuncionarios = new System.Windows.Forms.Button();
             this.btnVendas = new System.Windows.Forms.Button();
-            this.fornecedoresUC1 = new projetoMonkeyShop.src.view.admView.FornecedoresUC();
-            this.capa1 = new projetoMonkeyShop.src.view.admView.Capa();
+            this.fornecedoresMain1 = new projetoMonkeyShop.src.view.admView.fornecedores.FornecedoresMain();
             this.pnlMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -45,13 +44,12 @@
             // 
             this.pnlMain.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.pnlMain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlMain.Controls.Add(this.capa1);
+            this.pnlMain.Controls.Add(this.fornecedoresMain1);
             this.pnlMain.Controls.Add(this.pictureBox1);
             this.pnlMain.Controls.Add(this.btnFornecedores);
             this.pnlMain.Controls.Add(this.btnProdutos);
             this.pnlMain.Controls.Add(this.btnFuncionarios);
             this.pnlMain.Controls.Add(this.btnVendas);
-            this.pnlMain.Controls.Add(this.fornecedoresUC1);
             this.pnlMain.Location = new System.Drawing.Point(2, 1);
             this.pnlMain.Name = "pnlMain";
             this.pnlMain.Size = new System.Drawing.Size(1048, 738);
@@ -120,21 +118,14 @@
             this.btnVendas.UseVisualStyleBackColor = true;
             this.btnVendas.Click += new System.EventHandler(this.btnVendas_Click);
             // 
-            // fornecedoresUC1
+            // fornecedoresMain1
             // 
-            this.fornecedoresUC1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.fornecedoresUC1.Location = new System.Drawing.Point(206, -1);
-            this.fornecedoresUC1.Name = "fornecedoresUC1";
-            this.fornecedoresUC1.Size = new System.Drawing.Size(841, 741);
-            this.fornecedoresUC1.TabIndex = 2;
-            // 
-            // capa1
-            // 
-            this.capa1.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.capa1.Location = new System.Drawing.Point(206, -1);
-            this.capa1.Name = "capa1";
-            this.capa1.Size = new System.Drawing.Size(841, 741);
-            this.capa1.TabIndex = 4;
+            this.fornecedoresMain1.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.fornecedoresMain1.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.fornecedoresMain1.Location = new System.Drawing.Point(206, -1);
+            this.fornecedoresMain1.Name = "fornecedoresMain1";
+            this.fornecedoresMain1.Size = new System.Drawing.Size(841, 738);
+            this.fornecedoresMain1.TabIndex = 4;
             // 
             // FrmAdm
             // 
@@ -154,12 +145,11 @@
         #endregion
 
         private System.Windows.Forms.Panel pnlMain;
-        private FornecedoresUC fornecedoresUC1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnFornecedores;
         private System.Windows.Forms.Button btnProdutos;
         private System.Windows.Forms.Button btnFuncionarios;
         private System.Windows.Forms.Button btnVendas;
-        private Capa capa1;
+        private fornecedores.FornecedoresMain fornecedoresMain1;
     }
 }
