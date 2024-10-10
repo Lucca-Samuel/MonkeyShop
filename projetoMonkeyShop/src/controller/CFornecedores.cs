@@ -22,6 +22,20 @@ namespace projetoMonkeyShop.src.controller
             return this.daoFornecedores.CadastrarFornecedor(fornecedor);
         }
 
+        public bool ExcluirFornecedor(int fId)
+        {
+            return this.daoFornecedores.ExcluirFornecedor(fId);
+        }
+        
+        public bool AlterarFornecedor(MFornecedores fornecedores)
+        {
+            return this.daoFornecedores.AlterarFornecedor(fornecedores);
+        }
+
+        public MFornecedores retornarFornecedor(int fId)
+        {
+            return this.daoFornecedores.RetornarFornecedor(fId);
+        }
 
     }
 }

@@ -494,7 +494,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnSalvarFornecedor;
+        /*private System.Windows.Forms.Button btnSalvarFornecedor;
         private System.Windows.Forms.Button btnCancelarFornecedor;
         private System.Windows.Forms.GroupBox gbxInfos;
         private System.Windows.Forms.TextBox tbxFornecedorInfos;
@@ -530,6 +530,45 @@
         private System.Windows.Forms.TextBox tbxProdutoFor;
         private System.Windows.Forms.TextBox tbxCNPJ;
         private System.Windows.Forms.TextBox tbxNomeFor;
-        private System.Windows.Forms.TextBox tbxIdFornecedor;
+        private System.Windows.Forms.TextBox tbxIdFornecedor;*/
+
+        private System.Windows.Forms.Button btnSalvarFornecedor;
+        private System.Windows.Forms.Button btnCancelarFornecedor;
+        private System.Windows.Forms.GroupBox gbxInfos;
+        public System.Windows.Forms.TextBox tbxFornecedorInfos;
+        private System.Windows.Forms.GroupBox gbxEnderecos;
+        private System.Windows.Forms.Label label15;
+        public System.Windows.Forms.TextBox tbxComplemento;
+        public System.Windows.Forms.ComboBox tbxEstado;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        public System.Windows.Forms.TextBox tbxCidade;
+        public System.Windows.Forms.TextBox tbxBairro;
+        public System.Windows.Forms.TextBox tbxNumero;
+        public System.Windows.Forms.TextBox tbxLogradouro;
+        public System.Windows.Forms.TextBox tbxCEP;
+        private System.Windows.Forms.GroupBox gbxContatos;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        public System.Windows.Forms.TextBox tbxContato;
+        public System.Windows.Forms.TextBox tbxEmail;
+        public System.Windows.Forms.TextBox tbxCelular;
+        public System.Windows.Forms.TextBox tbxTelefone;
+        private System.Windows.Forms.GroupBox gbxDadosBasicos;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.TextBox tbxProdutoFor;
+        public System.Windows.Forms.TextBox tbxCNPJ;
+        public System.Windows.Forms.TextBox tbxNomeFor;
+        public System.Windows.Forms.TextBox tbxIdFornecedor;
+
     }
 }

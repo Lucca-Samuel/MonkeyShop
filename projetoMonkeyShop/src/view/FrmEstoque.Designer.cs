@@ -236,6 +236,8 @@
             // 
             // btnBuscarProd
             // 
+            this.btnBuscarProd.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarProd.Image")));
+            this.btnBuscarProd.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBuscarProd.Location = new System.Drawing.Point(884, 306);
             this.btnBuscarProd.Name = "btnBuscarProd";
             this.btnBuscarProd.Size = new System.Drawing.Size(139, 38);

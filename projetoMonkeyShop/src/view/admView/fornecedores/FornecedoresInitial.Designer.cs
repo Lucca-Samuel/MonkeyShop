@@ -29,28 +29,30 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FornecedoresInitial));
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbxPesquisa = new System.Windows.Forms.TextBox();
             this.dgvFornecedores = new System.Windows.Forms.DataGridView();
             this.btnPesquisarFor = new System.Windows.Forms.Button();
             this.btnCriarFor = new System.Windows.Forms.Button();
             this.btnAlterarFor = new System.Windows.Forms.Button();
             this.btnExcluirFor = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnPrinter = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFornecedores)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // tbxPesquisa
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 91);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(872, 40);
-            this.textBox1.TabIndex = 17;
+            this.tbxPesquisa.Location = new System.Drawing.Point(12, 97);
+            this.tbxPesquisa.Multiline = true;
+            this.tbxPesquisa.Name = "tbxPesquisa";
+            this.tbxPesquisa.Size = new System.Drawing.Size(872, 40);
+            this.tbxPesquisa.TabIndex = 17;
             // 
             // dgvFornecedores
             // 
             this.dgvFornecedores.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvFornecedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvFornecedores.Location = new System.Drawing.Point(12, 151);
+            this.dgvFornecedores.Location = new System.Drawing.Point(12, 157);
             this.dgvFornecedores.Name = "dgvFornecedores";
             this.dgvFornecedores.Size = new System.Drawing.Size(999, 406);
             this.dgvFornecedores.TabIndex = 11;
@@ -61,13 +63,14 @@
             this.btnPesquisarFor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPesquisarFor.Image = ((System.Drawing.Image)(resources.GetObject("btnPesquisarFor.Image")));
             this.btnPesquisarFor.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnPesquisarFor.Location = new System.Drawing.Point(901, 91);
+            this.btnPesquisarFor.Location = new System.Drawing.Point(901, 97);
             this.btnPesquisarFor.Name = "btnPesquisarFor";
             this.btnPesquisarFor.Size = new System.Drawing.Size(110, 40);
             this.btnPesquisarFor.TabIndex = 12;
             this.btnPesquisarFor.Text = "Pesquisar";
             this.btnPesquisarFor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPesquisarFor.UseVisualStyleBackColor = true;
+            this.btnPesquisarFor.Click += new System.EventHandler(this.btnPesquisarFor_Click);
             // 
             // btnCriarFor
             // 
@@ -75,7 +78,7 @@
             this.btnCriarFor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCriarFor.Image = global::projetoMonkeyShop.Properties.Resources._new;
             this.btnCriarFor.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCriarFor.Location = new System.Drawing.Point(12, 12);
+            this.btnCriarFor.Location = new System.Drawing.Point(901, 599);
             this.btnCriarFor.Name = "btnCriarFor";
             this.btnCriarFor.Size = new System.Drawing.Size(110, 50);
             this.btnCriarFor.TabIndex = 13;
@@ -88,7 +91,7 @@
             // 
             this.btnAlterarFor.Image = global::projetoMonkeyShop.Properties.Resources.edit;
             this.btnAlterarFor.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAlterarFor.Location = new System.Drawing.Point(142, 12);
+            this.btnAlterarFor.Location = new System.Drawing.Point(774, 599);
             this.btnAlterarFor.Name = "btnAlterarFor";
             this.btnAlterarFor.Size = new System.Drawing.Size(110, 50);
             this.btnAlterarFor.TabIndex = 14;
@@ -101,7 +104,7 @@
             // 
             this.btnExcluirFor.Image = ((System.Drawing.Image)(resources.GetObject("btnExcluirFor.Image")));
             this.btnExcluirFor.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnExcluirFor.Location = new System.Drawing.Point(278, 12);
+            this.btnExcluirFor.Location = new System.Drawing.Point(658, 599);
             this.btnExcluirFor.Name = "btnExcluirFor";
             this.btnExcluirFor.Size = new System.Drawing.Size(110, 50);
             this.btnExcluirFor.TabIndex = 15;
@@ -110,16 +113,44 @@
             this.btnExcluirFor.UseVisualStyleBackColor = true;
             this.btnExcluirFor.Click += new System.EventHandler(this.btnExcluirFor_Click);
             // 
+            // button1
+            // 
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.Location = new System.Drawing.Point(533, 599);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(110, 50);
+            this.button1.TabIndex = 15;
+            this.button1.Text = "Excluir";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.btnExcluirFor_Click);
+            // 
+            // btnPrinter
+            // 
+            this.btnPrinter.Image = ((System.Drawing.Image)(resources.GetObject("btnPrinter.Image")));
+            this.btnPrinter.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPrinter.Location = new System.Drawing.Point(533, 599);
+            this.btnPrinter.Name = "btnPrinter";
+            this.btnPrinter.Size = new System.Drawing.Size(110, 50);
+            this.btnPrinter.TabIndex = 15;
+            this.btnPrinter.Text = "Emprimir";
+            this.btnPrinter.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPrinter.UseVisualStyleBackColor = true;
+            this.btnPrinter.Click += new System.EventHandler(this.btnExcluirFor_Click);
+            // 
             // FornecedoresInitial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(1037, 589);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(1037, 661);
+            this.Controls.Add(this.tbxPesquisa);
             this.Controls.Add(this.btnPesquisarFor);
             this.Controls.Add(this.btnCriarFor);
             this.Controls.Add(this.btnAlterarFor);
+            this.Controls.Add(this.btnPrinter);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnExcluirFor);
             this.Controls.Add(this.dgvFornecedores);
             this.Name = "FornecedoresInitial";
@@ -132,11 +163,13 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbxPesquisa;
         private System.Windows.Forms.Button btnPesquisarFor;
         private System.Windows.Forms.Button btnCriarFor;
         private System.Windows.Forms.Button btnAlterarFor;
         private System.Windows.Forms.Button btnExcluirFor;
         private System.Windows.Forms.DataGridView dgvFornecedores;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnPrinter;
     }
 }
