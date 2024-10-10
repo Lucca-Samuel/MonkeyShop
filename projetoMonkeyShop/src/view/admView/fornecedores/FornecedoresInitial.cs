@@ -122,28 +122,30 @@ namespace projetoMonkeyShop.src.view.admView.fornecedores
             }
         }
 
+        //!!Incompleto!!
         public void loadFornecedores()
         {
             FrmCadastroFornecedores frmcadastroFornecedores = new FrmCadastroFornecedores();
             int linha = this.dgvFornecedores.CurrentRow.Index;
-            if (dgvFornecedores.SelectedRows.Count > 0)
-            {
+            
                 try
                 {
-                    frmcadastroFornecedores.tbxNomeFor.Text = dgvFornecedores.SelectedRows[0].Cells[1].Value.ToString();
-                    frmcadastroFornecedores.tbxCNPJ.Text = dgvFornecedores.SelectedRows[0].Cells[2].Value.ToString();
-                    frmcadastroFornecedores.tbxProdutoFor.Text = dgvFornecedores.SelectedRows[0].Cells[3].Value.ToString();
-                    frmcadastroFornecedores.tbxTelefone.Text = dgvFornecedores.SelectedRows[0].Cells[4].Value.ToString();
-                    frmcadastroFornecedores.tbxCelular.Text = dgvFornecedores.SelectedRows[0].Cells[5].Value.ToString();
-                    frmcadastroFornecedores.tbxEmail.Text = dgvFornecedores.SelectedRows[0].Cells[6].Value.ToString();
-                    frmcadastroFornecedores.tbxContato.Text = dgvFornecedores.SelectedRows[0].Cells[7].Value.ToString();
-                    frmcadastroFornecedores.tbxCEP.Text = dgvFornecedores.SelectedRows[0].Cells[8].Value.ToString();
-                    frmcadastroFornecedores.tbxLogradouro.Text = dgvFornecedores.SelectedRows[0].Cells[9].Value.ToString();
-                    frmcadastroFornecedores.tbxNumero.Text = dgvFornecedores.SelectedRows[0].Cells[10].Value.ToString();
-                    frmcadastroFornecedores.tbxBairro.Text = dgvFornecedores.SelectedRows[0].Cells[11].Value.ToString();
-                    frmcadastroFornecedores.tbxCidade.Text = dgvFornecedores.SelectedRows[0].Cells[12].Value.ToString();
-                    frmcadastroFornecedores.tbxEstado.Text = dgvFornecedores.SelectedRows[0].Cells[13].Value.ToString();
-                    frmcadastroFornecedores.tbxFornecedorInfos.Text = dgvFornecedores.SelectedRows[0].Cells[14].Value.ToString();
+                    frmcadastroFornecedores.tbxIdFornecedor.Text = dgvFornecedores.SelectedRows[linha].Cells[0].Value.ToString();
+                    frmcadastroFornecedores.tbxNomeFor.Text = dgvFornecedores.SelectedRows[linha].Cells[1].Value.ToString();
+                    frmcadastroFornecedores.tbxCNPJ.Text = dgvFornecedores.SelectedRows[linha].Cells[2].Value.ToString();
+                    frmcadastroFornecedores.tbxProdutoFor.Text = dgvFornecedores.SelectedRows[linha].Cells[3].Value.ToString();
+                    frmcadastroFornecedores.tbxTelefone.Text = dgvFornecedores.SelectedRows[linha].Cells[4].Value.ToString();
+                    frmcadastroFornecedores.tbxCelular.Text = dgvFornecedores.SelectedRows[linha].Cells[5].Value.ToString();
+                    frmcadastroFornecedores.tbxEmail.Text = dgvFornecedores.SelectedRows[linha].Cells[6].Value.ToString();
+                    frmcadastroFornecedores.tbxContato.Text = dgvFornecedores.SelectedRows[linha].Cells[7].Value.ToString();
+                    frmcadastroFornecedores.tbxCEP.Text = dgvFornecedores.SelectedRows[linha].Cells[8].Value.ToString();
+                    frmcadastroFornecedores.tbxLogradouro.Text = dgvFornecedores.SelectedRows[linha].Cells[9].Value.ToString();
+                    frmcadastroFornecedores.tbxNumero.Text = dgvFornecedores.SelectedRows[linha].Cells[10].Value.ToString();
+                    frmcadastroFornecedores.tbxComplemento.Text= dgvFornecedores.SelectedRows[linha].Cells[11].Value.ToString();
+                    frmcadastroFornecedores.tbxBairro.Text = dgvFornecedores.SelectedRows[linha].Cells[12].Value.ToString();
+                    frmcadastroFornecedores.tbxCidade.Text = dgvFornecedores.SelectedRows[linha].Cells[13].Value.ToString();
+                    frmcadastroFornecedores.tbxEstado.Text = dgvFornecedores.SelectedRows[linha].Cells[14].Value.ToString();
+                    frmcadastroFornecedores.tbxFornecedorInfos.Text = dgvFornecedores.SelectedRows[linha].Cells[15].Value.ToString();
 
                     frmcadastroFornecedores.tbxIdFornecedor.Enabled = false;
                 }
@@ -151,7 +153,6 @@ namespace projetoMonkeyShop.src.view.admView.fornecedores
                 {
                     MessageBox.Show(this, "Código invalido ou Registro não selecionado", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            }
         }
     }
 }

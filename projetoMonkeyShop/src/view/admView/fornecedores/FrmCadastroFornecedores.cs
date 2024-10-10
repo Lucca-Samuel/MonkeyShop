@@ -144,10 +144,11 @@ namespace projetoMonkeyShop.src.view.admView.fornecedores
 
         private void FrmCadastroFornecedores_Load(object sender, EventArgs e)
         {
-            /*if (salvarAlterar == "alterar")
+            if (salvarAlterar == "alterar")
             {
+                FornecedoresInitial fornecedoresInitial = new FornecedoresInitial();
                 fornecedoresInitial.loadFornecedores();
-            }*/
+            }
         }
     }
 }

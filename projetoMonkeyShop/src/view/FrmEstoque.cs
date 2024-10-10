@@ -97,8 +97,6 @@ namespace projetoMonkeyShop.src.view
         /**
         * Informa que será alterado um produto
         */
-
-        //!!INCOMPLETO!!
         private void btnAlterarProd_Click(object sender, EventArgs e)
         {
             HabilitarCampos(true);
