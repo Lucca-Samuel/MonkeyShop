@@ -569,6 +569,5 @@
         public System.Windows.Forms.TextBox tbxCNPJ;
         public System.Windows.Forms.TextBox tbxNomeFor;
         public System.Windows.Forms.TextBox tbxIdFornecedor;
-
     }
 }
