@@ -1,4 +1,5 @@
 ﻿using projetoMonkeyShop.src.controller;
+using projetoMonkeyShop.src.dao;
 using projetoMonkeyShop.src.model;
 using System;
 using System.Collections.Generic;
@@ -114,6 +115,7 @@ namespace projetoMonkeyShop.src.view.admView.fornecedores
 
         public void AlterarFornecedor()
         {
+            mFornecedor.setIdFornecedor(int.Parse(this.tbxIdFornecedor.Text));
             mFornecedor.setNomeFantasiaFornecedor(this.tbxNomeFor.Text);
             mFornecedor.setCnpjFornecedor(this.tbxCNPJ.Text);
             mFornecedor.setProdutoFornecedor(this.tbxProdutoFor.Text);
@@ -144,10 +146,37 @@ namespace projetoMonkeyShop.src.view.admView.fornecedores
 
         private void FrmCadastroFornecedores_Load(object sender, EventArgs e)
         {
-            if (salvarAlterar == "alterar")
+        }
+
+        //!!Incompleto!!
+        public void loadFornecedores(DataGridViewRow selectedRow)
+        {
+            try
             {
-                FornecedoresInitial fornecedoresInitial = new FornecedoresInitial();
-                fornecedoresInitial.loadFornecedores();
+                tbxIdFornecedor.Text = selectedRow.Cells[0].Value.ToString();
+                tbxNomeFor.Text = selectedRow.Cells[1].Value.ToString();
+                tbxCNPJ.Text = selectedRow.Cells[2].Value.ToString();
+                tbxProdutoFor.Text = selectedRow.Cells[3].Value.ToString();
+                tbxTelefone.Text = selectedRow.Cells[4].Value.ToString();
+                tbxCelular.Text = selectedRow.Cells[5].Value.ToString();
+                tbxEmail.Text = selectedRow.Cells[6].Value.ToString();
+                tbxContato.Text = selectedRow.Cells[7].Value.ToString();
+                tbxCEP.Text = selectedRow.Cells[8].Value.ToString();
+                tbxLogradouro.Text = selectedRow.Cells[9].Value.ToString();
+                tbxNumero.Text = selectedRow.Cells[10].Value.ToString();
+                tbxComplemento.Text = selectedRow.Cells[11].Value.ToString();
+                tbxBairro.Text = selectedRow.Cells[12].Value.ToString();
+                tbxCidade.Text = selectedRow.Cells[13].Value.ToString();
+                tbxEstado.Text = selectedRow.Cells[14].Value.ToString();
+                tbxFornecedorInfos.Text = selectedRow.Cells[15].Value.ToString();
+
+                tbxIdFornecedor.Enabled = false;
+
+            }
+            catch (Exception ex)
+            {
+                //MessageBox.Show(ex.Message);
+                MessageBox.Show(this, "Código invalido ou Registro não selecionado", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

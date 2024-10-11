@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.LinkLabel;
 
 namespace projetoMonkeyShop.src.view.admView.fornecedores
 {
@@ -26,15 +27,25 @@ namespace projetoMonkeyShop.src.view.admView.fornecedores
         {
             FrmCadastroFornecedores frmcadastroFornecedores = new FrmCadastroFornecedores();
             frmcadastroFornecedores.salvarAlterar = "salvar";
-            frmcadastroFornecedores.Show();
+            frmcadastroFornecedores.ShowDialog();
         }
 
         private void btnAlterarFor_Click(object sender, EventArgs e)
         {
-            FrmCadastroFornecedores frmcadastroFornecedores = new FrmCadastroFornecedores();
-            frmcadastroFornecedores.salvarAlterar = "alterar";
-            //frmcadastroFornecedores.loadFornecedores(); // Carregue os dados antes de mostrar
-            frmcadastroFornecedores.Show();
+            if (dgvFornecedores.SelectedRows.Count > 0)
+            {
+                FrmCadastroFornecedores frmcadastroFornecedores = new FrmCadastroFornecedores();
+                frmcadastroFornecedores.salvarAlterar = "alterar";
+
+                // Carregar os dados antes de mostrar
+                frmcadastroFornecedores.loadFornecedores(dgvFornecedores.SelectedRows[0]);
+
+                frmcadastroFornecedores.ShowDialog(); // Abre como diálogo modal
+            }
+            else
+            {
+                MessageBox.Show("Selecione um fornecedor para alterar.");
+            }
         }
 
         private void btnExcluirFor_Click(object sender, EventArgs e)
@@ -79,7 +90,8 @@ namespace projetoMonkeyShop.src.view.admView.fornecedores
 
         private void btnPesquisarFor_Click(object sender, EventArgs e)
         {
-            SqlConnection cn = new SqlConnection(@"Persist Security Info=False;User ID=senac;Password=senac;Initial Catalog=monkey_shop;Server=TAU0588413W10-1;Encrypt=False;");
+            SqlConnection cn = new SqlConnection(@"Persist Security Info=False;User ID=senac;Password=senac;Initial Catalog=monkey_shop;Server=TAU0588423W10-1;Encrypt=False;");
+            //TAU0588413W10-1
 
             SqlCommand cm = new SqlCommand();
 
@@ -122,37 +134,5 @@ namespace projetoMonkeyShop.src.view.admView.fornecedores
             }
         }
 
-        //!!Incompleto!!
-        public void loadFornecedores()
-        {
-            FrmCadastroFornecedores frmcadastroFornecedores = new FrmCadastroFornecedores();
-            int linha = this.dgvFornecedores.CurrentRow.Index;
-            
-                try
-                {
-                    frmcadastroFornecedores.tbxIdFornecedor.Text = dgvFornecedores.SelectedRows[linha].Cells[0].Value.ToString();
-                    frmcadastroFornecedores.tbxNomeFor.Text = dgvFornecedores.SelectedRows[linha].Cells[1].Value.ToString();
-                    frmcadastroFornecedores.tbxCNPJ.Text = dgvFornecedores.SelectedRows[linha].Cells[2].Value.ToString();
-                    frmcadastroFornecedores.tbxProdutoFor.Text = dgvFornecedores.SelectedRows[linha].Cells[3].Value.ToString();
-                    frmcadastroFornecedores.tbxTelefone.Text = dgvFornecedores.SelectedRows[linha].Cells[4].Value.ToString();
-                    frmcadastroFornecedores.tbxCelular.Text = dgvFornecedores.SelectedRows[linha].Cells[5].Value.ToString();
-                    frmcadastroFornecedores.tbxEmail.Text = dgvFornecedores.SelectedRows[linha].Cells[6].Value.ToString();
-                    frmcadastroFornecedores.tbxContato.Text = dgvFornecedores.SelectedRows[linha].Cells[7].Value.ToString();
-                    frmcadastroFornecedores.tbxCEP.Text = dgvFornecedores.SelectedRows[linha].Cells[8].Value.ToString();
-                    frmcadastroFornecedores.tbxLogradouro.Text = dgvFornecedores.SelectedRows[linha].Cells[9].Value.ToString();
-                    frmcadastroFornecedores.tbxNumero.Text = dgvFornecedores.SelectedRows[linha].Cells[10].Value.ToString();
-                    frmcadastroFornecedores.tbxComplemento.Text= dgvFornecedores.SelectedRows[linha].Cells[11].Value.ToString();
-                    frmcadastroFornecedores.tbxBairro.Text = dgvFornecedores.SelectedRows[linha].Cells[12].Value.ToString();
-                    frmcadastroFornecedores.tbxCidade.Text = dgvFornecedores.SelectedRows[linha].Cells[13].Value.ToString();
-                    frmcadastroFornecedores.tbxEstado.Text = dgvFornecedores.SelectedRows[linha].Cells[14].Value.ToString();
-                    frmcadastroFornecedores.tbxFornecedorInfos.Text = dgvFornecedores.SelectedRows[linha].Cells[15].Value.ToString();
-
-                    frmcadastroFornecedores.tbxIdFornecedor.Enabled = false;
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(this, "Código invalido ou Registro não selecionado", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-        }
     }
 }

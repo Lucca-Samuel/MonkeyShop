@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.Common;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace projetoMonkeyShop.src.dao
 {
@@ -115,14 +116,15 @@ namespace projetoMonkeyShop.src.dao
                         + "important_infos = '" + fornecedor.getInfoImportantFornecedor() + "' "
                         + "WHERE id_fornecedor = '" + fornecedor.getIdFornecedor() + "'"
                     );
+
             }
             catch (Exception ex)
-            {
-                Console.WriteLine("Erro ao alterar fornecedor: " + ex.Message);
+            { 
                 return false;
             }
             finally
             {
+                MessageBox.Show(fornecedor.getNomeFantasiaFornecedor());
                 this.FecharConexao("");
             }
         }

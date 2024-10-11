@@ -37,6 +37,8 @@
             this.btnExcluirFor = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnPrinter = new System.Windows.Forms.Button();
+            this.tbxTeste1 = new System.Windows.Forms.TextBox();
+            this.tbxTeste2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFornecedores)).BeginInit();
             this.SuspendLayout();
             // 
@@ -139,12 +141,28 @@
             this.btnPrinter.UseVisualStyleBackColor = true;
             this.btnPrinter.Click += new System.EventHandler(this.btnExcluirFor_Click);
             // 
+            // tbxTeste1
+            // 
+            this.tbxTeste1.Location = new System.Drawing.Point(88, 50);
+            this.tbxTeste1.Name = "tbxTeste1";
+            this.tbxTeste1.Size = new System.Drawing.Size(135, 20);
+            this.tbxTeste1.TabIndex = 18;
+            // 
+            // tbxTeste2
+            // 
+            this.tbxTeste2.Location = new System.Drawing.Point(229, 50);
+            this.tbxTeste2.Name = "tbxTeste2";
+            this.tbxTeste2.Size = new System.Drawing.Size(135, 20);
+            this.tbxTeste2.TabIndex = 18;
+            // 
             // FornecedoresInitial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(1037, 661);
+            this.Controls.Add(this.tbxTeste2);
+            this.Controls.Add(this.tbxTeste1);
             this.Controls.Add(this.tbxPesquisa);
             this.Controls.Add(this.btnPesquisarFor);
             this.Controls.Add(this.btnCriarFor);
@@ -168,8 +186,10 @@
         private System.Windows.Forms.Button btnCriarFor;
         private System.Windows.Forms.Button btnAlterarFor;
         private System.Windows.Forms.Button btnExcluirFor;
-        private System.Windows.Forms.DataGridView dgvFornecedores;
+        public System.Windows.Forms.DataGridView dgvFornecedores;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnPrinter;
+        private System.Windows.Forms.TextBox tbxTeste1;
+        private System.Windows.Forms.TextBox tbxTeste2;
     }
 }
