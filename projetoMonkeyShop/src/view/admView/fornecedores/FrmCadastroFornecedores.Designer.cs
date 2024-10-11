@@ -61,10 +61,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.tbxProdutoFor = new System.Windows.Forms.TextBox();
             this.tbxCNPJ = new System.Windows.Forms.TextBox();
             this.tbxNomeFor = new System.Windows.Forms.TextBox();
             this.tbxIdFornecedor = new System.Windows.Forms.TextBox();
+            this.tbxProdutoFor = new System.Windows.Forms.ComboBox();
             this.gbxInfos.SuspendLayout();
             this.gbxEnderecos.SuspendLayout();
             this.gbxContatos.SuspendLayout();
@@ -380,11 +380,11 @@
             // gbxDadosBasicos
             // 
             this.gbxDadosBasicos.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.gbxDadosBasicos.Controls.Add(this.tbxProdutoFor);
             this.gbxDadosBasicos.Controls.Add(this.label4);
             this.gbxDadosBasicos.Controls.Add(this.label3);
             this.gbxDadosBasicos.Controls.Add(this.label2);
             this.gbxDadosBasicos.Controls.Add(this.label1);
-            this.gbxDadosBasicos.Controls.Add(this.tbxProdutoFor);
             this.gbxDadosBasicos.Controls.Add(this.tbxCNPJ);
             this.gbxDadosBasicos.Controls.Add(this.tbxNomeFor);
             this.gbxDadosBasicos.Controls.Add(this.tbxIdFornecedor);
@@ -432,14 +432,6 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "ID";
             // 
-            // tbxProdutoFor
-            // 
-            this.tbxProdutoFor.Location = new System.Drawing.Point(540, 41);
-            this.tbxProdutoFor.Multiline = true;
-            this.tbxProdutoFor.Name = "tbxProdutoFor";
-            this.tbxProdutoFor.Size = new System.Drawing.Size(127, 25);
-            this.tbxProdutoFor.TabIndex = 1;
-            // 
             // tbxCNPJ
             // 
             this.tbxCNPJ.Location = new System.Drawing.Point(362, 41);
@@ -464,6 +456,35 @@
             this.tbxIdFornecedor.Name = "tbxIdFornecedor";
             this.tbxIdFornecedor.Size = new System.Drawing.Size(127, 25);
             this.tbxIdFornecedor.TabIndex = 1;
+            // 
+            // tbxProdutoFor
+            // 
+            this.tbxProdutoFor.FormattingEnabled = true;
+            this.tbxProdutoFor.Items.AddRange(new object[] {
+            "Camisas",
+            "Blusas",
+            "T-shirts",
+            "Regatas",
+            "Saias",
+            "Calças",
+            "Shorts",
+            "Bermudas",
+            "Macacões",
+            "Jaquetas",
+            "Casacos",
+            "Cardigans",
+            "Suéteres",
+            "Bonés",
+            "Chapéus",
+            "Meias",
+            "Bolsas",
+            "Shoulder Bags",
+            "Mochilas",
+            "Óculos de sol"});
+            this.tbxProdutoFor.Location = new System.Drawing.Point(540, 41);
+            this.tbxProdutoFor.Name = "tbxProdutoFor";
+            this.tbxProdutoFor.Size = new System.Drawing.Size(151, 24);
+            this.tbxProdutoFor.TabIndex = 3;
             // 
             // FrmCadastroFornecedores
             // 
@@ -565,9 +586,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        public System.Windows.Forms.TextBox tbxProdutoFor;
         public System.Windows.Forms.TextBox tbxCNPJ;
         public System.Windows.Forms.TextBox tbxNomeFor;
         public System.Windows.Forms.TextBox tbxIdFornecedor;
+        private System.Windows.Forms.ComboBox tbxProdutoFor;
     }
 }
