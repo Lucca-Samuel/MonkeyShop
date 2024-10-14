@@ -1,4 +1,5 @@
 ﻿using projetoMonkeyShop.src.view.admView;
+using projetoMonkeyShop.src.view.admView.fornecedores;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -51,8 +52,8 @@ namespace projetoMonkeyShop.src.view
         {
             try
             {
-                FrmAdm admView = new FrmAdm();
-                admView.Show();
+                FornecedoresInitial fornecedoresInitial = new FornecedoresInitial();
+                fornecedoresInitial.Show();
             }catch(Exception exception)
             {
                 MessageBox.Show(exception.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);

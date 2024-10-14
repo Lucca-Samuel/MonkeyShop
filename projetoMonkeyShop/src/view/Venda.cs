@@ -16,13 +16,20 @@ namespace projetoMonkeyShop.src.view
 {
     public partial class Venda : Form
     {
+
         private List<CarrinhoVenda> carrinho;
 
         public Venda()
         {
             InitializeComponent();
+            carrinho = new List<CarrinhoVenda>();
+
+            tbxValorTotal.Enabled = false;
+            tbxQtdeItens.Enabled = false;
         }
 
+
+        //Começo da área do carrinho
         private void btnOk_Click(object sender, EventArgs e)
         {
             int codigoProduto;
@@ -57,12 +64,15 @@ namespace projetoMonkeyShop.src.view
             {
                 MessageBox.Show("Código de produto inválido.");
             }
+
+            tbxInclusao.Text = "";
         }
 
         private MProdutos ObterProdutoPorCodigo(int codigo)
         {
              MProdutos produto = new MProdutos();
-            string connectionString = @"Persist Security Info=False;User ID=senac;Password=senac;Initial Catalog=monkey_shop;Server=TAU0588413W10-1;Encrypt=False;";
+            //string connectionString = @"Persist Security Info=False;User ID=senac;Password=senac;Initial Catalog=monkey_shop;Server=TAU0588413W10-1;Encrypt=False;";
+            string connectionString = @"Persist Security Info=False;User ID=senac;Password=senac;Initial Catalog=monkey_shop;Server=Lucca-pc;Encrypt=False;";
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
@@ -77,7 +87,20 @@ namespace projetoMonkeyShop.src.view
                     {
                         produto.SetCodProduto(reader.GetInt32(0));
                         produto.SetNomeProduto(reader.GetString(1));
-                        produto.SetPrecoProduto(reader.GetDouble(2));
+                        object precoObj = reader.GetValue(2);
+                        if (precoObj is decimal precoDecimal)
+                        {
+                            produto.SetPrecoProduto(Convert.ToDouble(precoDecimal));
+                        }
+                        else if (precoObj is double precoDouble)
+                        {
+                            produto.SetPrecoProduto(precoDouble);
+                        }
+                        else
+                        {
+                            // Trate o caso em que o valor não é compatível
+                            throw new InvalidCastException("O tipo do preço não é compatível.");
+                        }
                     }
                     else
                     {
@@ -99,6 +122,46 @@ namespace projetoMonkeyShop.src.view
                 Quantidade = i.qtde,
                 Total = i.produto.getPrecoProduto() * i.qtde
             }).ToList();
+
+            tbxValorTotal.Text = CalcularTotalGeral().ToString("F2");
+            tbxQtdeItens.Text = CalcularQuantidadeTotal().ToString();
+        }
+
+        private double CalcularTotalGeral()
+        {
+            return carrinho.Sum(item => item.produto.getPrecoProduto() * item.qtde);
+        }
+
+        private int CalcularQuantidadeTotal()
+        {
+            return carrinho.Sum(item => item.qtde);
+        }
+
+        private void tbxInclusao_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnOk.PerformClick(); // Simula o clique no botão "OK"
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void Form_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Control && e.KeyCode == Keys.E) // Verifica se Ctrl está pressionado e a tecla E
+            {
+                FrmEstoqueAux frmEstoqueAux = new FrmEstoqueAux();
+                frmEstoqueAux.ShowDialog();
+                e.SuppressKeyPress = true;
+            }
+        }
+        //Fim dá área do carrinho
+
+        private void btnCancelarVenda_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = null; // Limpa a fonte de dados
+            tbxValorTotal.Text = ("");
+            tbxQtdeItens.Text = ("");
         }
     }
 }
