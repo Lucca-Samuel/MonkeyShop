@@ -137,6 +137,21 @@ namespace projetoMonkeyShop.src.view
             return carrinho.Sum(item => item.qtde);
         }
 
+        private void AtualizarValorFinal()
+        {
+            double valorTotal;
+            double desconto;
+
+            // Tente converter os valores do TextBox
+            if (double.TryParse(tbxValorTotal.Text, out valorTotal) && double.TryParse(tbxDesconto.Text, out desconto))
+            {
+                // Calcula o valor final
+                double valorFinal = valorTotal - desconto;
+                tbxValorFinal.Text = valorFinal.ToString("F2"); // Atualiza o TextBox de valor final
+            }
+        }
+
+
         private void tbxInclusao_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
