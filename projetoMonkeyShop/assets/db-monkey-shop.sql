@@ -3,14 +3,14 @@ create database monkey_shop;
 use monkey_shop;
 
 -- Criação de um login no servidor
-CREATE LOGIN administrador WITH PASSWORD = 'ADM123';
+CREATE LOGIN senac WITH PASSWORD = 'senac';
 
 -- Criação de um usuário de banco de dados associado ao login
 USE [monkey_shop]; -- Substitua 'SeuBancoDeDados' pelo nome do seu banco de dados
-CREATE USER administrador FOR LOGIN administrador;
+CREATE USER senac FOR LOGIN senac;
 
 -- Concedendo permissões de administrador
-ALTER ROLE db_owner ADD MEMBER administrador;
+ALTER ROLE db_owner ADD MEMBER senac;
 
 
 CREATE TABLE permissoes_usuarios(
