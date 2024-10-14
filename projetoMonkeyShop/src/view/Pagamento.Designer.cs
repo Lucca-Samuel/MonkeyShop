@@ -41,6 +41,8 @@
             this.tbxDebito = new System.Windows.Forms.TextBox();
             this.rbtnCredito = new System.Windows.Forms.RadioButton();
             this.tbxCredito = new System.Windows.Forms.TextBox();
+            this.tbxTotal = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,12 +67,13 @@
             // btnFinalizar
             // 
             this.btnFinalizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFinalizar.Location = new System.Drawing.Point(95, 318);
+            this.btnFinalizar.Location = new System.Drawing.Point(95, 359);
             this.btnFinalizar.Name = "btnFinalizar";
             this.btnFinalizar.Size = new System.Drawing.Size(126, 50);
             this.btnFinalizar.TabIndex = 2;
             this.btnFinalizar.Text = "Finalizar";
             this.btnFinalizar.UseVisualStyleBackColor = true;
+            this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click);
             // 
             // rbtnDinheiro
             // 
@@ -87,12 +90,13 @@
             // btnCancelar
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(95, 374);
+            this.btnCancelar.Location = new System.Drawing.Point(95, 415);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(126, 50);
             this.btnCancelar.TabIndex = 4;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // rbtnPix
             // 
@@ -154,12 +158,32 @@
             this.tbxCredito.Size = new System.Drawing.Size(124, 31);
             this.tbxCredito.TabIndex = 9;
             // 
+            // tbxTotal
+            // 
+            this.tbxTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxTotal.Location = new System.Drawing.Point(143, 276);
+            this.tbxTotal.Name = "tbxTotal";
+            this.tbxTotal.Size = new System.Drawing.Size(124, 31);
+            this.tbxTotal.TabIndex = 9;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(51, 276);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(68, 29);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Total";
+            // 
             // Pagamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(321, 450);
+            this.ClientSize = new System.Drawing.Size(321, 482);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.rbtnCredito);
+            this.Controls.Add(this.tbxTotal);
             this.Controls.Add(this.tbxCredito);
             this.Controls.Add(this.rbtnDebito);
             this.Controls.Add(this.tbxDebito);
@@ -193,5 +217,7 @@
         private System.Windows.Forms.TextBox tbxDebito;
         private System.Windows.Forms.RadioButton rbtnCredito;
         private System.Windows.Forms.TextBox tbxCredito;
+        private System.Windows.Forms.TextBox tbxTotal;
+        private System.Windows.Forms.Label label1;
     }
 }

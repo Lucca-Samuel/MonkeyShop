@@ -17,7 +17,7 @@ namespace projetoMonkeyShop.src.view
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new admView.FrmAdm());
+            Application.Run(new PaginaInicial());
         }
     }
 }

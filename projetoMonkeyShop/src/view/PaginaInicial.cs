@@ -1,4 +1,5 @@
-﻿using System;
+﻿using projetoMonkeyShop.src.view.admView;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -46,5 +47,16 @@ namespace projetoMonkeyShop.src.view
             }
         }
 
+        private void btnFornecedores_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                FrmAdm admView = new FrmAdm();
+                admView.Show();
+            }catch(Exception exception)
+            {
+                MessageBox.Show(exception.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

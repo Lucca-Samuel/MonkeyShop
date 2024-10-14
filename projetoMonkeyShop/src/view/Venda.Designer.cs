@@ -55,6 +55,8 @@
             this.tbxValorTotal = new System.Windows.Forms.TextBox();
             this.lblValorTotal = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
+            this.tbxCpf = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,7 +64,7 @@
             // 
             this.lblNome.AutoSize = true;
             this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNome.Location = new System.Drawing.Point(12, 9);
+            this.lblNome.Location = new System.Drawing.Point(248, 9);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(79, 29);
             this.lblNome.TabIndex = 0;
@@ -71,15 +73,15 @@
             // tbxNome
             // 
             this.tbxNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxNome.Location = new System.Drawing.Point(18, 43);
+            this.tbxNome.Location = new System.Drawing.Point(253, 43);
             this.tbxNome.Name = "tbxNome";
-            this.tbxNome.Size = new System.Drawing.Size(397, 35);
+            this.tbxNome.Size = new System.Drawing.Size(290, 35);
             this.tbxNome.TabIndex = 1;
             // 
             // tbxTelefone
             // 
             this.tbxTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxTelefone.Location = new System.Drawing.Point(452, 43);
+            this.tbxTelefone.Location = new System.Drawing.Point(580, 43);
             this.tbxTelefone.Name = "tbxTelefone";
             this.tbxTelefone.Size = new System.Drawing.Size(243, 35);
             this.tbxTelefone.TabIndex = 3;
@@ -88,7 +90,7 @@
             // 
             this.lblTelefone.AutoSize = true;
             this.lblTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTelefone.Location = new System.Drawing.Point(446, 9);
+            this.lblTelefone.Location = new System.Drawing.Point(574, 9);
             this.lblTelefone.Name = "lblTelefone";
             this.lblTelefone.Size = new System.Drawing.Size(110, 29);
             this.lblTelefone.TabIndex = 2;
@@ -181,6 +183,7 @@
             this.btnOk.TabIndex = 12;
             this.btnOk.Text = "Ok";
             this.btnOk.UseVisualStyleBackColor = true;
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
             // dataGridView1
             // 
@@ -294,6 +297,24 @@
             this.lblUsuario.TabIndex = 18;
             this.lblUsuario.Text = "Usuário:";
             // 
+            // tbxCpf
+            // 
+            this.tbxCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxCpf.Location = new System.Drawing.Point(12, 43);
+            this.tbxCpf.Name = "tbxCpf";
+            this.tbxCpf.Size = new System.Drawing.Size(228, 35);
+            this.tbxCpf.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(7, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(61, 29);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "CPF";
+            // 
             // Venda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -316,7 +337,9 @@
             this.Controls.Add(this.btnCadastro);
             this.Controls.Add(this.tbxTelefone);
             this.Controls.Add(this.lblTelefone);
+            this.Controls.Add(this.tbxCpf);
             this.Controls.Add(this.tbxNome);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblNome);
             this.Name = "Venda";
             this.Text = "Venda";
@@ -355,5 +378,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colTamanho;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPreco;
         private System.Windows.Forms.DataGridViewTextBoxColumn colQtde;
+        private System.Windows.Forms.TextBox tbxCpf;
+        private System.Windows.Forms.Label label1;
     }
 }

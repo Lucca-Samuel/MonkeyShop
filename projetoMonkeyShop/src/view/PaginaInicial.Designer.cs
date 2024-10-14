@@ -31,7 +31,7 @@
             this.btnVendas = new System.Windows.Forms.Button();
             this.btnEstoque = new System.Windows.Forms.Button();
             this.btnAdm = new System.Windows.Forms.Button();
-            this.btnMensagem = new System.Windows.Forms.Button();
+            this.btnFornecedores = new System.Windows.Forms.Button();
             this.btnTitulo = new System.Windows.Forms.Label();
             this.lblUser = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -68,15 +68,16 @@
             this.btnAdm.Text = "Administrativo";
             this.btnAdm.UseVisualStyleBackColor = true;
             // 
-            // btnMensagem
+            // btnFornecedores
             // 
-            this.btnMensagem.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMensagem.Location = new System.Drawing.Point(313, 238);
-            this.btnMensagem.Name = "btnMensagem";
-            this.btnMensagem.Size = new System.Drawing.Size(184, 55);
-            this.btnMensagem.TabIndex = 3;
-            this.btnMensagem.Text = "Mensagem";
-            this.btnMensagem.UseVisualStyleBackColor = true;
+            this.btnFornecedores.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFornecedores.Location = new System.Drawing.Point(313, 238);
+            this.btnFornecedores.Name = "btnFornecedores";
+            this.btnFornecedores.Size = new System.Drawing.Size(184, 55);
+            this.btnFornecedores.TabIndex = 3;
+            this.btnFornecedores.Text = "Fornecedores";
+            this.btnFornecedores.UseVisualStyleBackColor = true;
+            this.btnFornecedores.Click += new System.EventHandler(this.btnFornecedores_Click);
             // 
             // btnTitulo
             // 
@@ -105,7 +106,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.lblUser);
             this.Controls.Add(this.btnTitulo);
-            this.Controls.Add(this.btnMensagem);
+            this.Controls.Add(this.btnFornecedores);
             this.Controls.Add(this.btnAdm);
             this.Controls.Add(this.btnEstoque);
             this.Controls.Add(this.btnVendas);
@@ -121,7 +122,7 @@
         private System.Windows.Forms.Button btnVendas;
         private System.Windows.Forms.Button btnEstoque;
         private System.Windows.Forms.Button btnAdm;
-        private System.Windows.Forms.Button btnMensagem;
+        private System.Windows.Forms.Button btnFornecedores;
         private System.Windows.Forms.Label btnTitulo;
         private System.Windows.Forms.Label lblUser;
     }
