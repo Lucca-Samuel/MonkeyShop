@@ -50,44 +50,16 @@ estado varchar(50),
 pais varchar(50),
 );
 
---Criação da tabela de eventos
-create table eventos(
-id_evento bigint primary key identity(1,1),
-nome_evento varchar(100),
-data_evento date,
-ramo_evento varchar(100),
-cidade_evento varchar(100),
-estado_evento varchar(50),
-);
-
---Criação da tabela de relacionamentos clientes-eventos
-create table rl_clientes_eventos(
-fk_id_cliente bigint,
-fk_id_evento bigint,
-data_evento date,
-
-FOREIGN KEY (fk_id_cliente) REFERENCES clientes(id_cliente),
-FOREIGN KEY (fk_id_evento) REFERENCES eventos(id_evento),
-);
-
---Criação da tabela de formas de pagamento
-CREATE TABLE formas_pgto(
-	id_forma_pgto BIGINT PRIMARY KEY IDENTITY(1,1),
-	forma_pgto CHAR(50),
-);
-
 --Criação da tabela de vendas
 create table vendas(
 id_venda bigint primary key identity(1,1),
 data_venda date,
-nota_fiscal int,
 valor_total decimal(8,2),
 forma_pgto char(100),
-fk_id_forma_pgto bigint,
+fk_id_forma_pgto varchar(50),
 fk_id_cliente bigint,
 fk_id_user bigint,
 
-FOREIGN KEY (fk_id_forma_pgto) REFERENCES formas_pgto(id_forma_pgto),
 FOREIGN KEY (fk_id_cliente) REFERENCES clientes(id_cliente),
 FOREIGN KEY (fk_id_user) REFERENCES usuarios(id_usuario),
 );
@@ -171,11 +143,10 @@ CREATE TABLE compras(
 	valor_total_compra DECIMAL(10,2),
 	fk_id_for BIGINT,
 	fk_id_user BIGINT,
-	fk_id_forma_pgto BIGINT,
+	fk_id_forma_pgto varchar(50),
 
 	FOREIGN KEY (fk_id_for) REFERENCES fornecedores(id_fornecedor),
 	FOREIGN KEY (fk_id_user) REFERENCES usuarios(id_usuario),
-	FOREIGN KEY (fk_id_forma_pgto) REFERENCES formas_pgto(id_forma_pgto),
 );
 
 --Criação da tabela de relacionamento compra-produtos

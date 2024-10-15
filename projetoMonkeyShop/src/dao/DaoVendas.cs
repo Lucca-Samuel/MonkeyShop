@@ -18,21 +18,17 @@ namespace projetoMonkeyShop.src.dao
                 this.Conectar();
                 return ExecutarInsert(
                     "INSERT INTO vendas("
-                    + "id_venda, "
                     + "data_venda, "
-                    + "nota_fisca, "
                     + "valor_total, "
-                    + "fk_id_forma_pgto, "
-                    + "fk_id_cliente, "
-                    + "fk_id_user "
+                    + "fk_id_forma_pgto "
+                    //+ "fk_id_cliente, "
+                    //+ "fk_id_user "
                     + ") VALUES("
-                    + "'" + venda.GetIdVenda() + "',"
                     + "'" + venda.GetDataVenda() + "',"
-                    + "'" + venda.GetNfVenda() + "',"
                     + "'" + venda.GetValorTotalVenda() + "',"
-                    + "'" + venda.GetFkIdFormaPgto() + "',"
-                    + "'" + venda.GetFkIdCliente() + "',"
-                    + "'" + venda.GetFkIdUser() + "'"
+                    + "'" + venda.GetFkIdFormaPgto() + "'"
+                    //+ "'" + venda.GetFkIdCliente() + "',"
+                    //+ "'" + venda.GetFkIdUser() + "'"
                     + ");"
                     );
             }catch( Exception ex )

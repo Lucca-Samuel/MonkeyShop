@@ -11,9 +11,8 @@ namespace projetoMonkeyShop.src.model
         //tbl Vendas
         private int idVenda;
         private DateTime data_venda;
-        private long nf_venda;
         private double valorTotal_venda;
-        private int fk_id_forma_pgto;
+        private string fk_id_forma_pgto;
         private int fk_id_cliente;
         private int fk_id_user;
 
@@ -38,17 +37,6 @@ namespace projetoMonkeyShop.src.model
             data_venda = value;
         }
 
-        // Getter e Setter para nf_venda
-        public long GetNfVenda()
-        {
-            return nf_venda;
-        }
-
-        public void SetNfVenda(long value)
-        {
-            nf_venda = value;
-        }
-
         // Getter e Setter para valorTotal_venda
         public double GetValorTotalVenda()
         {
@@ -61,12 +49,12 @@ namespace projetoMonkeyShop.src.model
         }
 
         // Getter e Setter para fk_id_forma_pgto
-        public int GetFkIdFormaPgto()
+        public string GetFkIdFormaPgto()
         {
             return fk_id_forma_pgto;
         }
 
-        public void SetFkIdFormaPgto(int value)
+        public void SetFkIdFormaPgto(string value)
         {
             fk_id_forma_pgto = value;
         }

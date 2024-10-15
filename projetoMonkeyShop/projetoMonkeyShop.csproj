@@ -57,6 +57,8 @@
     <Compile Include="src\conexao\Conexao.cs" />
     <Compile Include="src\controller\CFornecedores.cs" />
     <Compile Include="src\controller\CProdutos.cs" />
+    <Compile Include="src\controller\CVendas.cs" />
+    <Compile Include="src\controller\CVendasRelation.cs" />
     <Compile Include="src\dao\DaoFornecedores.cs" />
     <Compile Include="src\dao\DaoProdutos.cs" />
     <Compile Include="src\dao\DaoVendas.cs" />

@@ -191,7 +191,10 @@ namespace projetoMonkeyShop.src.view
 
             SqlDataReader dt;
 
-            if(tbxBuscarProd.Text != "")
+            SqlDataAdapter da = new SqlDataAdapter();
+            DataTable dy = new DataTable();
+
+            if (tbxBuscarProd.Text != "")
             {
                 try
                 {
@@ -199,8 +202,6 @@ namespace projetoMonkeyShop.src.view
                     cn.Open();
                     cm.CommandText = "select pro_id, pro_cod, pro_nome, pro_categoria, pro_modelo, pro_tamanho, pro_cor, pro_qtd, pro_status, pro_preco from tbl_produtos where pro_cod like('%" + tbxBuscarProd.Text + "')";
 
-                    SqlDataAdapter da = new SqlDataAdapter();
-                    DataTable dy = new DataTable();
 
                     da.SelectCommand = cm;
                     da.Fill(dy);
@@ -217,7 +218,13 @@ namespace projetoMonkeyShop.src.view
             }
             else
             {
-                dgvProdutos.DataSource = null;
+                cm.Connection = cn;
+                cn.Open();
+                cm.CommandText = "SELECT pro_id, pro_cod, pro_nome, pro_categoria, pro_modelo, pro_tamanho, pro_cor, pro_qtd, pro_status, pro_preco FROM tbl_produtos";
+                da.SelectCommand = cm;
+                da.Fill(dy);
+
+                dgvProdutos.DataSource = dy;
             }
         }
 

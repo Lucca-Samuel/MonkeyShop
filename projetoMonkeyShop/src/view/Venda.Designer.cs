@@ -48,9 +48,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tbxDesconto = new System.Windows.Forms.TextBox();
             this.gbxInfos = new System.Windows.Forms.GroupBox();
+            this.cbxFormPgto = new System.Windows.Forms.ComboBox();
             this.tbxValorFinal = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.cbxFormPgto = new System.Windows.Forms.ComboBox();
             this.btnFinalizar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.gbxInfos.SuspendLayout();
@@ -240,6 +240,7 @@
             this.tbxDesconto.Name = "tbxDesconto";
             this.tbxDesconto.Size = new System.Drawing.Size(134, 25);
             this.tbxDesconto.TabIndex = 17;
+            this.tbxDesconto.TextChanged += new System.EventHandler(this.tbxDesconto_TextChanged);
             // 
             // gbxInfos
             // 
@@ -260,6 +261,22 @@
             this.gbxInfos.TabStop = false;
             this.gbxInfos.Text = "Informações da Compra";
             // 
+            // cbxFormPgto
+            // 
+            this.cbxFormPgto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxFormPgto.FormattingEnabled = true;
+            this.cbxFormPgto.Items.AddRange(new object[] {
+            "Dinheiro",
+            "Pix",
+            "Débito",
+            "Crédito a vista",
+            "Crédito parcelado"});
+            this.cbxFormPgto.Location = new System.Drawing.Point(7, 22);
+            this.cbxFormPgto.Name = "cbxFormPgto";
+            this.cbxFormPgto.Size = new System.Drawing.Size(267, 28);
+            this.cbxFormPgto.TabIndex = 18;
+            this.cbxFormPgto.Text = "Selecione a Forma de Pagamento";
+            // 
             // tbxValorFinal
             // 
             this.tbxValorFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -279,44 +296,29 @@
             this.label3.TabIndex = 14;
             this.label3.Text = "Valor Total:";
             // 
-            // cbxFormPgto
-            // 
-            this.cbxFormPgto.FormattingEnabled = true;
-            this.cbxFormPgto.Items.AddRange(new object[] {
-            "Dinheiro",
-            "Pix",
-            "Débito",
-            "Crédito a vista",
-            "Crédito parcelado"});
-            this.cbxFormPgto.Location = new System.Drawing.Point(7, 29);
-            this.cbxFormPgto.Name = "cbxFormPgto";
-            this.cbxFormPgto.Size = new System.Drawing.Size(190, 21);
-            this.cbxFormPgto.TabIndex = 18;
-            this.cbxFormPgto.Text = "Selecione a Forma de Pagamento";
-            // 
             // btnFinalizar
             // 
             this.btnFinalizar.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.btnFinalizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFinalizar.Location = new System.Drawing.Point(626, 682);
+            this.btnFinalizar.Location = new System.Drawing.Point(637, 682);
             this.btnFinalizar.Name = "btnFinalizar";
             this.btnFinalizar.Size = new System.Drawing.Size(223, 50);
-            this.btnFinalizar.TabIndex = 8;
+            this.btnFinalizar.TabIndex = 20;
             this.btnFinalizar.Text = "Finalizar";
             this.btnFinalizar.UseVisualStyleBackColor = false;
-            this.btnFinalizar.Click += new System.EventHandler(this.btnCancelarVenda_Click);
+            this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click);
             // 
             // Venda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(885, 741);
+            this.Controls.Add(this.btnFinalizar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.lblCodProduto);
             this.Controls.Add(this.tbxInclusao);
             this.Controls.Add(this.lblInclusao);
-            this.Controls.Add(this.btnFinalizar);
             this.Controls.Add(this.btnCancelarVenda);
             this.Controls.Add(this.btnCadastro);
             this.Controls.Add(this.tbxTelefone);
