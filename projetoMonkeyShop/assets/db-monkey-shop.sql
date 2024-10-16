@@ -55,7 +55,6 @@ create table vendas(
 id_venda bigint primary key identity(1,1),
 data_venda date,
 valor_total decimal(8,2),
-forma_pgto char(100),
 fk_id_forma_pgto varchar(50),
 fk_id_cliente bigint,
 fk_id_user bigint,

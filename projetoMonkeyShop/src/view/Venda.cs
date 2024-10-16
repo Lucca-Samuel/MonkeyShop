@@ -76,8 +76,8 @@ namespace projetoMonkeyShop.src.view
         private MProdutos ObterProdutoPorCodigo(int codigo)
         {
              MProdutos produto = new MProdutos();
-            string connectionString = @"Persist Security Info=False;User ID=senac;Password=senac;Initial Catalog=monkey_shop;Server=TAU0588413W10-1;Encrypt=False;";
-            //string connectionString = @"Persist Security Info=False;User ID=senac;Password=senac;Initial Catalog=monkey_shop;Server=Lucca-pc;Encrypt=False;";
+            //string connectionString = @"Persist Security Info=False;User ID=senac;Password=senac;Initial Catalog=monkey_shop;Server=TAU0588413W10-1;Encrypt=False;";
+            string connectionString = @"Persist Security Info=False;User ID=senac;Password=senac;Initial Catalog=monkey_shop;Server=Lucca-pc;Encrypt=False;";
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
@@ -166,39 +166,27 @@ namespace projetoMonkeyShop.src.view
 
         private void AtualizarValorFinal()
         {
-            double valorTotal;
-            double desconto;
+            double valorTotal = 0;
+            double desconto = 0;
 
             // Tente converter o valor total
-            if (double.TryParse(tbxValorTotal.Text, out valorTotal))
+            if (!double.TryParse(tbxValorTotal.Text, out valorTotal))
             {
-                // Verifica se o desconto está vazio ou é igual a 0
-                if (string.IsNullOrWhiteSpace(tbxDesconto.Text) || tbxDesconto.Text == "0")
-                {
-                    // Se o desconto for vazio ou 0, o valor final é o mesmo que o valor total
-                    tbxValorFinal.Text = valorTotal.ToString("F2");
-                }
-                else
-                {
-                    // Tente converter o valor do desconto
-                    if (double.TryParse(tbxDesconto.Text, out desconto))
-                    {
-                        // Calcula o valor final
-                        double valorFinal = valorTotal - desconto;
-                        tbxValorFinal.Text = valorFinal.ToString("F2"); // Atualiza o TextBox de valor final
-                    }
-                    else
-                    {
-                        // Se a conversão do desconto falhar, exiba uma mensagem ou trate o erro
-                        MessageBox.Show("Desconto inválido.");
-                    }
-                }
+                // Se o valor total não é válido, não faz nada e apenas retorna
+                tbxValorFinal.Text = ""; // Limpa o campo de valor final
+                return;
             }
-            else
+
+            // Tente converter o desconto, se não for vazio ou não for um número
+            if (!string.IsNullOrWhiteSpace(tbxDesconto.Text) && !double.TryParse(tbxDesconto.Text, out desconto))
             {
-                // Se a conversão do valor total falhar, trate o erro
-                MessageBox.Show("Valor total inválido.");
+                MessageBox.Show("Desconto inválido."); // Alerta se o desconto não for um número
+                return; // Retorna para evitar cálculos inválidos
             }
+
+            // Calcula o valor final
+            double valorFinal = valorTotal - desconto;
+            tbxValorFinal.Text = valorFinal.ToString("F2");
         }
 
         private void tbxDesconto_TextChanged(object sender, EventArgs e)
@@ -245,8 +233,8 @@ namespace projetoMonkeyShop.src.view
 
         private bool VerificarIdsProdutosExistentes(List<int> idsProdutos)
         {
-            string connectionString = @"Persist Security Info=False;User ID=senac;Password=senac;Initial Catalog=monkey_shop;Server=TAU0588413W10-1;Encrypt=False;";
-            //string connectionString = @"Persist Security Info=False;User ID=senac;Password=senac;Initial Catalog=monkey_shop;Server=Lucca-pc;Encrypt=False;";
+            //string connectionString = @"Persist Security Info=False;User ID=senac;Password=senac;Initial Catalog=monkey_shop;Server=TAU0588413W10-1;Encrypt=False;";
+            string connectionString = @"Persist Security Info=False;User ID=senac;Password=senac;Initial Catalog=monkey_shop;Server=Lucca-pc;Encrypt=False;";
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
@@ -271,55 +259,54 @@ namespace projetoMonkeyShop.src.view
 
         public void SalvarVendaRl()
         {
-            
-            List<int> idsProdutos = ObterIdsProdutosDoDataGridView();
-
-            foreach (var id in idsProdutos)
+            //using (SqlConnection cn = new SqlConnection(@"Persist Security Info=False;User ID=senac;Password=senac;Initial Catalog=monkey_shop;Server=TAU0588413W10-1;Encrypt=False;"))
+            using (SqlConnection cn = new SqlConnection(@"Persist Security Info=False;User ID=senac;Password=senac;Initial Catalog=monkey_shop;Server=Lucca-pc;Encrypt=False;"))
             {
-                mVendaRl.SetFkIdProduto(id); // Chama o método com cada ID
-            }
+                cn.Open();
 
-            int ultimoIdVenda = ObterUltimoIdVenda();
-            mVendaRl.SetFkIdVenda(ultimoIdVenda);
+                // Recupera o último ID de venda
+                int ultimoIdVenda = ObterUltimoIdVenda();
 
-            double desconto;
-            if (double.TryParse(tbxDesconto.Text, out desconto))
-            {
-                mVendaRl.SetDesconto(desconto);
-            }
-            else
-            {
-                MessageBox.Show("Desconto inválido. Por favor, insira um valor numérico.");
-            }
-
-            List<int> quantidades = ObterQuantidadesDoCarrinho();
-            foreach (var quantidade in quantidades)
-            {
-                mVendaRl.SetQtdeProdutos(quantidade); // Chama o método para cada quantidade
-            }
-
-            DateTime dataAtual = DateTime.Now;
-            string dataFormatada = dataAtual.ToString("dd/MM/yyyy");
-            mVendaRl.SetData(DateTime.Parse(dataFormatada));
-
-            try
-            {
-                if(cVendaRl.SalvarVendaRelation(mVendaRl) > 0)
+                // Loop pelos itens do carrinho
+                foreach (var item in carrinho)
                 {
-                    MessageBox.Show("sucesso");
+                    int idProduto = item.produto.getIdProduto();
+                    double valorProduto = item.produto.getPrecoProduto();
+                    int quantidadeVendida = item.qtde;
+                    double desconto = double.Parse(tbxDesconto.Text);
 
-                    dataGridView1.DataSource = null; // Limpa a fonte de dados
-                    tbxValorTotal.Text = ("");
-                    tbxQtdeItens.Text = ("");
-                    tbxDesconto.Text = ("0");
-                    tbxValorFinal.Text = ("");
+                    // Insere na tabela rl_produtos_vendas
+                    string query = "INSERT INTO rl_produtos_vendas (fk_id_produto, fk_id_venda, data_venda, valor_produto, desconto, qtde_vendida) " +
+                                    "VALUES (@fk_id_produto, @fk_id_venda, @data_venda, @valor_produto, @desconto, @qtde_vendida)";
+
+                    using (SqlCommand cmd = new SqlCommand(query, cn))
+                    {
+                        cmd.Parameters.AddWithValue("@fk_id_produto", idProduto);
+                        cmd.Parameters.AddWithValue("@fk_id_venda", ultimoIdVenda);
+                        cmd.Parameters.AddWithValue("@data_venda", DateTime.Now);
+                        cmd.Parameters.AddWithValue("@valor_produto", valorProduto);
+                        cmd.Parameters.AddWithValue("@desconto", desconto);
+                        cmd.Parameters.AddWithValue("@qtde_vendida", quantidadeVendida);
+
+                        cmd.ExecuteNonQuery();
+                    }
+
+                    // Atualiza a quantidade do produto na tabela tbl_produtos
+                    string updateQuery = "UPDATE tbl_produtos SET pro_qtd = pro_qtd - @qtde_vendida WHERE pro_id = @idProduto";
+                    using (SqlCommand updateCmd = new SqlCommand(updateQuery, cn))
+                    {
+                        updateCmd.Parameters.AddWithValue("@qtde_vendida", quantidadeVendida);
+                        updateCmd.Parameters.AddWithValue("@idProduto", idProduto);
+
+                        updateCmd.ExecuteNonQuery();
+                    }
                 }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
         }
+
+        
+
+
 
         private List<int> ObterIdsProdutosDoDataGridView()
         {
@@ -342,8 +329,8 @@ namespace projetoMonkeyShop.src.view
         {
             int ultimoIdVenda = 0;
 
-            string connectionString = @"Persist Security Info=False;User ID=senac;Password=senac;Initial Catalog=monkey_shop;Server=TAU0588413W10-1;Encrypt=False;";
-            //string connectionString = @"Persist Security Info=False;User ID=senac;Password=senac;Initial Catalog=monkey_shop;Server=Lucca-pc;Encrypt=False;";
+            //string connectionString = @"Persist Security Info=False;User ID=senac;Password=senac;Initial Catalog=monkey_shop;Server=TAU0588413W10-1;Encrypt=False;";
+            string connectionString = @"Persist Security Info=False;User ID=senac;Password=senac;Initial Catalog=monkey_shop;Server=Lucca-pc;Encrypt=False;";
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
@@ -383,7 +370,8 @@ namespace projetoMonkeyShop.src.view
 
         private void AtualizarEstoqueProdutos()
         {
-            string connectionString = @"Persist Security Info=False;User ID=senac;Password=senac;Initial Catalog=monkey_shop;Server=TAU0588413W10-1;Encrypt=False;";
+            //string connectionString = @"Persist Security Info=False;User ID=senac;Password=senac;Initial Catalog=monkey_shop;Server=TAU0588413W10-1;Encrypt=False;";
+            string connectionString = @"Persist Security Info=False;User ID=senac;Password=senac;Initial Catalog=monkey_shop;Server=Lucca-pc;Encrypt=False;";
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
@@ -409,21 +397,15 @@ namespace projetoMonkeyShop.src.view
 
         private void btnFinalizar_Click(object sender, EventArgs e)
         {
-
-            this.Salvarvenda();
-            int ex = mVendaRl.GetFkIdProduto();
-            MessageBox.Show(ex.ToString());
-            
-
-            List<int> idsProdutos = ObterIdsProdutosDoDataGridView();
-            if (VerificarIdsProdutosExistentes(idsProdutos))
+            if(cbxFormPgto.Text == "" || cbxFormPgto.Text == "Selecione a Forma de Pagamento")
             {
-                this.SalvarVendaRl();
-                this.AtualizarEstoqueProdutos();
+                MessageBox.Show("Por favor Selecione uma forma de pagamento válida");
             }
             else
             {
-                MessageBox.Show("Um ou mais produtos não existem no estoque. Verifique e tente novamente.");
+                this.Salvarvenda();
+                this.SalvarVendaRl();
+                tbxDesconto.Text = "0";
             }
         }
     }
