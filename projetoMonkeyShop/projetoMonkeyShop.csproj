@@ -58,16 +58,19 @@
     <Compile Include="src\controller\CClientes.cs" />
     <Compile Include="src\controller\CFornecedores.cs" />
     <Compile Include="src\controller\CProdutos.cs" />
+    <Compile Include="src\controller\CUsers.cs" />
     <Compile Include="src\controller\CVendas.cs" />
     <Compile Include="src\controller\CVendasRelation.cs" />
     <Compile Include="src\dao\DaoClientes.cs" />
     <Compile Include="src\dao\DaoFornecedores.cs" />
     <Compile Include="src\dao\DaoProdutos.cs" />
+    <Compile Include="src\dao\DaoUsers.cs" />
     <Compile Include="src\dao\DaoVendas.cs" />
     <Compile Include="src\dao\DaoVendasRelation.cs" />
     <Compile Include="src\model\MClientes.cs" />
     <Compile Include="src\model\MFornecedores.cs" />
     <Compile Include="src\model\MProdutos.cs" />
+    <Compile Include="src\model\MUsers.cs" />
     <Compile Include="src\model\MVendaRelation.cs" />
     <Compile Include="src\model\MVendas.cs" />
     <Compile Include="src\util\CarrinhoVenda.cs" />
@@ -119,23 +122,17 @@
     <Compile Include="src\view\FrmEstoque.Designer.cs">
       <DependentUpon>FrmEstoque.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\view\FrmEstoqueAux.cs">
+    <Compile Include="src\view\FrmFuncionarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="src\view\FrmEstoqueAux.Designer.cs">
-      <DependentUpon>FrmEstoqueAux.cs</DependentUpon>
+    <Compile Include="src\view\FrmFuncionarios.Designer.cs">
+      <DependentUpon>FrmFuncionarios.cs</DependentUpon>
     </Compile>
     <Compile Include="src\view\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="src\view\FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="src\view\FrmVenda.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="src\view\FrmVenda.Designer.cs">
-      <DependentUpon>FrmVenda.cs</DependentUpon>
     </Compile>
     <Compile Include="src\view\Logout.cs">
       <SubType>Form</SubType>
@@ -184,14 +181,11 @@
     <EmbeddedResource Include="src\view\FrmEstoque.resx">
       <DependentUpon>FrmEstoque.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\view\FrmEstoqueAux.resx">
-      <DependentUpon>FrmEstoqueAux.cs</DependentUpon>
+    <EmbeddedResource Include="src\view\FrmFuncionarios.resx">
+      <DependentUpon>FrmFuncionarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\view\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="src\view\FrmVenda.resx">
-      <DependentUpon>FrmVenda.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\view\Logout.resx">
       <DependentUpon>Logout.cs</DependentUpon>

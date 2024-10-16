@@ -376,7 +376,6 @@
             this.Controls.Add(this.gbxInfos);
             this.Name = "Venda";
             this.Text = "Venda";
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.gbxInfos.ResumeLayout(false);
             this.gbxInfos.PerformLayout();

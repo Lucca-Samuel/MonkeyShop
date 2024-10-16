@@ -62,8 +62,14 @@ namespace projetoMonkeyShop.src.view
 
         private void btnAdm_Click(object sender, EventArgs e)
         {
+            FrmFuncionarios frmFuncionarios = new FrmFuncionarios();
+            frmFuncionarios.Show();
+        }
+
+        private void btnClientes_Click(object sender, EventArgs e)
+        {
             FrmClientes frmClientes = new FrmClientes();
-            frmClientes.Show();
+           frmClientes.Show();
         }
     }
 }

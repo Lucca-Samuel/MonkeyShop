@@ -34,6 +34,7 @@
             this.btnFornecedores = new System.Windows.Forms.Button();
             this.btnTitulo = new System.Windows.Forms.Label();
             this.lblUser = new System.Windows.Forms.Label();
+            this.btnClientes = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnVendas
@@ -61,11 +62,11 @@
             // btnAdm
             // 
             this.btnAdm.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdm.Location = new System.Drawing.Point(313, 314);
+            this.btnAdm.Location = new System.Drawing.Point(312, 383);
             this.btnAdm.Name = "btnAdm";
             this.btnAdm.Size = new System.Drawing.Size(185, 55);
             this.btnAdm.TabIndex = 2;
-            this.btnAdm.Text = "Administrativo";
+            this.btnAdm.Text = "Usuarios";
             this.btnAdm.UseVisualStyleBackColor = true;
             this.btnAdm.Click += new System.EventHandler(this.btnAdm_Click);
             // 
@@ -100,11 +101,23 @@
             this.lblUser.TabIndex = 5;
             this.lblUser.Text = "User:";
             // 
+            // btnClientes
+            // 
+            this.btnClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClientes.Location = new System.Drawing.Point(312, 310);
+            this.btnClientes.Name = "btnClientes";
+            this.btnClientes.Size = new System.Drawing.Size(185, 55);
+            this.btnClientes.TabIndex = 6;
+            this.btnClientes.Text = "Clientes";
+            this.btnClientes.UseVisualStyleBackColor = true;
+            this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
+            // 
             // PaginaInicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnClientes);
             this.Controls.Add(this.lblUser);
             this.Controls.Add(this.btnTitulo);
             this.Controls.Add(this.btnFornecedores);
@@ -126,5 +139,6 @@
         private System.Windows.Forms.Button btnFornecedores;
         private System.Windows.Forms.Label btnTitulo;
         private System.Windows.Forms.Label lblUser;
+        private System.Windows.Forms.Button btnClientes;
     }
 }

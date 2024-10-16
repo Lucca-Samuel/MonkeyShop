@@ -1,7 +1,4 @@
 ﻿using projetoMonkeyShop.src.controller;
-using projetoMonkeyShop.src.dao;
-using projetoMonkeyShop.src.model;
-using projetoMonkeyShop.src.view.admView.fornecedores;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,70 +12,52 @@ using System.Windows.Forms;
 
 namespace projetoMonkeyShop.src.view
 {
-    public partial class FrmClientes : Form
+    public partial class FrmFuncionarios : Form
     {
-        CClientes cClientes = new CClientes();
-
-        public FrmClientes()
+        CUsers cUsers = new CUsers();
+        public FrmFuncionarios()
         {
             InitializeComponent();
         }
 
-        private void btnCriarClie_Click(object sender, EventArgs e)
+        private void btnCriarUser_Click(object sender, EventArgs e)
         {
-            FrmCadastroCliente frmCadastroCliente = new FrmCadastroCliente();
-            frmCadastroCliente.salvarAlterar = "salvar";
-            frmCadastroCliente.ShowDialog();
+            FormCadastro formCadastro = new FormCadastro();
+            formCadastro.ShowDialog();
         }
 
-        private void btnAlterarClie_Click(object sender, EventArgs e)
-        {
-            if(dgvClies.Rows.Count > 0)
-            {
-                FrmCadastroCliente frmCadastroCliente = new FrmCadastroCliente();
-                frmCadastroCliente.salvarAlterar = "alterar";
-
-                frmCadastroCliente.LoadClientes(dgvClies.SelectedRows[0]);
-                frmCadastroCliente.ShowDialog();
-            }
-            else
-            {
-                MessageBox.Show("Selecione um Cliente para Atualizar");
-            }
-        }
-
-        private void btnExcluirClie_Click(object sender, EventArgs e)
+        private void btnExcluirUser_Click(object sender, EventArgs e)
         {
             //Verifica se há uma linha selecionada
-            if (this.dgvClies.CurrentRow == null)
+            if (this.dgvUsers.CurrentRow == null)
             {
                 MessageBox.Show("Nenhum cliente selecionado.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            int linha = this.dgvClies.CurrentRow.Index;
+            int linha = this.dgvUsers.CurrentRow.Index;
 
             // Tenta obter o valor do código do fornecedor
-            object valor = this.dgvClies.Rows[linha].Cells[0].Value;
+            object valor = this.dgvUsers.Rows[linha].Cells[0].Value;
 
             // Verifica se o valor não é nulo e pode ser convertido para inteiro
             if (valor == null || !int.TryParse(valor.ToString(), out int codigoFornecedor))
             {
-                MessageBox.Show("Código do cliente inválido.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Código do Usuário inválido.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            DialogResult confirmacao = MessageBox.Show(this, "Tem certeza que deseja excluir este cliente?", "Confirmação", MessageBoxButtons.YesNo);
+            DialogResult confirmacao = MessageBox.Show(this, "Tem certeza que deseja excluir este Usuário?", "Confirmação", MessageBoxButtons.YesNo);
 
             if (confirmacao == DialogResult.Yes)
             {
-                if (cClientes.ExcluirCliente(codigoFornecedor))
+                if (cUsers.ExcluirUsuario(codigoFornecedor))
                 {
-                    MessageBox.Show("Cliente excluído com sucesso!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Usuário excluído com sucesso!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    MessageBox.Show("Erro ao tentar excluir cliente", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Erro ao tentar excluir Usuário", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
@@ -107,13 +86,13 @@ namespace projetoMonkeyShop.src.view
                 {
                     cm.Connection = cn;
                     cn.Open();
-                    cm.CommandText = "SELECT id_cliente, nome, sobrenome, telefone, whatsapp, email, cpf, data_nascimento, rg, tipo_cliente, cep, logradouro, numero, complemento, bairro, cidade, estado, pais " +
-                                     "FROM clientes WHERE nome LIKE ('%" + tbxSearch.Text + "%') OR cpf LIKE ('%" + tbxSearch.Text + "%')";
+                    cm.CommandText = "SELECT id_usuario, nome, email, login_user " +
+                                     "FROM usuarios WHERE nome LIKE ('%" + tbxSearch.Text + "%')";
 
                     da.SelectCommand = cm;
                     da.Fill(dy);
 
-                    dgvClies.DataSource = dy;
+                    dgvUsers.DataSource = dy;
                 }
                 catch (Exception ex)
                 {
@@ -128,11 +107,11 @@ namespace projetoMonkeyShop.src.view
             {
                 cm.Connection = cn;
                 cn.Open();
-                cm.CommandText = "SELECT * FROM clientes";
+                cm.CommandText = "SELECT id_usuario, nome, email, login_user FROM usuarios";
                 da.SelectCommand = cm;
                 da.Fill(dy);
 
-                dgvClies.DataSource = dy;
+                dgvUsers.DataSource = dy;
             }
         }
     }
