@@ -235,6 +235,12 @@ namespace projetoMonkeyShop.src.view
             dataGridView1.DataSource = null; // Limpa a fonte de dados
             tbxValorTotal.Text = ("");
             tbxQtdeItens.Text = ("");
+            tbxValorFinal.Text = ("");
+            tbxDesconto.Text = "0";
+            tbxCodClie.Text = ("");
+            tbxCpf.Text = ("");
+            tbxNome.Text = ("");
+            tbxTelefone.Text = ("");
         }
 
 
@@ -364,8 +370,8 @@ namespace projetoMonkeyShop.src.view
         {
             int ultimoIdVenda = 0;
 
-            //string connectionString = @"Persist Security Info=False;User ID=senac;Password=senac;Initial Catalog=monkey_shop;Server=TAU0588413W10-1;Encrypt=False;";
-            string connectionString = @"Persist Security Info=False;User ID=senac;Password=senac;Initial Catalog=monkey_shop;Server=Lucca-pc;Encrypt=False;";
+            string connectionString = @"Persist Security Info=False;User ID=senac;Password=senac;Initial Catalog=monkey_shop;Server=TAU0588413W10-1;Encrypt=False;";
+            //string connectionString = @"Persist Security Info=False;User ID=senac;Password=senac;Initial Catalog=monkey_shop;Server=Lucca-pc;Encrypt=False;";
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
@@ -405,8 +411,8 @@ namespace projetoMonkeyShop.src.view
 
         private void AtualizarEstoqueProdutos()
         {
-            //string connectionString = @"Persist Security Info=False;User ID=senac;Password=senac;Initial Catalog=monkey_shop;Server=TAU0588413W10-1;Encrypt=False;";
-            string connectionString = @"Persist Security Info=False;User ID=senac;Password=senac;Initial Catalog=monkey_shop;Server=Lucca-pc;Encrypt=False;";
+            string connectionString = @"Persist Security Info=False;User ID=senac;Password=senac;Initial Catalog=monkey_shop;Server=TAU0588413W10-1;Encrypt=False;";
+            //string connectionString = @"Persist Security Info=False;User ID=senac;Password=senac;Initial Catalog=monkey_shop;Server=Lucca-pc;Encrypt=False;";
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
