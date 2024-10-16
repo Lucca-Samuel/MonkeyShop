@@ -55,14 +55,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="src\conexao\Conexao.cs" />
+    <Compile Include="src\controller\CClientes.cs" />
     <Compile Include="src\controller\CFornecedores.cs" />
     <Compile Include="src\controller\CProdutos.cs" />
     <Compile Include="src\controller\CVendas.cs" />
     <Compile Include="src\controller\CVendasRelation.cs" />
+    <Compile Include="src\dao\DaoClientes.cs" />
     <Compile Include="src\dao\DaoFornecedores.cs" />
     <Compile Include="src\dao\DaoProdutos.cs" />
     <Compile Include="src\dao\DaoVendas.cs" />
     <Compile Include="src\dao\DaoVendasRelation.cs" />
+    <Compile Include="src\model\MClientes.cs" />
     <Compile Include="src\model\MFornecedores.cs" />
     <Compile Include="src\model\MProdutos.cs" />
     <Compile Include="src\model\MVendaRelation.cs" />
@@ -92,17 +95,23 @@
     <Compile Include="src\view\BuscarVenda.Designer.cs">
       <DependentUpon>BuscarVenda.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\view\CadastroCliente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="src\view\CadastroCliente.Designer.cs">
-      <DependentUpon>CadastroCliente.cs</DependentUpon>
-    </Compile>
     <Compile Include="src\view\FormCadastro.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="src\view\FormCadastro.Designer.cs">
       <DependentUpon>FormCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\view\FrmCadastroCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\view\FrmCadastroCliente.Designer.cs">
+      <DependentUpon>FrmCadastroCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\view\FrmClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\view\FrmClientes.Designer.cs">
+      <DependentUpon>FrmClientes.cs</DependentUpon>
     </Compile>
     <Compile Include="src\view\FrmEstoque.cs">
       <SubType>Form</SubType>
@@ -134,12 +143,6 @@
     <Compile Include="src\view\Logout.Designer.cs">
       <DependentUpon>Logout.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\view\Pagamento.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="src\view\Pagamento.Designer.cs">
-      <DependentUpon>Pagamento.cs</DependentUpon>
-    </Compile>
     <Compile Include="src\view\PaginaInicial.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,11 +172,14 @@
     <EmbeddedResource Include="src\view\BuscarVenda.resx">
       <DependentUpon>BuscarVenda.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\view\CadastroCliente.resx">
-      <DependentUpon>CadastroCliente.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="src\view\FormCadastro.resx">
       <DependentUpon>FormCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\view\FrmCadastroCliente.resx">
+      <DependentUpon>FrmCadastroCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\view\FrmClientes.resx">
+      <DependentUpon>FrmClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\view\FrmEstoque.resx">
       <DependentUpon>FrmEstoque.cs</DependentUpon>
@@ -189,9 +195,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="src\view\Logout.resx">
       <DependentUpon>Logout.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="src\view\Pagamento.resx">
-      <DependentUpon>Pagamento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\view\PaginaInicial.resx">
       <DependentUpon>PaginaInicial.cs</DependentUpon>

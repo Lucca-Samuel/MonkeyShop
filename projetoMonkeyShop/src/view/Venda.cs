@@ -31,8 +31,53 @@ namespace projetoMonkeyShop.src.view
             tbxValorTotal.Enabled = false;
             tbxQtdeItens.Enabled = false;
             tbxDesconto.Text = "0";
+            tbxCodClie.Enabled = false;
         }
 
+        //INICIO AREA CLIENTE
+        private void buscarCliente_keyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F1)
+            {
+                //SqlConnection cn = new SqlConnection(@"Persist Security Info=False;User ID=senac;Password=senac;Initial Catalog=monkey_shop;Server=TAU0588413W10-1;Encrypt=False;");
+                SqlConnection cn = new SqlConnection(@"Persist Security Info=False;User ID=senac;Password=senac;Initial Catalog=monkey_shop;Server=Lucca-pc;Encrypt=False;");
+                SqlCommand cm = new SqlCommand();
+
+                if (tbxCpf.Text != "")
+                {
+                    try
+                    {
+                        cm.Connection = cn;
+                        cn.Open();
+                        cm.CommandText = "SELECT id_cliente, nome, whatsapp, cpf FROM clientes WHERE cpf LIKE (@cpf)";
+                        cm.Parameters.AddWithValue("@cpf", "%" + tbxCpf.Text + "%");
+
+                        SqlDataReader dt = cm.ExecuteReader();
+
+                        if (dt.Read()) // Verifica se há resultados
+                        {
+                            tbxCodClie.Text = dt["id_cliente"].ToString();
+                            tbxCpf.Text = dt["cpf"].ToString();
+                            tbxNome.Text = dt["nome"].ToString();
+                            tbxTelefone.Text = dt["whatsapp"].ToString(); // Ajuste se necessário
+                        }
+                        else
+                        {
+                            MessageBox.Show("Cliente não encontrado.");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    finally
+                    {
+                        cn.Close();
+                    }
+                }
+            }
+        }
+        //FIM AREA CLIENTE
 
         //Começo da área do carrinho
         private void btnOk_Click(object sender, EventArgs e)
@@ -211,7 +256,7 @@ namespace projetoMonkeyShop.src.view
             mVendas.SetDataVenda(DateTime.Parse(dataFormatada));
             mVendas.SetValorTotalVenda(double.Parse(tbxValorFinal.Text));
             mVendas.SetFkIdFormaPgto(cbxFormPgto.Text);
-            //mVendas.SetFkIdCliente(int.Parse());
+            mVendas.SetFkIdCliente(int.Parse(tbxCodClie.Text));
             //mVendas.SetFkIdUser(int.Parse());
             try
             {
@@ -406,7 +451,12 @@ namespace projetoMonkeyShop.src.view
                 this.Salvarvenda();
                 this.SalvarVendaRl();
                 tbxDesconto.Text = "0";
+                tbxCodClie.Text = ("");
+                tbxCpf.Text = ("");
+                tbxNome.Text = ("");
+                tbxTelefone.Text = ("");
             }
         }
+
     }
 }

@@ -148,7 +148,6 @@ namespace projetoMonkeyShop.src.view.admView.fornecedores
         {
         }
 
-        //!!Incompleto!!
         public void loadFornecedores(DataGridViewRow selectedRow)
         {
             try

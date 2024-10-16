@@ -90,7 +90,7 @@ namespace projetoMonkeyShop.src.view.admView.fornecedores
 
         private void btnPesquisarFor_Click(object sender, EventArgs e)
         {
-            SqlConnection cn = new SqlConnection(@"Persist Security Info=False;User ID=senac;Password=senac;Initial Catalog=monkey_shop;Server=TAU0588413W10-1;Encrypt=False;");
+            SqlConnection cn = new SqlConnection(@"Persist Security Info=False;User ID=senac;Password=senac;Initial Catalog=monkey_shop;Server=Lucca-pc;Encrypt=False;");
             //TAU0588413W10-1
             //TAU0588423W10-1
 

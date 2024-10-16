@@ -40,6 +40,11 @@ whatsapp char(19),
 email varchar(100),
 cpf char(15),
 data_nascimento date,
+rg char(12),
+tipo_cliente varchar(30),
+
+
+
 cep char(10),
 logradouro varchar(150),
 numero int,

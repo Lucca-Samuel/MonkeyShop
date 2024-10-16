@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Venda));
             this.lblNome = new System.Windows.Forms.Label();
             this.tbxNome = new System.Windows.Forms.TextBox();
             this.tbxTelefone = new System.Windows.Forms.TextBox();
@@ -52,6 +53,9 @@
             this.tbxValorFinal = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnFinalizar = new System.Windows.Forms.Button();
+            this.tbxCodClie = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.gbxInfos.SuspendLayout();
             this.SuspendLayout();
@@ -60,7 +64,7 @@
             // 
             this.lblNome.AutoSize = true;
             this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNome.Location = new System.Drawing.Point(179, 9);
+            this.lblNome.Location = new System.Drawing.Point(261, 9);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(68, 25);
             this.lblNome.TabIndex = 0;
@@ -68,8 +72,8 @@
             // 
             // tbxNome
             // 
-            this.tbxNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxNome.Location = new System.Drawing.Point(184, 43);
+            this.tbxNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxNome.Location = new System.Drawing.Point(266, 43);
             this.tbxNome.Multiline = true;
             this.tbxNome.Name = "tbxNome";
             this.tbxNome.Size = new System.Drawing.Size(220, 25);
@@ -77,8 +81,8 @@
             // 
             // tbxTelefone
             // 
-            this.tbxTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxTelefone.Location = new System.Drawing.Point(423, 43);
+            this.tbxTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxTelefone.Location = new System.Drawing.Point(505, 43);
             this.tbxTelefone.Multiline = true;
             this.tbxTelefone.Name = "tbxTelefone";
             this.tbxTelefone.Size = new System.Drawing.Size(173, 25);
@@ -88,31 +92,38 @@
             // 
             this.lblTelefone.AutoSize = true;
             this.lblTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTelefone.Location = new System.Drawing.Point(417, 9);
+            this.lblTelefone.Location = new System.Drawing.Point(499, 9);
             this.lblTelefone.Name = "lblTelefone";
-            this.lblTelefone.Size = new System.Drawing.Size(96, 25);
+            this.lblTelefone.Size = new System.Drawing.Size(80, 25);
             this.lblTelefone.TabIndex = 2;
-            this.lblTelefone.Text = "Telefone";
+            this.lblTelefone.Text = "Celular";
             // 
             // btnCadastro
             // 
+            this.btnCadastro.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.btnCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastro.Location = new System.Drawing.Point(626, 33);
+            this.btnCadastro.Image = global::projetoMonkeyShop.Properties.Resources._new;
+            this.btnCadastro.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCadastro.Location = new System.Drawing.Point(708, 33);
             this.btnCadastro.Name = "btnCadastro";
-            this.btnCadastro.Size = new System.Drawing.Size(140, 35);
+            this.btnCadastro.Size = new System.Drawing.Size(147, 35);
             this.btnCadastro.TabIndex = 4;
             this.btnCadastro.Text = "Cadastro";
-            this.btnCadastro.UseVisualStyleBackColor = true;
+            this.btnCadastro.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCadastro.UseVisualStyleBackColor = false;
             // 
             // btnCancelarVenda
             // 
             this.btnCancelarVenda.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.btnCancelarVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelarVenda.Image = global::projetoMonkeyShop.Properties.Resources.cancel;
+            this.btnCancelarVenda.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancelarVenda.Location = new System.Drawing.Point(397, 682);
             this.btnCancelarVenda.Name = "btnCancelarVenda";
             this.btnCancelarVenda.Size = new System.Drawing.Size(223, 50);
             this.btnCancelarVenda.TabIndex = 8;
             this.btnCancelarVenda.Text = "Cancelar Venda";
+            this.btnCancelarVenda.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancelarVenda.UseVisualStyleBackColor = false;
             this.btnCancelarVenda.Click += new System.EventHandler(this.btnCancelarVenda_Click);
             // 
@@ -149,11 +160,11 @@
             // 
             this.btnOk.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.btnOk.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOk.Image = global::projetoMonkeyShop.Properties.Resources._new;
             this.btnOk.Location = new System.Drawing.Point(709, 156);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(140, 35);
             this.btnOk.TabIndex = 12;
-            this.btnOk.Text = "Adicionar";
             this.btnOk.UseVisualStyleBackColor = false;
             this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
@@ -205,18 +216,19 @@
             // 
             // tbxCpf
             // 
-            this.tbxCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxCpf.Location = new System.Drawing.Point(12, 43);
+            this.tbxCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxCpf.Location = new System.Drawing.Point(94, 43);
             this.tbxCpf.Multiline = true;
             this.tbxCpf.Name = "tbxCpf";
             this.tbxCpf.Size = new System.Drawing.Size(150, 25);
             this.tbxCpf.TabIndex = 1;
+            this.tbxCpf.KeyDown += new System.Windows.Forms.KeyEventHandler(this.buscarCliente_keyDown);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 15);
+            this.label1.Location = new System.Drawing.Point(94, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(54, 25);
             this.label1.TabIndex = 0;
@@ -300,6 +312,8 @@
             // 
             this.btnFinalizar.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.btnFinalizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFinalizar.Image = ((System.Drawing.Image)(resources.GetObject("btnFinalizar.Image")));
+            this.btnFinalizar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnFinalizar.Location = new System.Drawing.Point(637, 682);
             this.btnFinalizar.Name = "btnFinalizar";
             this.btnFinalizar.Size = new System.Drawing.Size(223, 50);
@@ -308,11 +322,41 @@
             this.btnFinalizar.UseVisualStyleBackColor = false;
             this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click);
             // 
+            // tbxCodClie
+            // 
+            this.tbxCodClie.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxCodClie.Location = new System.Drawing.Point(8, 43);
+            this.tbxCodClie.Multiline = true;
+            this.tbxCodClie.Name = "tbxCodClie";
+            this.tbxCodClie.Size = new System.Drawing.Size(80, 25);
+            this.tbxCodClie.TabIndex = 21;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(6, 15);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(54, 25);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "CPF";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(3, 15);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(51, 25);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Cod";
+            // 
             // Venda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(885, 741);
+            this.Controls.Add(this.tbxCodClie);
             this.Controls.Add(this.btnFinalizar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnOk);
@@ -325,6 +369,8 @@
             this.Controls.Add(this.lblTelefone);
             this.Controls.Add(this.tbxCpf);
             this.Controls.Add(this.tbxNome);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblNome);
             this.Controls.Add(this.gbxInfos);
@@ -365,5 +411,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cbxFormPgto;
         private System.Windows.Forms.Button btnFinalizar;
+        private System.Windows.Forms.TextBox tbxCodClie;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }

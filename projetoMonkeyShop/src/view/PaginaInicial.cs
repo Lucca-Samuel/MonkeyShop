@@ -59,5 +59,11 @@ namespace projetoMonkeyShop.src.view
                 MessageBox.Show(exception.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnAdm_Click(object sender, EventArgs e)
+        {
+            FrmClientes frmClientes = new FrmClientes();
+            frmClientes.Show();
+        }
     }
 }

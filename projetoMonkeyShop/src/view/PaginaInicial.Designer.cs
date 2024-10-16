@@ -67,6 +67,7 @@
             this.btnAdm.TabIndex = 2;
             this.btnAdm.Text = "Administrativo";
             this.btnAdm.UseVisualStyleBackColor = true;
+            this.btnAdm.Click += new System.EventHandler(this.btnAdm_Click);
             // 
             // btnFornecedores
             // 
