@@ -35,8 +35,16 @@
             this.dtpFilter = new System.Windows.Forms.DateTimePicker();
             this.cbxCatFilter = new System.Windows.Forms.ComboBox();
             this.cbxCorFilter = new System.Windows.Forms.ComboBox();
+            this.cbxTamFilter = new System.Windows.Forms.ComboBox();
+            this.gbxFiltros = new System.Windows.Forms.GroupBox();
+            this.cbxPgtoFilter = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVendas)).BeginInit();
+            this.gbxFiltros.SuspendLayout();
             this.SuspendLayout();
             // 
             // tbxBuscarVenda
@@ -79,7 +87,7 @@
             // dtpFilter
             // 
             this.dtpFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFilter.Location = new System.Drawing.Point(12, 113);
+            this.dtpFilter.Location = new System.Drawing.Point(4, 43);
             this.dtpFilter.Name = "dtpFilter";
             this.dtpFilter.Size = new System.Drawing.Size(310, 24);
             this.dtpFilter.TabIndex = 7;
@@ -111,7 +119,7 @@
             "Shoulder Bags",
             "Mochilas",
             "Óculos de sol"});
-            this.cbxCatFilter.Location = new System.Drawing.Point(328, 113);
+            this.cbxCatFilter.Location = new System.Drawing.Point(320, 43);
             this.cbxCatFilter.Name = "cbxCatFilter";
             this.cbxCatFilter.Size = new System.Drawing.Size(233, 24);
             this.cbxCatFilter.TabIndex = 8;
@@ -156,36 +164,132 @@
             "Verde escuro",
             "Vermelho",
             "Vinho"});
-            this.cbxCorFilter.Location = new System.Drawing.Point(567, 113);
+            this.cbxCorFilter.Location = new System.Drawing.Point(559, 43);
             this.cbxCorFilter.Name = "cbxCorFilter";
             this.cbxCorFilter.Size = new System.Drawing.Size(233, 24);
             this.cbxCorFilter.TabIndex = 8;
             // 
+            // cbxTamFilter
+            // 
+            this.cbxTamFilter.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cbxTamFilter.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbxTamFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxTamFilter.FormattingEnabled = true;
+            this.cbxTamFilter.Items.AddRange(new object[] {
+            "PP",
+            "P",
+            "M",
+            "G",
+            "GG",
+            "XG",
+            "XGG"});
+            this.cbxTamFilter.Location = new System.Drawing.Point(799, 43);
+            this.cbxTamFilter.Name = "cbxTamFilter";
+            this.cbxTamFilter.Size = new System.Drawing.Size(233, 24);
+            this.cbxTamFilter.TabIndex = 8;
+            // 
+            // gbxFiltros
+            // 
+            this.gbxFiltros.Controls.Add(this.cbxPgtoFilter);
+            this.gbxFiltros.Controls.Add(this.label4);
+            this.gbxFiltros.Controls.Add(this.label3);
+            this.gbxFiltros.Controls.Add(this.label2);
+            this.gbxFiltros.Controls.Add(this.label5);
+            this.gbxFiltros.Controls.Add(this.label1);
+            this.gbxFiltros.Controls.Add(this.cbxTamFilter);
+            this.gbxFiltros.Controls.Add(this.cbxCatFilter);
+            this.gbxFiltros.Controls.Add(this.cbxCorFilter);
+            this.gbxFiltros.Controls.Add(this.dtpFilter);
+            this.gbxFiltros.Location = new System.Drawing.Point(12, 91);
+            this.gbxFiltros.Name = "gbxFiltros";
+            this.gbxFiltros.Size = new System.Drawing.Size(1036, 223);
+            this.gbxFiltros.TabIndex = 9;
+            this.gbxFiltros.TabStop = false;
+            this.gbxFiltros.Text = "Filtrar por";
+            // 
+            // cbxPgtoFilter
+            // 
+            this.cbxPgtoFilter.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cbxPgtoFilter.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbxPgtoFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxPgtoFilter.FormattingEnabled = true;
+            this.cbxPgtoFilter.Items.AddRange(new object[] {
+            "Dinheiro",
+            "Pix",
+            "Débito",
+            "Crédito a vista",
+            "Crédito parcelado"});
+            this.cbxPgtoFilter.Location = new System.Drawing.Point(4, 111);
+            this.cbxPgtoFilter.Name = "cbxPgtoFilter";
+            this.cbxPgtoFilter.Size = new System.Drawing.Size(310, 24);
+            this.cbxPgtoFilter.TabIndex = 10;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(796, 22);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(149, 18);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Tamanho do Produto";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(556, 22);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(111, 18);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Cor do Produto";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(317, 22);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(150, 18);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Categoria do Produto";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 94);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(7, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(102, 18);
             this.label1.TabIndex = 9;
-            this.label1.Text = "label1";
+            this.label1.Text = "Data de venda";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(7, 90);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(152, 18);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Forma de Pagamento";
             // 
             // BuscarVenda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1052, 741);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.cbxCorFilter);
-            this.Controls.Add(this.cbxCatFilter);
-            this.Controls.Add(this.dtpFilter);
             this.Controls.Add(this.dgvVendas);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.tbxBuscarVenda);
             this.Controls.Add(this.lblBuscarVenda);
+            this.Controls.Add(this.gbxFiltros);
             this.Name = "BuscarVenda";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BuscarVenda";
             ((System.ComponentModel.ISupportInitialize)(this.dgvVendas)).EndInit();
+            this.gbxFiltros.ResumeLayout(false);
+            this.gbxFiltros.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -200,6 +304,13 @@
         private System.Windows.Forms.DateTimePicker dtpFilter;
         private System.Windows.Forms.ComboBox cbxCatFilter;
         private System.Windows.Forms.ComboBox cbxCorFilter;
+        private System.Windows.Forms.ComboBox cbxTamFilter;
+        private System.Windows.Forms.GroupBox gbxFiltros;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cbxPgtoFilter;
+        private System.Windows.Forms.Label label5;
     }
 }

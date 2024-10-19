@@ -125,8 +125,5 @@ namespace projetoMonkeyShop.src.view
             }
         }
 
-
-
-
     }
 }
