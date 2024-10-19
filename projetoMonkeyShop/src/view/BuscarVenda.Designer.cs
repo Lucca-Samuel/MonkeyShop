@@ -45,7 +45,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.dtpData2Filter = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
-            this.cbxTypeTextFilter = new System.Windows.Forms.ComboBox();
+            this.cbxTypeFilter = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVendas)).BeginInit();
             this.gbxFiltros.SuspendLayout();
@@ -95,6 +95,7 @@
             this.dtpData1Filter.Name = "dtpData1Filter";
             this.dtpData1Filter.Size = new System.Drawing.Size(310, 24);
             this.dtpData1Filter.TabIndex = 7;
+            this.dtpData1Filter.Value = new System.DateTime(2024, 10, 1, 0, 0, 0, 0);
             // 
             // cbxCatFilter
             // 
@@ -203,8 +204,8 @@
             this.gbxFiltros.Controls.Add(this.label6);
             this.gbxFiltros.Controls.Add(this.label1);
             this.gbxFiltros.Controls.Add(this.cbxTamFilter);
-            this.gbxFiltros.Controls.Add(this.cbxTypeTextFilter);
             this.gbxFiltros.Controls.Add(this.cbxCatFilter);
+            this.gbxFiltros.Controls.Add(this.cbxTypeFilter);
             this.gbxFiltros.Controls.Add(this.cbxCorFilter);
             this.gbxFiltros.Controls.Add(this.dtpData2Filter);
             this.gbxFiltros.Controls.Add(this.dtpData1Filter);
@@ -300,21 +301,21 @@
             this.label6.TabIndex = 9;
             this.label6.Text = "Data Máxima de venda";
             // 
-            // cbxTypeTextFilter
+            // cbxTypeFilter
             // 
-            this.cbxTypeTextFilter.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.cbxTypeTextFilter.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbxTypeTextFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxTypeTextFilter.FormattingEnabled = true;
-            this.cbxTypeTextFilter.Items.AddRange(new object[] {
-            "Mais Vendidos",
-            "Menos Vendidos",
-            "Maior Preço",
-            "Menor Preço"});
-            this.cbxTypeTextFilter.Location = new System.Drawing.Point(559, 107);
-            this.cbxTypeTextFilter.Name = "cbxTypeTextFilter";
-            this.cbxTypeTextFilter.Size = new System.Drawing.Size(471, 24);
-            this.cbxTypeTextFilter.TabIndex = 8;
+            this.cbxTypeFilter.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cbxTypeFilter.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbxTypeFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxTypeFilter.FormattingEnabled = true;
+            this.cbxTypeFilter.Items.AddRange(new object[] {
+            "Mais Vendido",
+            "Menos Vendido",
+            "Maior Valor",
+            "Menor Valor"});
+            this.cbxTypeFilter.Location = new System.Drawing.Point(559, 107);
+            this.cbxTypeFilter.Name = "cbxTypeFilter";
+            this.cbxTypeFilter.Size = new System.Drawing.Size(469, 24);
+            this.cbxTypeFilter.TabIndex = 8;
             // 
             // label7
             // 
@@ -322,9 +323,9 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(556, 86);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(106, 18);
+            this.label7.Size = new System.Drawing.Size(101, 18);
             this.label7.TabIndex = 9;
-            this.label7.Text = "Filtros Prontos";
+            this.label7.Text = "Filtros Padrão";
             // 
             // BuscarVenda
             // 
@@ -366,7 +367,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dtpData2Filter;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox cbxTypeTextFilter;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox cbxTypeFilter;
     }
 }
