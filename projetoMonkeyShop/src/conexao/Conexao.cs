@@ -20,8 +20,8 @@ namespace projetoMonkeyShop.src.conexao
 
 
 
-        //private string servidor = "Lucca-pc";
-        private string servidor = "TAU0588413W10-1";
+        private string servidor = "Lucca-pc";
+        //private string servidor = "TAU0588413W10-1";
         //private string servidor = "TAU0588423W10-1";
         private string nomeDoBanco = "monkey_shop";
         private string usuario = "senac";

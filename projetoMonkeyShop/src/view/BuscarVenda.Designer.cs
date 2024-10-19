@@ -31,32 +31,27 @@
             this.tbxBuscarVenda = new System.Windows.Forms.TextBox();
             this.lblBuscarVenda = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnVisualizarVenda = new System.Windows.Forms.Button();
-            this.btnGerarRelatorio = new System.Windows.Forms.Button();
-            this.rbtnCsv = new System.Windows.Forms.RadioButton();
-            this.rbtnXlsx = new System.Windows.Forms.RadioButton();
-            this.rbtnPdf = new System.Windows.Forms.RadioButton();
-            this.colCodVenda = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colData = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dgvVendas = new System.Windows.Forms.DataGridView();
+            this.dtpFilter = new System.Windows.Forms.DateTimePicker();
+            this.cbxCatFilter = new System.Windows.Forms.ComboBox();
+            this.cbxCorFilter = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVendas)).BeginInit();
             this.SuspendLayout();
             // 
             // tbxBuscarVenda
             // 
             this.tbxBuscarVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxBuscarVenda.Location = new System.Drawing.Point(22, 50);
+            this.tbxBuscarVenda.Location = new System.Drawing.Point(12, 50);
             this.tbxBuscarVenda.Name = "tbxBuscarVenda";
-            this.tbxBuscarVenda.Size = new System.Drawing.Size(822, 35);
+            this.tbxBuscarVenda.Size = new System.Drawing.Size(882, 35);
             this.tbxBuscarVenda.TabIndex = 3;
             // 
             // lblBuscarVenda
             // 
             this.lblBuscarVenda.AutoSize = true;
             this.lblBuscarVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBuscarVenda.Location = new System.Drawing.Point(16, 16);
+            this.lblBuscarVenda.Location = new System.Drawing.Point(7, 18);
             this.lblBuscarVenda.Name = "lblBuscarVenda";
             this.lblBuscarVenda.Size = new System.Drawing.Size(162, 29);
             this.lblBuscarVenda.TabIndex = 2;
@@ -65,123 +60,132 @@
             // btnBuscar
             // 
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(873, 50);
+            this.btnBuscar.Location = new System.Drawing.Point(900, 50);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(140, 35);
             this.btnBuscar.TabIndex = 5;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // dataGridView1
+            // dgvVendas
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colCodVenda,
-            this.colData,
-            this.colCliente,
-            this.colValor});
-            this.dataGridView1.Location = new System.Drawing.Point(21, 109);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(843, 150);
-            this.dataGridView1.TabIndex = 6;
+            this.dgvVendas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVendas.Location = new System.Drawing.Point(12, 471);
+            this.dgvVendas.Name = "dgvVendas";
+            this.dgvVendas.Size = new System.Drawing.Size(1028, 258);
+            this.dgvVendas.TabIndex = 6;
             // 
-            // btnVisualizarVenda
+            // dtpFilter
             // 
-            this.btnVisualizarVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVisualizarVenda.Location = new System.Drawing.Point(21, 286);
-            this.btnVisualizarVenda.Name = "btnVisualizarVenda";
-            this.btnVisualizarVenda.Size = new System.Drawing.Size(264, 50);
-            this.btnVisualizarVenda.TabIndex = 7;
-            this.btnVisualizarVenda.Text = "Visualizar Venda";
-            this.btnVisualizarVenda.UseVisualStyleBackColor = true;
+            this.dtpFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFilter.Location = new System.Drawing.Point(12, 113);
+            this.dtpFilter.Name = "dtpFilter";
+            this.dtpFilter.Size = new System.Drawing.Size(310, 24);
+            this.dtpFilter.TabIndex = 7;
             // 
-            // btnGerarRelatorio
+            // cbxCatFilter
             // 
-            this.btnGerarRelatorio.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGerarRelatorio.Location = new System.Drawing.Point(21, 351);
-            this.btnGerarRelatorio.Name = "btnGerarRelatorio";
-            this.btnGerarRelatorio.Size = new System.Drawing.Size(264, 50);
-            this.btnGerarRelatorio.TabIndex = 8;
-            this.btnGerarRelatorio.Text = "Gerar Relatório";
-            this.btnGerarRelatorio.UseVisualStyleBackColor = true;
+            this.cbxCatFilter.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cbxCatFilter.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbxCatFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxCatFilter.FormattingEnabled = true;
+            this.cbxCatFilter.Items.AddRange(new object[] {
+            "Camisas",
+            "Blusas",
+            "T-shirts",
+            "Regatas",
+            "Saias",
+            "Calças",
+            "Shorts",
+            "Bermudas",
+            "Macacões",
+            "Jaquetas",
+            "Casacos",
+            "Cardigans",
+            "Suéteres",
+            "Bonés",
+            "Chapéus",
+            "Meias",
+            "Bolsas",
+            "Shoulder Bags",
+            "Mochilas",
+            "Óculos de sol"});
+            this.cbxCatFilter.Location = new System.Drawing.Point(328, 113);
+            this.cbxCatFilter.Name = "cbxCatFilter";
+            this.cbxCatFilter.Size = new System.Drawing.Size(233, 24);
+            this.cbxCatFilter.TabIndex = 8;
             // 
-            // rbtnCsv
+            // cbxCorFilter
             // 
-            this.rbtnCsv.AutoSize = true;
-            this.rbtnCsv.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnCsv.Location = new System.Drawing.Point(22, 407);
-            this.rbtnCsv.Name = "rbtnCsv";
-            this.rbtnCsv.Size = new System.Drawing.Size(71, 28);
-            this.rbtnCsv.TabIndex = 9;
-            this.rbtnCsv.TabStop = true;
-            this.rbtnCsv.Text = ".CSV";
-            this.rbtnCsv.UseVisualStyleBackColor = true;
+            this.cbxCorFilter.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cbxCorFilter.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbxCorFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxCorFilter.FormattingEnabled = true;
+            this.cbxCorFilter.Items.AddRange(new object[] {
+            "Aqua",
+            "Azul",
+            "Azul claro",
+            "Azul escuro",
+            "Bege",
+            "Bordô",
+            "Branco",
+            "Caramelo",
+            "Ciano",
+            "Cinza",
+            "Cinza claro",
+            "Cinza escuro",
+            "Dourado",
+            "Laranja",
+            "Lavanda",
+            "Marrom",
+            "Mostarda",
+            "Pêssego",
+            "Petroleo",
+            "Preto",
+            "Prata",
+            "Rosa",
+            "Rosa claro",
+            "Roxo",
+            "Salmon",
+            "Sépia",
+            "Terracota",
+            "Turquesa",
+            "Verde",
+            "Verde claro",
+            "Verde escuro",
+            "Vermelho",
+            "Vinho"});
+            this.cbxCorFilter.Location = new System.Drawing.Point(567, 113);
+            this.cbxCorFilter.Name = "cbxCorFilter";
+            this.cbxCorFilter.Size = new System.Drawing.Size(233, 24);
+            this.cbxCorFilter.TabIndex = 8;
             // 
-            // rbtnXlsx
+            // label1
             // 
-            this.rbtnXlsx.AutoSize = true;
-            this.rbtnXlsx.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnXlsx.Location = new System.Drawing.Point(99, 407);
-            this.rbtnXlsx.Name = "rbtnXlsx";
-            this.rbtnXlsx.Size = new System.Drawing.Size(83, 28);
-            this.rbtnXlsx.TabIndex = 10;
-            this.rbtnXlsx.TabStop = true;
-            this.rbtnXlsx.Text = ".XLSX";
-            this.rbtnXlsx.UseVisualStyleBackColor = true;
-            // 
-            // rbtnPdf
-            // 
-            this.rbtnPdf.AutoSize = true;
-            this.rbtnPdf.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnPdf.Location = new System.Drawing.Point(198, 407);
-            this.rbtnPdf.Name = "rbtnPdf";
-            this.rbtnPdf.Size = new System.Drawing.Size(70, 28);
-            this.rbtnPdf.TabIndex = 11;
-            this.rbtnPdf.TabStop = true;
-            this.rbtnPdf.Text = ".PDF";
-            this.rbtnPdf.UseVisualStyleBackColor = true;
-            // 
-            // colCodVenda
-            // 
-            this.colCodVenda.HeaderText = "Cód Venda";
-            this.colCodVenda.Name = "colCodVenda";
-            this.colCodVenda.Width = 200;
-            // 
-            // colData
-            // 
-            this.colData.HeaderText = "Data";
-            this.colData.Name = "colData";
-            this.colData.Width = 200;
-            // 
-            // colCliente
-            // 
-            this.colCliente.HeaderText = "Cliente";
-            this.colCliente.Name = "colCliente";
-            this.colCliente.Width = 200;
-            // 
-            // colValor
-            // 
-            this.colValor.HeaderText = "Valor";
-            this.colValor.Name = "colValor";
-            this.colValor.Width = 200;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(13, 94);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "label1";
             // 
             // BuscarVenda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1052, 741);
-            this.Controls.Add(this.rbtnPdf);
-            this.Controls.Add(this.rbtnXlsx);
-            this.Controls.Add(this.rbtnCsv);
-            this.Controls.Add(this.btnGerarRelatorio);
-            this.Controls.Add(this.btnVisualizarVenda);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.cbxCorFilter);
+            this.Controls.Add(this.cbxCatFilter);
+            this.Controls.Add(this.dtpFilter);
+            this.Controls.Add(this.dgvVendas);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.tbxBuscarVenda);
             this.Controls.Add(this.lblBuscarVenda);
             this.Name = "BuscarVenda";
             this.Text = "BuscarVenda";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVendas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -192,15 +196,10 @@
         private System.Windows.Forms.TextBox tbxBuscarVenda;
         private System.Windows.Forms.Label lblBuscarVenda;
         private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button btnVisualizarVenda;
-        private System.Windows.Forms.Button btnGerarRelatorio;
-        private System.Windows.Forms.RadioButton rbtnCsv;
-        private System.Windows.Forms.RadioButton rbtnXlsx;
-        private System.Windows.Forms.RadioButton rbtnPdf;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colCodVenda;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colData;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colCliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colValor;
+        private System.Windows.Forms.DataGridView dgvVendas;
+        private System.Windows.Forms.DateTimePicker dtpFilter;
+        private System.Windows.Forms.ComboBox cbxCatFilter;
+        private System.Windows.Forms.ComboBox cbxCorFilter;
+        private System.Windows.Forms.Label label1;
     }
 }

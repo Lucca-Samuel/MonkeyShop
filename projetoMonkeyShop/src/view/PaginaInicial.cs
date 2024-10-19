@@ -24,9 +24,11 @@ namespace projetoMonkeyShop.src.view
         {
             try
             {
-                Venda vendaForm = new Venda();
+                //Venda vendaForm = new Venda();
+                //vendaForm.Show();
 
-                vendaForm.Show();
+                BuscarVenda buscarVenda = new BuscarVenda();
+                buscarVenda.Show();
 
             } catch(Exception exception)
             {

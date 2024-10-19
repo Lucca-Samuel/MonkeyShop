@@ -73,19 +73,6 @@ nome_categoria varchar(100),
 );
 
 --criação da tabela produtos
-/*create table produtos(
-id_produto bigint primary key identity(1,1),
-nome_produto varchar(100),
-custo_unitario decimal(8,2),
-imposto decimal(8,2),
-preco_venda decimal(8,2),
-qtde_estoque int,
-fk_id_categoria_produto bigint,
-
-FOREIGN KEY (fk_id_categoria_produto) REFERENCES categorias_produtos(id_categoria_produto),
-);*/
-
---criação da tabela produtos
 create table tbl_produtos(
 	pro_id int primary key identity(1,1),
 	pro_cod int,
@@ -160,14 +147,3 @@ CREATE TABLE compra_produtos(
 	FOREIGN KEY (fk_id_compra) REFERENCES compras(id_compra),
 	FOREIGN KEY (fk_id_prod) REFERENCES tbl_produtos(pro_id),
 );
-
-create table mensagens(
-	id_msg bigint primary key identity(1, 1),
-	data_msg date,
-	msg varchar(500),
-	fk_id_user BIGINT,
-	assunto varchar(100)
-
-	FOREIGN KEY (fk_id_user) REFERENCES usuarios(id_usuario)
-)
-

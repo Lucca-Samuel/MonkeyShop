@@ -310,6 +310,8 @@
             // 
             // cbxTamanho
             // 
+            this.cbxTamanho.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cbxTamanho.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbxTamanho.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxTamanho.FormattingEnabled = true;
             this.cbxTamanho.Items.AddRange(new object[] {
@@ -327,44 +329,44 @@
             // 
             // cbxCor
             // 
+            this.cbxCor.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cbxCor.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbxCor.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxCor.FormattingEnabled = true;
             this.cbxCor.Items.AddRange(new object[] {
-            "Branco",
-            "Preto",
+            "Aqua",
             "Azul",
             "Azul claro",
             "Azul escuro",
-            "Vermelho",
-            "Verde",
-            "Verde claro",
-            "Verde escuro",
-            "Amarelo",
-            "Laranja",
-            "Roxo",
-            "Rosa",
-            "Rosa claro",
+            "Bege",
+            "Bordô",
+            "Branco",
+            "Caramelo",
+            "Ciano",
             "Cinza",
             "Cinza claro",
             "Cinza escuro",
-            "Marrom",
-            "Bege",
-            "Vinho",
-            "Turquesa",
-            "Aqua",
             "Dourado",
-            "Prata",
-            "Mostarda",
+            "Laranja",
             "Lavanda",
-            "Salmon",
+            "Marrom",
+            "Mostarda",
             "Pêssego",
-            "Índigo",
-            "Ciano",
-            "Sépia",
-            "Caramelo",
-            "Terracota",
             "Petroleo",
-            "Bordô"});
+            "Preto",
+            "Prata",
+            "Rosa",
+            "Rosa claro",
+            "Roxo",
+            "Salmon",
+            "Sépia",
+            "Terracota",
+            "Turquesa",
+            "Verde",
+            "Verde claro",
+            "Verde escuro",
+            "Vermelho",
+            "Vinho"});
             this.cbxCor.Location = new System.Drawing.Point(884, 113);
             this.cbxCor.Name = "cbxCor";
             this.cbxCor.Size = new System.Drawing.Size(126, 39);
@@ -386,6 +388,8 @@
             // 
             // cbxCategoria
             // 
+            this.cbxCategoria.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cbxCategoria.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbxCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxCategoria.FormattingEnabled = true;
             this.cbxCategoria.Items.AddRange(new object[] {
